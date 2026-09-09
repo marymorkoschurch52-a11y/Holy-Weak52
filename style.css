@@ -384,21 +384,15 @@ a{ color:inherit; }
 .CC{
   color: black;
 }
-.c1 {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
-    align-items: stretch;
+
+.c1{
+  display: flex;
+  flex-direction: row;
 }
 
-.c1 > div:first-child {
-    flex: 1;
-    min-width: 0;
-}
 
 .image-container {
-    flex: 1;
-    width: auto;
+    width: 600px;
     height: 281px;
     overflow: hidden;
     border-radius: 15px;
@@ -408,23 +402,4 @@ a{ color:inherit; }
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-
-/* Mobile */
-@media (max-width: 768px) {
-    .c1 {
-        flex-direction: row;
-        gap: 8px;
-    }
-
-    .c1 > div:first-child,
-    .image-container {
-        width: 50%;
-        flex: 0 0 50%;
-    }
-
-    .image-container {
-        height: 100%;
-    }
 }

@@ -1,0 +1,1311 @@
+```html
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>سبت لعازر | تأملات وأحداث</title>
+
+  <style>
+
+    /* =========================
+       General
+    ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Arial", sans-serif;
+      background: #f5f1e8;
+      color: #29251f;
+      line-height: 1.9;
+    }
+
+
+    /* =========================
+       Header
+    ========================= */
+
+    .hero {
+      min-height: 430px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      text-align: center;
+
+      padding: 60px 20px;
+
+      background:
+        linear-gradient(
+          rgba(30, 25, 20, 0.88),
+          rgba(30, 25, 20, 0.94)
+        );
+
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .hero-small {
+      font-size: 18px;
+      color: #d8c6a4;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 82px);
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #d8b36a;
+    }
+
+    .hero p {
+      font-size: clamp(17px, 2vw, 22px);
+      color: #ddd6ca;
+      max-width: 750px;
+      margin: auto;
+    }
+
+
+    /* =========================
+       Main
+    ========================= */
+
+    .container {
+      width: min(1200px, 92%);
+      margin: 70px auto;
+    }
+
+
+    /* =========================
+       Event Card
+    ========================= */
+
+    .event-card {
+      background: #fffdf8;
+
+      border-radius: 24px;
+
+      margin-bottom: 45px;
+
+      overflow: hidden;
+
+      border: 1px solid #e5dccb;
+
+      box-shadow: 0 12px 35px rgba(50, 40, 25, 0.08);
+
+      transition: 0.3s;
+    }
+
+    .event-card:hover {
+      transform: translateY(-5px);
+
+      box-shadow: 0 18px 45px rgba(50, 40, 25, 0.14);
+    }
+
+
+    /* =========================
+       Card Header
+    ========================= */
+
+    .event-header {
+      padding: 28px 35px;
+
+      background: #302a23;
+
+      color: white;
+
+      display: flex;
+      align-items: center;
+
+      gap: 20px;
+    }
+
+    .event-number {
+      min-width: 55px;
+      height: 55px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 50%;
+
+      background: #c8a15a;
+
+      color: #302a23;
+
+      font-size: 24px;
+      font-weight: 900;
+    }
+
+    .event-header h2 {
+      font-size: clamp(22px, 3vw, 32px);
+      font-weight: 800;
+    }
+
+
+    /* =========================
+       Card Content
+    ========================= */
+
+    .event-content {
+      padding: 35px;
+    }
+
+    .section {
+      margin-bottom: 32px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+
+      gap: 10px;
+
+      font-size: 22px;
+      font-weight: 800;
+
+      color: #6d5128;
+
+      margin-bottom: 15px;
+
+      padding-bottom: 8px;
+
+      border-bottom: 2px solid #e8decd;
+    }
+
+    .section p {
+      font-size: 17px;
+      color: #514b43;
+    }
+
+
+    /* =========================
+       Bible Verse
+    ========================= */
+
+    .verse {
+      background: #f3eee4;
+
+      border-right: 5px solid #b99452;
+
+      padding: 22px 25px;
+
+      border-radius: 12px;
+
+      margin-top: 12px;
+
+      color: #403a32;
+
+      font-size: 17px;
+
+      font-weight: 600;
+    }
+
+
+    /* =========================
+       Spiritual Lesson
+    ========================= */
+
+    .spiritual {
+      background: #faf5e9;
+
+      border: 1px solid #eadcc1;
+
+      padding: 25px;
+
+      border-radius: 15px;
+    }
+
+    .spiritual p {
+      font-style: italic;
+      color: #4c4438;
+    }
+
+
+    /* =========================
+       Prophecy
+    ========================= */
+
+    .prophecy-grid {
+      display: grid;
+
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 20px;
+    }
+
+    .prophecy-box {
+      background: #f8f4ec;
+
+      border-radius: 15px;
+
+      padding: 22px;
+
+      border: 1px solid #e8dfd0;
+    }
+
+    .prophecy-box h4 {
+      color: #80602d;
+
+      font-size: 19px;
+
+      margin-bottom: 10px;
+    }
+
+
+    /* =========================
+       Ritual
+    ========================= */
+
+    .ritual {
+      background: #302a23;
+
+      color: #eee7dc;
+
+      border-radius: 16px;
+
+      padding: 25px;
+    }
+
+    .ritual h3 {
+      color: #d8b36a;
+
+      margin-bottom: 12px;
+
+      font-size: 21px;
+    }
+
+    .ritual p {
+      color: #e3ddd4;
+    }
+
+
+    /* =========================
+       Footer
+    ========================= */
+
+    footer {
+      background: #29241e;
+
+      color: #cfc7ba;
+
+      text-align: center;
+
+      padding: 45px 20px;
+
+      margin-top: 80px;
+    }
+
+    footer h2 {
+      color: #d8b36a;
+
+      margin-bottom: 10px;
+    }
+
+
+    /* =========================
+       Responsive
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .hero {
+        min-height: 350px;
+      }
+
+      .event-header {
+        padding: 22px;
+
+        align-items: flex-start;
+      }
+
+      .event-number {
+        min-width: 45px;
+        height: 45px;
+
+        font-size: 19px;
+      }
+
+      .event-content {
+        padding: 22px;
+      }
+
+      .prophecy-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section p,
+      .verse {
+        font-size: 16px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-small">
+        أسبوع الآلام
+      </div>
+
+      <h1>
+        سبت <span>لعازر</span>
+      </h1>
+
+      <p>
+        من المرض إلى القيامة،
+        ومن القبر إلى الحياة،
+        رحلة تكشف لنا محبة المسيح
+        وسلطانه على الموت.
+      </p>
+
+    </div>
+
+  </header>
+
+
+
+  <main class="container">
+
+
+    <!-- =========================
+         1
+    ========================= -->
+
+    <article class="event-card">
+
+      <div class="event-header">
+
+        <div class="event-number">1</div>
+
+        <h2>
+          مرض لعازر ورسالة الأختين إلى يسوع
+        </h2>
+
+      </div>
+
+
+      <div class="event-content">
+
+
+        <section class="section">
+
+          <h3 class="section-title">
+            📖 الحدث
+          </h3>
+
+          <p>
+            يوحنا 11: 1–6
+          </p>
+
+          <div class="verse">
+            «وَكَانَ إِنْسَانٌ مَرِيضاً وَهُوَ لَعَازَرُ،
+            مِنْ بَيْتِ عَنِيَا مِنْ قَرْيَةِ مَرْيَمَ وَمَرْثَا أُخْتِهَا...
+            فَأَرْسَلَتِ الأُخْتَانِ إِلَيْهِ قَائِلَتَيْنِ:
+            يَا سَيِّدُ، هُوَذَا الَّذِي تُحِبُّهُ مَرِيضٌ».
+          </div>
+
+        </section>
+
+
+        <section class="section spiritual">
+
+          <h3 class="section-title">
+            ✨ الدرس الروحي
+          </h3>
+
+          <p>
+            تفسير القديس يوحنا الذهبي الفم:
+          </p>
+
+          <div class="verse">
+
+            «لَمْ تَقُلاَ تَعَالَ، وَلاَ قَالَتَا اشْفِهِ،
+            بَلْ عَرَضَتَا الأَمْرَ فَقَطْ...
+            لأَنَّهُمَا كَانَتَا تَعْلَمَانِ أَنَّهُ يُحِبُّهُ،
+            وَلَمْ تَشَكَّا فِي قُدْرَتِهِ.»
+
+          </div>
+
+        </section>
+
+
+        <section class="section">
+
+          <h3 class="section-title">
+            🔗 الربط والنبووات
+          </h3>
+
+          <div class="prophecy-grid">
+
+            <div class="prophecy-box">
+
+              <h4>الرمز والنبوة</h4>
+
+              <p>
+                مزمور 38: 9
+              </p>
+
+              <div class="verse">
+                «يَا رَبُّ، أَمَامَكَ كُلُّ بُغْيَتِي،
+                وَتَنَهُّدِي لَيْسَ بِمَسْتُورٍ عَنْك».
+              </div>
+
+            </div>
+
+
+            <div class="prophecy-box">
+
+              <h4>التحقيق</h4>
+
+              <p>
+                يوحنا 11: 4
+              </p>
+
+              <div class="verse">
+                «هذَا الْمَرَضُ لَيْسَ لِلْمَوْتِ،
+                بَلْ لأَجْلِ مَجْدِ اللهِ،
+                لِيَتَمَجَّدَ ابْنُ اللهِ بِهِ».
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="ritual">
+
+          <h3>⛪ الطقس الكنسي والألحان</h3>
+
+          <p>
+            القراءات: مزمور عشية سبت لعازر
+            (مزمور 6: 1، 2):
+            «يَا رَبُّ لاَ تُبْتَكِتْنِي بِغَضَبِكَ...
+            إِرْحَمْنِي يَا رَبُّ فَإِنِّي ضَعِيفٌ».
+          </p>
+
+          <p>
+            الألحان والطقس: تُصلى العشية بالطقس السنوي،
+            وتُقال أوشية المرضى في رفع بخور عشية.
+          </p>
+
+        </section>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- =========================
+         2
+    ========================= -->
+
+    <article class="event-card">
+
+      <div class="event-header">
+
+        <div class="event-number">2</div>
+
+        <h2>
+          حديث يسوع والتأخير الإلهي والتوجه لليهودية
+        </h2>
+
+      </div>
+
+      <div class="event-content">
+
+        <section class="section">
+
+          <h3 class="section-title">📖 الحدث</h3>
+
+          <p>يوحنا 11: 7–16</p>
+
+          <div class="verse">
+
+            «فَلَمَّا سَمِعَ أَنَّهُ مَرِيضٌ
+            مَكَثَ حِينَئِذٍ فِي الْمَوْضِعِ الَّذِي كَانَ فِيهِ يَوْمَيْنِ...
+            ثُمَّ قَالَ لَهُمْ:
+            لَعَازَرُ حَبِيبُنَا قَدْ نَامَ.
+            لكِنِّي أَذْهَبُ لأُوقِظَهُ».
+
+          </div>
+
+        </section>
+
+
+        <section class="section spiritual">
+
+          <h3 class="section-title">✨ الدرس الروحي</h3>
+
+          <p>
+            تفسير القديس يوحنا الذهبي الفم:
+          </p>
+
+          <div class="verse">
+
+            «أَبْطَأَ لِيَمُوتَ وَيُقْبَرَ،
+            وَيَنْتَنَ، لِكَيْ لاَ يَبْقَى شَكٌّ
+            فِي أَنَّهُ قَدْ مَاتَ فِعْلاً،
+            وَلِيَصِيرَ إِيمَانُهُمْ أَعْظَمَ.»
+
+          </div>
+
+        </section>
+
+
+        <section class="section">
+
+          <h3 class="section-title">🔗 الربط والنبووات</h3>
+
+          <div class="prophecy-grid">
+
+            <div class="prophecy-box">
+
+              <h4>الرمز والنبوة</h4>
+
+              <p>
+                حبقوق 2: 3
+              </p>
+
+              <div class="verse">
+                «إِنْ تَنَاهَتْ فَانْتَظِرْهَا
+                لأَنَّهَا سَتَأْتِي أَتْيَاً
+                وَلاَ تَتَأَخَّرُ».
+              </div>
+
+              <p>
+                دانيال 12: 2
+              </p>
+
+              <div class="verse">
+                «وَكَثِيرُونَ مِنَ الرَّاقِدِينَ
+                فِي تُرَابِ الأَرْضِ يَسْتَيْقِظُونَ».
+              </div>
+
+            </div>
+
+
+            <div class="prophecy-box">
+
+              <h4>التحقيق</h4>
+
+              <p>
+                1 تسالونيكي 4: 14
+              </p>
+
+              <div class="verse">
+                «إِنَّهُ إِنْ كُنَّا نُؤْمِنُ
+                أَنَّ يَسُوعَ مَاتَ وَقَامَ،
+                فَكَذلِكَ الرَّاقِدُونَ بِيَسُوعَ،
+                سَيُحْضِرُهُمُ اللهُ أَيْضاً مَعَهُ».
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="ritual">
+
+          <h3>⛪ الطقس الكنسي والألحان</h3>
+
+          <p>
+            القراءات: نبوات باكر سبت لعازر
+            (إشعياء 40: 1–8)، و(دانيال 9: 20–27).
+          </p>
+
+          <p>
+            الألحان والطقس: يُصلى باكر بالطقس الفرايحي،
+            وتُقال أوشية الراقدين.
+          </p>
+
+        </section>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- =========================
+         3
+    ========================= -->
+
+    <article class="event-card">
+
+      <div class="event-header">
+
+        <div class="event-number">3</div>
+
+        <h2>
+          وصول يسوع وحواره مع مرثا ومريم
+        </h2>
+
+      </div>
+
+      <div class="event-content">
+
+        <section class="section">
+
+          <h3 class="section-title">📖 الحدث</h3>
+
+          <p>يوحنا 11: 17–37</p>
+
+          <div class="verse">
+
+            «أَنَا هُوَ الْقِيَامَةُ وَالْحَيَاةُ.
+            مَنْ آمَنَ بِي وَلَوْ مَاتَ فَسَيَحْيَا»...
+
+            «وَبَكَى يَسُوعُ».
+
+          </div>
+
+        </section>
+
+
+        <section class="section spiritual">
+
+          <h3 class="section-title">✨ الدرس الروحي</h3>
+
+          <div class="verse">
+
+            «أَظْهَرَ إِنْسَانِيَّتَهُ الْحَقِيقِيَّةَ
+            إِذْ بَكَى، وَأَكَّدَ أَنَّهُ هُوَ
+            بِذَاتِهِ الْحَيَاةُ وَالْقِيَامَةُ.»
+
+          </div>
+
+          <p>
+            تفسير القديس كيرلس الكبير
+          </p>
+
+        </section>
+
+
+        <section class="section">
+
+          <h3 class="section-title">🔗 الربط والنبووات</h3>
+
+          <div class="prophecy-grid">
+
+            <div class="prophecy-box">
+
+              <h4>الرمز والنبوة</h4>
+
+              <p>مزمور 36: 9</p>
+
+              <div class="verse">
+                «لأَنَّ عِنْدَكَ يَنْبُوعَ الْحَيَاةِ».
+              </div>
+
+              <p>إشعياء 25: 8</p>
+
+              <div class="verse">
+                «يَبْلَعُ الْمَوْتَ إِلَى الأَبَدِ،
+                وَيَمْسَحُ السَّيِّدُ الرَّبُّ الدُّمُوعَ
+                عَنْ كُلِّ الْوُجُوهِ».
+              </div>
+
+            </div>
+
+
+            <div class="prophecy-box">
+
+              <h4>التحقيق</h4>
+
+              <p>عبرانيين 4: 15</p>
+
+              <div class="verse">
+                «لَيْسَ لَنَا رَئِيسُ كَهَنَةٍ
+                غَيْرُ قَادِرٍ أَنْ يَرْثِيَ لِضَعَفَاتِنَا».
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="ritual">
+
+          <h3>⛪ الطقس الكنسي والألحان</h3>
+
+          <p>
+            القراءات: إنجيل باكر (لوقا 10: 38–42)،
+            ومزمور باكر (مزمور 30: 3، 9):
+            «يَا رَبُّ أَصْعَدْتَ مِنَ الْهَاوِيَةِ نَفْسِي».
+          </p>
+
+          <p>
+            الألحان والطقس: يُرتل المزمور
+            والذكصولوجية الخاصة بسبت لعازر
+            باللحن الفرايحي.
+          </p>
+
+        </section>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- =========================
+         4
+    ========================= -->
+
+    <article class="event-card">
+
+      <div class="event-header">
+
+        <div class="event-number">4</div>
+
+        <h2>
+          إقامة لعازر ودحرجة الحجر
+        </h2>
+
+      </div>
+
+      <div class="event-content">
+
+        <section class="section">
+
+          <h3 class="section-title">📖 الحدث</h3>
+
+          <p>يوحنا 11: 38–44</p>
+
+          <div class="verse">
+
+            «ارْفَعُوا الْحَجَرَ!»
+
+            <br><br>
+
+            «لَعَازَرُ، هَلُمَّ خَارِجاً!»
+
+            <br><br>
+
+            «فَخَرَجَ الْمَيْتُ مَرْبُوطَ الْيَدَيْنِ
+            وَالرِّجْلَيْنِ بِأَقْمِطَةٍ».
+
+          </div>
+
+        </section>
+
+
+        <section class="section spiritual">
+
+          <h3 class="section-title">✨ الدرس الروحي</h3>
+
+          <div class="verse">
+
+            «أَمَرَهُمْ بِرَفْعِ الْحَجَرِ
+            لِيَكُونُوا شُهُوداً لِلْمَعْجِزَةِ،
+            وَنَادَاهُ بِصَوْتٍ عَظِيمٍ
+            لِيُعْلِنَ سُلْطَانَهُ الإِلَهِيَّ.»
+
+          </div>
+
+          <p>
+            تفسير القديس يوحنا الذهبي الفم
+          </p>
+
+        </section>
+
+
+        <section class="section">
+
+          <h3 class="section-title">🔗 الربط والنبووات</h3>
+
+          <div class="prophecy-grid">
+
+            <div class="prophecy-box">
+
+              <h4>الرمز والنبوة</h4>
+
+              <p>حزقيال 37: 12</p>
+
+              <div class="verse">
+                «هَأنَذَا أَفْتَحُ قُبُورَكُمْ
+                وَأُطْلِعُكُمْ مِنْ قُبُورِكُمْ
+                يَا شَعْبِي».
+              </div>
+
+            </div>
+
+
+            <div class="prophecy-box">
+
+              <h4>التحقيق</h4>
+
+              <p>يوحنا 5: 28–29</p>
+
+              <div class="verse">
+                «تَأْتِي سَاعَةٌ فِيهَا يَسْمَعُ
+                جَمِيعُ الَّذِينَ فِي الْقُبُورِ صَوْتَهُ،
+                فَيَخْرُجُ الَّذِينَ فَعَلُوا الصَّالِحَاتِ
+                إِلَى قِيَامَةِ الْحَيَاةِ».
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="ritual">
+
+          <h3>⛪ الطقس الكنسي والألحان</h3>
+
+          <p>
+            القراءات: نبوة باكر (حزقيال 37: 1–14)،
+            وقراءات القداس: البولس (1 كورنثوس 15: 50–58)،
+            الكاثوليكون (1 بطرس 4: 1–11)،
+            الإبركسيس (أعمال 27: 38–44)،
+            مزمور القداس (مزمور 118: 26، 27)،
+            وإنجيل القداس (يوحنا 11: 1–45).
+          </p>
+
+          <p>
+            الألحان والطقس: يُصلى القداس الإلهي كاملاً
+            بالطقس الفرايحي؛ وتُقال الهيتينيات الفرايحي،
+            ولحن «طاي أوري»، ومرد الإنجيل الفرايحي لسبت لعازر،
+            والتوزيع باللحن الفرايحي.
+          </p>
+
+        </section>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- =========================
+         5
+    ========================= -->
+
+    <article class="event-card">
+
+      <div class="event-header">
+
+        <div class="event-number">5</div>
+
+        <h2>
+          مؤامرة رؤساء الكهنة ومكث يسوع في أفرايم
+        </h2>
+
+      </div>
+
+      <div class="event-content">
+
+        <section class="section">
+
+          <h3 class="section-title">📖 الحدث</h3>
+
+          <p>يوحنا 11: 45–57</p>
+
+          <div class="verse">
+
+            «خَيْرٌ لَنَا أَنْ يَمُوتَ إِنْسَانٌ وَاحِدٌ عَنِ الشَّعْبِ».
+
+            <br><br>
+
+            «فَمِنْ ذلِكَ الْيَوْمِ اعْتَمَدُوا لِيَقْتُلُوهُ».
+
+          </div>
+
+        </section>
+
+
+        <section class="section spiritual">
+
+          <h3 class="section-title">✨ الدرس الروحي</h3>
+
+          <div class="verse">
+
+            «تَنَبَّأَ قَيَافَا دُونَ أَنْ يَدْرِي
+            عَنْ مَوْتِ الْمَسِيحِ الْفِدَائِيِّ عَنِ الْعَالَمِ،
+            وَمَكَثَ يَسُوعُ فِي أَفْرَايِمَ
+            لأَنَّ سَاعَتَهُ لَمْ تَكُنْ قَدْ جَاءَتْ بَعْدُ.»
+
+          </div>
+
+          <p>
+            تفسير القديس كيرلس الكبير
+          </p>
+
+        </section>
+
+
+        <section class="section">
+
+          <h3 class="section-title">🔗 الربط والنبووات</h3>
+
+          <div class="prophecy-grid">
+
+            <div class="prophecy-box">
+
+              <h4>الرمز والنبوة</h4>
+
+              <p>مزمور 2: 2</p>
+
+              <div class="verse">
+                «قَامَ مُلُوكُ الأَرْضِ،
+                وَتَآمَرَ الرُّؤَسَاءُ مَعاً
+                عَلَى الرَّبِّ وَعَلَى مَسِيحِهِ».
+              </div>
+
+              <p>إشعياء 53: 8</p>
+
+              <div class="verse">
+                «قُطِعَ مِنَ الأَرْضِ،
+                أَنَّهُ ضُرِبَ مِنْ أَجْلِ ذَنْبِ شَعْبِي».
+              </div>
+
+            </div>
+
+
+            <div class="prophecy-box">
+
+              <h4>التحقيق</h4>
+
+              <p>رومية 5: 8</p>
+
+              <div class="verse">
+                «وَلكِنَّ اللهَ بَيَّنَ مَحَبَّتَهُ لَنَا،
+                لأَنَّهُ وَنَحْنُ بَعْدُ خُطَاةٌ
+                مَاتَ الْمَسِيحُ عَنْهَا».
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="ritual">
+
+          <h3>⛪ الطقس الكنسي والألحان</h3>
+
+          <p>
+            القراءات: مزمور عشية أحد الشعانين
+            (مزمور 2: 1، 2):
+            «لِمَاذَا ارْتَجَّتِ الأُمَمُ...
+            قَامَ مُلُوكُ الأَرْضِ».
+          </p>
+
+          <p>
+            الألحان والطقس: تبدأ عشية أحد الشعانين
+            (مساء سبت لعازر) بالطقس الشعانيني،
+            حيث تُقال إبصالية الشعانين والألحان الشعانينية.
+          </p>
+
+        </section>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- =========================
+         6
+    ========================= -->
+
+    <article class="event-card">
+
+      <div class="event-header">
+
+        <div class="event-number">6</div>
+
+        <h2>
+          عشاء بيت عنيا وسكب طيب مريم
+        </h2>
+
+      </div>
+
+      <div class="event-content">
+
+        <section class="section">
+
+          <h3 class="section-title">📖 الحدث</h3>
+
+          <p>يوحنا 12: 1–8</p>
+
+          <div class="verse">
+
+            «فَأَخَذَتْ مَرْيَمُ مَنَّا مِنْ طِيبِ نَارْدِينٍ
+            خَالِصٍ كَثِيرِ الثَّمَنِ،
+            وَدَهَنَتْ قَدَمَيْ يَسُوعَ...»
+
+            <br><br>
+
+            «اتْرُكُوهَا!
+            إِنَّهَا لِيَوْمِ تَكْفِينِي حَفِظَتْهُ».
+
+          </div>
+
+        </section>
+
+
+        <section class="section spiritual">
+
+          <h3 class="section-title">✨ الدرس الروحي</h3>
+
+          <div class="verse">
+
+            «قَدَّمَتْ مَرْيَمُ الطِيبَ بِإِيمَانٍ
+            وَمَحَبَّةٍ خَالِصَةٍ،
+            وَسَوَّغَ السَّيِّدُ عَمَلَهَا
+            كَتَكْفِينٍ لِجَسَدِهِ.»
+
+          </div>
+
+          <p>
+            تفسير القديس يوحنا الذهبي الفم
+          </p>
+
+        </section>
+
+
+        <section class="section">
+
+          <h3 class="section-title">🔗 الربط والنبووات</h3>
+
+          <div class="prophecy-grid">
+
+            <div class="prophecy-box">
+
+              <h4>الرمز والنبوة</h4>
+
+              <p>نشيد الأنشاد 1: 12</p>
+
+              <div class="verse">
+                «مَا دَامَ الْمَلِكُ فِي مَجْلِسِهِ
+                أَفَاحَ نَارْدِينِي رَائِحَتَهُ».
+              </div>
+
+            </div>
+
+
+            <div class="prophecy-box">
+
+              <h4>التحقيق</h4>
+
+              <p>مرقس 14: 9</p>
+
+              <div class="verse">
+                «حَيْثُمَا يُكْرَزْ بِهذَا الإِنْجِيلِ
+                فِي كُلِّ الْعَالَمِ،
+                يُخْبَرْ أَيْضاً بِمَا فَعَلَتْ هَذِهِ،
+                تَذْكَاراً لَهَا».
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="ritual">
+
+          <h3>⛪ الطقس الكنسي والألحان</h3>
+
+          <p>
+            القراءات: إنجيل عشية أحد الشعانين
+            (يوحنا 12: 1–11).
+          </p>
+
+          <p>
+            الألحان والطقس: تُقال أرباع الناقوس الشعانيني
+            ومرد الإنجيل باللحن الشعانيني.
+          </p>
+
+        </section>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- =========================
+         7
+    ========================= -->
+
+    <article class="event-card">
+
+      <div class="event-header">
+
+        <div class="event-number">7</div>
+
+        <h2>
+          التشاور لقتل لعازر وقوة الشهادة
+        </h2>
+
+      </div>
+
+      <div class="event-content">
+
+        <section class="section">
+
+          <h3 class="section-title">📖 الحدث</h3>
+
+          <p>يوحنا 12: 9–11</p>
+
+          <div class="verse">
+
+            «فَتَشَاوَرَ رُؤَسَاءُ الْكَهَنَةِ
+            لِيَقْتُلُوا لَعَازَرَ أَيْضاً،
+            لأَنَّ كَثِيرِينَ مِنَ الْيَهُودِ
+            كَانُوا بِسَبَبِهِ يَذْهَبُونَ
+            وَيُؤْمِنُونَ بِيَسُوعَ».
+
+          </div>
+
+        </section>
+
+
+        <section class="section spiritual">
+
+          <h3 class="section-title">✨ الدرس الروحي</h3>
+
+          <div class="verse">
+
+            «سَعَوْا لِقَتْلِ لَعَازَرَ
+            كَيْ يَمْحُوا جَرِيمَةَ عَمَاهُمْ،
+            لكِنَّ حَيَاتَهُ كَانَتْ
+            شَهَادَةً قَاطِعَةً لِلْحَقِّ.»
+
+          </div>
+
+          <p>
+            تفسير القديس يوحنا الذهبي الفم
+          </p>
+
+        </section>
+
+
+        <section class="section">
+
+          <h3 class="section-title">🔗 الربط والنبووات</h3>
+
+          <div class="prophecy-grid">
+
+            <div class="prophecy-box">
+
+              <h4>الرمز والنبوة</h4>
+
+              <p>مزمور 37: 32</p>
+
+              <div class="verse">
+                «الشِّرِّيرُ يُرَاقِبُ الصِّدِّيقَ
+                مُحَاوِلاً أَنْ يُمِيتَهُ».
+              </div>
+
+            </div>
+
+
+            <div class="prophecy-box">
+
+              <h4>التحقيق</h4>
+
+              <p>أعمال 4: 14</p>
+
+              <div class="verse">
+                «إِذْ نَظَرُوا الإِنْسَانَ الَّذِيَ شُفِيَ
+                وَاقِفاً مَعَهُمَا،
+                لَمْ يَكُنْ لَهُمْ شَيْءٌ يُنَاقِضُونَ بِهِ».
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        <section class="ritual">
+
+          <h3>⛪ الطقس الكنسي والألحان</h3>
+
+          <p>
+            القراءات: يُختتم إنجيل العشية
+            بالجزء التكميلي (يوحنا 12: 9–11).
+          </p>
+
+          <p>
+            الألحان والطقس: تُقال إبصالية الشعانين
+            ولحن دورة الشعانين التمهيدي.
+          </p>
+
+        </section>
+
+      </div>
+
+    </article>
+
+
+  </main>
+
+
+  <footer>
+
+    <h2>سبت لعازر</h2>
+
+    <p>
+      «أَنَا هُوَ الْقِيَامَةُ وَالْحَيَاةُ»
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
+```
