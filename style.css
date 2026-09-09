@@ -11,7 +11,7 @@
   --clay-dark: #7A3A1F;
   --olive: #5B6B3A;
   --olive-dark: #45532A;
-  --wine: #6B1F1F;
+  --wine:   #6B1F1F;
   --sky-top: #86B8D8;
   --sky-bottom: #E8DDBB;
   --gold: #B8862E;
@@ -192,6 +192,7 @@ a{ color:inherit; }
   display:grid;
   grid-template-columns:1fr;
   margin-bottom:3.25rem;
+  
   z-index:1;
 }
 
@@ -297,7 +298,12 @@ a{ color:inherit; }
 }
 
 .station-major .station-marker{
-  background:radial-gradient(circle at 32% 28%, #8A2E2E, var(--wine) 55%, #4A1414 100%);
+  background:black;
+  outline-color:#4A1414;
+  width:58px; height:58px;
+}
+.station-major .BB{
+  background:white;
   outline-color:#4A1414;
   width:58px; height:58px;
 }
@@ -372,4 +378,28 @@ a{ color:inherit; }
 
 @media (min-width:1080px){
   .station-nav{ display:block; }
+}
+
+
+.CC{
+  color: black;
+}
+
+.c1{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.image-container {
+    width: 600px;
+    height: 281px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
