@@ -385,24 +385,48 @@ a{ color:inherit; }
   color: black;
 }
 
+/* ============================================================
+   محتوى الكارت (نص + صورة) — جنب بعض دايمًا، يمين مرة وشمال مرة
+   حسب ترتيبهم في الـ HTML (data-side يمين/شمال لكل محطة)
+   ============================================================ */
 .c1{
   display: flex;
-  flex-direction: row;
- 
+  flex-direction: row;      /* الصورة والنص جنب بعض على كل المقاسات */
+  align-items: stretch;     /* الصورة تاخد نفس طول عمود النص بالظبط */
+  gap: 0.75rem;
 }
 
+/* النص ياخد المساحة المتبقية وينكمش صح من غير ما يكسر الكارت */
+.c1 > div:not(.image-container){
+  flex: 1 1 auto;
+  min-width: 0;
+}
 
+/* الصورة نسبة من عرض الكارت، وطولها = طول عمود النص جنبها (stretch) */
 .image-container {
-    width: 600px;
-    height: 281px;
+    flex: 0 0 38%;
+    max-width: 160px;
     overflow: hidden;
     border-radius: 15px;
-    /* background-color: red; */
-    padding: 20px;
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+}
+
+/* على الشاشات الأوسع بشوية، تكبير مساحة الصورة تدريجيًا */
+@media (min-width: 420px){
+  .image-container{ flex-basis: 40%; max-width: 190px; }
+}
+
+@media (min-width: 560px){
+  .c1{ gap: 1.1rem; }
+  .image-container{ flex-basis: 44%; max-width: 240px; }
+}
+
+@media (min-width: 760px){
+  .image-container{ flex-basis: 46%; max-width: 260px; }
 }
