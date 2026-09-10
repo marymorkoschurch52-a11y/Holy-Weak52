@@ -1,0 +1,1081 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>أحد الشعانين – دخول السيد المسيح إلى أورشليم</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Tajawal", sans-serif;
+
+        background: radial-gradient(
+          circle at top,
+          #3b2a1d 0%,
+          #18120e 45%,
+          #0b0907 100%
+        );
+
+        color: #f8f1e7;
+        line-height: 2;
+        min-height: 100vh;
+      }
+
+      /* =========================
+       HERO
+    ========================= */
+
+      .hero {
+        min-height: 55vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 80px 20px;
+
+        position: relative;
+        overflow: hidden;
+
+        border-bottom: 1px solid rgba(218, 177, 106, 0.3);
+      }
+
+      .hero::before,
+      .hero::after {
+        content: "";
+
+        position: absolute;
+
+        border-radius: 50%;
+
+        filter: blur(3px);
+      }
+
+      .hero::before {
+        width: 450px;
+        height: 450px;
+
+        background: rgba(180, 125, 45, 0.12);
+
+        top: -200px;
+        right: -150px;
+      }
+
+      .hero::after {
+        width: 350px;
+        height: 350px;
+
+        background: rgba(100, 55, 30, 0.2);
+
+        bottom: -180px;
+        left: -100px;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+
+        max-width: 1000px;
+      }
+
+      .cross {
+        font-size: 55px;
+
+        color: #d9b36c;
+
+        display: block;
+
+        margin-bottom: 15px;
+      }
+
+      .hero h1 {
+        font-family: "Aref Ruqaa", serif;
+
+        font-size: clamp(45px, 7vw, 90px);
+
+        color: #f0d49a;
+
+        line-height: 1.2;
+
+        text-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+      }
+
+      .hero-subtitle {
+        margin-top: 20px;
+
+        font-size: clamp(18px, 3vw, 27px);
+
+        color: #ddd0bd;
+      }
+
+      .hero-reference {
+        display: inline-block;
+
+        margin-top: 25px;
+
+        padding: 8px 25px;
+
+        border: 1px solid rgba(218, 177, 106, 0.5);
+
+        border-radius: 30px;
+
+        color: #d9b36c;
+
+        background: rgba(0, 0, 0, 0.2);
+      }
+
+      /* =========================
+       CONTAINER
+    ========================= */
+
+      .container {
+        width: min(1450px, 94%);
+
+        margin: auto;
+
+        padding: 70px 0 100px;
+      }
+
+      /* =========================
+       EVENT CARD
+    ========================= */
+
+      .event {
+        margin-bottom: 80px;
+
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.07),
+          rgba(255, 255, 255, 0.025)
+        );
+
+        border: 1px solid rgba(218, 177, 106, 0.22);
+
+        border-radius: 28px;
+
+        padding: 45px;
+
+        box-shadow:
+          0 25px 70px rgba(0, 0, 0, 0.35),
+          inset 0 1px rgba(255, 255, 255, 0.04);
+
+        backdrop-filter: blur(10px);
+
+        transition: 0.35s ease;
+      }
+
+      .event:hover {
+        transform: translateY(-5px);
+
+        border-color: rgba(218, 177, 106, 0.4);
+
+        box-shadow:
+          0 30px 80px rgba(0, 0, 0, 0.45),
+          inset 0 1px rgba(255, 255, 255, 0.05);
+      }
+
+      .event-number {
+        width: 60px;
+        height: 60px;
+
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: linear-gradient(145deg, #c99b4a, #8d6225);
+
+        color: #1b1208;
+
+        font-weight: 900;
+
+        font-size: 24px;
+
+        margin-bottom: 20px;
+
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      }
+
+      .event h2 {
+        font-family: "Aref Ruqaa", serif;
+
+        font-size: clamp(30px, 4vw, 48px);
+
+        color: #f0d49a;
+
+        margin-bottom: 15px;
+
+        line-height: 1.5;
+      }
+
+      .section-title {
+        font-size: 22px;
+
+        font-weight: 900;
+
+        color: #d9b36c;
+
+        margin-top: 35px;
+
+        margin-bottom: 12px;
+
+        padding-right: 18px;
+
+        border-right: 4px solid #c99b4a;
+      }
+
+      .reference {
+        color: #e0d5c8;
+
+        font-size: 17px;
+
+        margin-bottom: 15px;
+      }
+
+      .text {
+        color: #eee4d7;
+
+        font-size: 18px;
+      }
+
+      /* =========================
+       QUOTE
+    ========================= */
+
+      .quote {
+        background: rgba(0, 0, 0, 0.22);
+
+        border-right: 4px solid #c99b4a;
+
+        border-radius: 12px;
+
+        padding: 25px 30px;
+
+        margin-top: 15px;
+
+        color: #eee4d7;
+
+        font-size: 18px;
+      }
+
+      .quote::before {
+        content: "“";
+
+        display: block;
+
+        font-family: Georgia, serif;
+
+        font-size: 50px;
+
+        color: #c99b4a;
+
+        height: 25px;
+      }
+
+      /* =========================
+       LESSON
+    ========================= */
+
+      .lesson {
+        background: linear-gradient(
+          135deg,
+          rgba(132, 93, 43, 0.2),
+          rgba(255, 255, 255, 0.035)
+        );
+
+        border: 1px solid rgba(201, 155, 74, 0.2);
+
+        border-radius: 18px;
+
+        padding: 25px 30px;
+
+        color: #eee4d7;
+
+        font-size: 18px;
+      }
+
+      .source {
+        color: #d9b36c;
+
+        font-weight: 700;
+
+        margin-bottom: 8px;
+      }
+
+      /* =========================
+       PROPHECY
+    ========================= */
+
+      .prophecy-grid {
+        display: grid;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 25px;
+
+        margin-top: 20px;
+      }
+
+      .prophecy-card {
+        padding: 25px;
+
+        background: rgba(0, 0, 0, 0.2);
+
+        border-radius: 18px;
+
+        border: 1px solid rgba(255, 255, 255, 0.07);
+
+        color: #eee4d7;
+      }
+
+      .prophecy-card h4 {
+        color: #d9b36c;
+
+        font-size: 19px;
+
+        margin-bottom: 10px;
+      }
+
+      /* =========================
+       LITURGY
+    ========================= */
+
+      .liturgy {
+        background: rgba(92, 60, 30, 0.16);
+
+        border-radius: 18px;
+
+        padding: 25px 30px;
+
+        border: 1px solid rgba(218, 177, 106, 0.13);
+
+        color: #eee4d7;
+
+        font-size: 18px;
+      }
+
+      .liturgy p {
+        margin-bottom: 12px;
+      }
+
+      /* =========================
+       HYMN
+    ========================= */
+
+      .hymn {
+        margin-top: 20px;
+
+        padding: 20px 25px;
+
+        text-align: center;
+
+        background: linear-gradient(
+          135deg,
+          rgba(201, 155, 74, 0.15),
+          rgba(0, 0, 0, 0.2)
+        );
+
+        border: 1px solid rgba(201, 155, 74, 0.25);
+
+        border-radius: 18px;
+
+        color: #f0d49a;
+
+        font-family: "Aref Ruqaa", serif;
+
+        font-size: 24px;
+      }
+
+      /* =========================
+       BACK BUTTON
+    ========================= */
+
+      .back-container {
+        text-align: center;
+
+        margin-top: 20px;
+      }
+
+      .back-btn {
+        display: inline-block;
+
+        text-decoration: none;
+
+        color: #1a1107;
+
+        background: linear-gradient(135deg, #e2bd71, #a8782e);
+
+        padding: 13px 35px;
+
+        border-radius: 30px;
+
+        font-weight: 900;
+
+        font-size: 17px;
+
+        transition: 0.3s ease;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .back-btn:hover {
+        transform: translateY(-3px);
+
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+      }
+
+      /* =========================
+       FOOTER
+    ========================= */
+
+      footer {
+        text-align: center;
+
+        padding: 40px 20px;
+
+        border-top: 1px solid rgba(218, 177, 106, 0.15);
+
+        color: #a99b8a;
+
+        font-size: 16px;
+      }
+
+      /* =========================
+       RESPONSIVE
+    ========================= */
+
+      @media (max-width: 800px) {
+        .container {
+          width: 92%;
+
+          padding-top: 45px;
+        }
+
+        .event {
+          padding: 25px 20px;
+
+          margin-bottom: 45px;
+
+          border-radius: 20px;
+        }
+
+        .prophecy-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .quote,
+        .lesson,
+        .liturgy {
+          padding: 20px;
+        }
+
+        .section-title {
+          font-size: 20px;
+        }
+
+        .text,
+        .lesson,
+        .liturgy,
+        .quote {
+          font-size: 16px;
+        }
+
+        .hymn {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+       HERO
+  ========================= -->
+
+    <header class="hero">
+      <div class="hero-content">
+        <span class="cross">✝</span>
+
+        <h1>أحد الشعانين</h1>
+
+        <p class="hero-subtitle">دخول السيد المسيح إلى أورشليم</p>
+
+        <span class="hero-reference">
+          متى 21 • مرقس 11 • لوقا 19 • يوحنا 12
+        </span>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- =========================
+         EVENT 1
+    ========================= -->
+
+      <section class="event">
+        <div class="event-number">١</div>
+
+        <h2>الوصول إلى قرية بيت فاجي عند جبل الزيتون</h2>
+
+        <h3 class="section-title">الحدث</h3>
+
+        <p class="reference">متى 21: 1 • مرقس 11: 1 • لوقا 19: 28</p>
+
+        <div class="quote">
+          «وَلَمَّا قَرُبُوا مِنْ أُورُشَلِيمَ وَجَاءُوا إِلَى بَيْتِ فَاجِي
+          عِنْدَ جَبَلِ الزَّيْتُونِ...»
+        </div>
+
+        <p class="text">
+          بدأ السيد المسيح طريق دخوله إلى أورشليم من ناحية جبل الزيتون، وكان
+          يعلم أنه داخل إلى أورشليم ليكمل طريق الصليب والفداء.
+        </p>
+
+        <h3 class="section-title">الدرس الروحي</h3>
+
+        <div class="lesson">
+          المسيح لم يدخل أورشليم تحت ضغط الظروف، لكنه دخل بإرادته وهو عالم بما
+          ينتظره.
+
+          <br />
+
+          وهذا يعلمنا أن نسير مع الله بطاعة وثبات، حتى عندما يكون الطريق صعبًا،
+          وأن يكون هدفنا تنفيذ مشيئة الله وليس الهروب من الألم.
+        </div>
+
+        <h3 class="section-title">الرمز والنبوة</h3>
+
+        <div class="quote">
+          «وَتَقِفُ رِجْلَاهُ فِي ذَلِكَ الْيَوْمِ عَلَى جَبَلِ الزَّيْتُونِ»
+          <br />
+          <span class="reference">(زك 14: 4)</span>
+        </div>
+
+        <p class="text">
+          يرتبط جبل الزيتون في الكتاب المقدس بأحداث مهمة في حياة السيد المسيح،
+          ومنها دخوله أورشليم وصعوده إلى السماء.
+        </p>
+
+        <h3 class="section-title">الارتباط بالعهد الجديد</h3>
+
+        <p class="text">
+          بعد القيامة صعد السيد المسيح إلى السماء من جبل الزيتون، وقال الملاكان
+          للتلاميذ إن يسوع سيأتي أيضًا كما رأوه منطلقًا إلى السماء.
+        </p>
+
+        <p class="reference">أعمال الرسل 1: 11-12</p>
+
+        <h3 class="section-title">طقس الكنيسة</h3>
+
+        <div class="liturgy">
+          يرتبط هذا الحدث بدورة الشعانين في باكر أحد الشعانين، حيث يحمل الكهنة
+          والشمامسة الصليب وسعف النخل، وتتم الدورة داخل الكنيسة أمام الأيقونات
+          المختلفة، تذكارًا لموكب دخول السيد المسيح إلى أورشليم.
+
+          <br /><br />
+
+          وتضم الدورة اثنتي عشرة محطة تُقرأ عند كل منها فصول من المزامير
+          والأناجيل.
+        </div>
+
+        <div class="hymn">«اصعد على الجبال العالية يا مبشر صهيون...»</div>
+      </section>
+
+      <!-- =========================
+         EVENT 2
+    ========================= -->
+
+      <section class="event">
+        <div class="event-number">٢</div>
+
+        <h2>إرسال التلميذين لإحضار الجحش والأتان</h2>
+
+        <h3 class="section-title">الحدث</h3>
+
+        <p class="reference">متى 21: 2 • مرقس 11: 2 • لوقا 19: 30</p>
+
+        <div class="quote">
+          «اذْهَبَا إِلَى الْقَرْيَةِ الَّتِي أَمَامَكُمَا، فَلِلْوَقْتِ تَجِدَا
+          أَتَانًا مَرْبُوطَةً وَجَحْشًا مَعَهَا، فَحُلَّاهُمَا وَأْتِيَانِي
+          بِهِمَا»
+        </div>
+
+        <h3 class="section-title">الدرس الروحي</h3>
+
+        <div class="lesson">
+          المسيح يطلب منا أن نقدم له ما نملكه، حتى لو بدا بسيطًا.
+
+          <br /><br />
+
+          كما أن الجحش كان مربوطًا ثم حُلَّ، وهذا يحمل معنى روحيًا: المسيح يأتي
+          ليحرر الإنسان من قيوده ومن سلطان الخطية.
+        </div>
+
+        <h3 class="section-title">أقوال الآباء</h3>
+
+        <div class="prophecy-grid">
+          <div class="prophecy-card">
+            <h4>القديس كيرلس الكبير</h4>
+
+            <p>
+              «الأتان والجحش يُمثّلان رمزيًا العالم في ذلك الحين، إذ انقسم
+              العالم إلى اليهود والأمم.»
+            </p>
+          </div>
+
+          <div class="prophecy-card">
+            <h4>القديس يوحنا ذهبي الفم</h4>
+
+            <p>
+              «عندما أرسل الرب تلميذيه ليُحضِرا الأتان والجحش، أخبرهما مُسبقًا
+              أنه لن يعترضهما أحد...»
+            </p>
+          </div>
+        </div>
+
+        <h3 class="section-title">النبوة</h3>
+
+        <div class="quote">
+          «لاَ يَزُولُ قَضِيبٌ مِنْ يَهُوذَا... رَابِطًا بِالْكَرْمَةِ جَحْشَهُ»
+
+          <br />
+
+          <span class="reference"> تكوين 49: 10-11 </span>
+        </div>
+
+        <div class="quote">
+          «هُوَذَا مَلِكُكِ يَأْتِي إِلَيْكِ... وَدِيعٌ وَرَاكِبٌ عَلَى حِمَارٍ
+          وَعَلَى جَحْشٍ ابْنِ أَتَانٍ»
+
+          <br />
+
+          <span class="reference"> زكريا 9: 9 </span>
+        </div>
+
+        <h3 class="section-title">طقس الكنيسة</h3>
+
+        <div class="liturgy">
+          في دورة الشعانين تُقرأ فصول من الأناجيل أمام أيقونات مختلفة في
+          الكنيسة، وتُقام الدورة بالصليب وسعف النخل، ويردد الشعب مردات الشعانين.
+        </div>
+
+        <div class="hymn">«أوصنا خلصنا في الأعالي، هذا هو ملك إسرائيل...»</div>
+      </section>
+
+      <!-- =========================
+         EVENT 3
+    ========================= -->
+
+      <section class="event">
+        <div class="event-number">٣</div>
+
+        <h2>طاعة التلميذين وإتمام النبوة</h2>
+
+        <h3 class="section-title">الحدث</h3>
+
+        <p class="reference">متى 21: 6 • مرقس 11: 4-6 • لوقا 19: 32-34</p>
+
+        <div class="quote">
+          «فَذَهَبَ التِّلْمِيذَانِ وَفَعَلَا كَمَا أَمَرَهُمَا يَسُوعُ»
+        </div>
+
+        <p class="text">
+          وأحضرا الأتان والجحش، ووضعا عليهما ثيابهما، فركب السيد المسيح.
+
+          <br /><br />
+
+          وتحققت النبوة التي قالها زكريا عن الملك الوديع الذي يأتي راكبًا على
+          جحش.
+        </p>
+
+        <h3 class="section-title">الدرس الروحي</h3>
+
+        <div class="lesson">
+          نتعلم من التلميذين الطاعة السريعة دون جدال أو تردد، ونتعلم من المسيح
+          نفسه الاتضاع.
+
+          <br /><br />
+
+          فهو الملك، ومع ذلك لم يدخل أورشليم في مركبة حربية أو بمظاهر عظمة
+          أرضية، بل دخل وديعًا راكبًا على جحش.
+        </div>
+
+        <h3 class="section-title">قول القديس يوحنا ذهبي الفم</h3>
+
+        <div class="quote">
+          «لقد جلس الرب على الجحش بعد أن غطّاه الرسولان بثيابهما، لأنهما بعد أن
+          وجدا الجحش سلّما كل شيء...»
+        </div>
+
+        <h3 class="section-title">النبوة</h3>
+
+        <div class="quote">
+          «هُوَذَا مَلِكُكِ يَأْتِي إِلَيْكِ وَدِيعٌ وَرَاكِبٌ عَلَى حِمَارٍ
+          وَعَلَى جَحْشٍ ابْنِ أَتَانٍ»
+
+          <br />
+
+          <span class="reference"> زكريا 9: 9 </span>
+        </div>
+
+        <h3 class="section-title">التحقيق</h3>
+
+        <div class="lesson">
+          تحققت النبوة مباشرة في دخول السيد المسيح إلى أورشليم، كما يذكر القديس
+          متى:
+
+          <br /><br />
+
+          «وَهذَا كُلُّهُ كَانَ لِكَيْ يَتِمَّ مَا قِيلَ بِالنَّبِيِّ...»
+
+          <br />
+
+          <span class="reference"> متى 21: 4-7 </span>
+
+          <br /><br />
+
+          أما قول بولس الرسول:
+
+          <br /><br />
+
+          «أَخْلَى نَفْسَهُ، آخِذًا صُورَةَ عَبْدٍ...»
+
+          <br />
+
+          <span class="reference"> فيلبي 2: 7-8 </span>
+
+          <br /><br />
+
+          فهو تطبيق روحي على اتضاع المسيح وطاعته.
+        </div>
+
+        <h3 class="section-title">طقس الكنيسة</h3>
+
+        <div class="liturgy">
+          يظهر معنى هذه النبوة بوضوح في قراءات الشعانين ومرداتها، حيث تؤكد
+          الكنيسة أن ما تنبأ به زكريا قد تم في دخول المسيح الملك الوديع إلى
+          أورشليم.
+
+          <br /><br />
+
+          كما أن دورة الشعانين نفسها تمثل موكب المسيح الملك.
+        </div>
+
+        <div class="hymn">
+          «اليوم تمت الأقوال من النبوة والأمثال، كما تنبأ زكريا وقال...»
+        </div>
+      </section>
+
+      <!-- =========================
+         EVENT 4
+    ========================= -->
+
+      <section class="event">
+        <div class="event-number">٤</div>
+
+        <h2>الاستقبال الشعبي الحافل</h2>
+
+        <h3 class="section-title">الحدث</h3>
+
+        <p class="reference">
+          متى 21: 8-9 • مرقس 11: 8-10 • لوقا 19: 36-38 • يوحنا 12: 12-13
+        </p>
+
+        <div class="quote">
+          «وَالْجُمُوعُ الَّذِينَ تَقَدَّمُوا وَالَّذِينَ تَبِعُوا كَانُوا
+          يَصْرُخُونَ قَائِلِينَ: أُوصَنَّا لاِبْنِ دَاوُدَ! مُبَارَكٌ الآتِي
+          بِاسْمِ الرَّبِّ! أُوصَنَّا فِي الأَعَالِي»
+        </div>
+
+        <p class="text">
+          خرجت الجموع تستقبل المسيح كملك، وفرشوا ثيابهم في الطريق وقطعوا أغصان
+          النخل والزيتون، وهتفوا له: «أوصنا».
+        </p>
+
+        <h3 class="section-title">الدرس الروحي</h3>
+
+        <div class="lesson">
+          كلمة «أوصنا» تعني «يا رب خلص».
+
+          <br /><br />
+
+          لذلك فالفرح الحقيقي في الشعانين ليس مجرد الاحتفال أو حمل سعف النخل، بل
+          أن نطلب من المسيح أن يملك على حياتنا ويخلصنا من الخطية.
+
+          <br /><br />
+
+          فالمهم ليس فقط أن نهتف للمسيح، بل أن يكون المسيح هو ملك القلب والحياة.
+        </div>
+
+        <h3 class="section-title">النبوة</h3>
+
+        <div class="quote">
+          «آهِ يَا رَبُّ خَلِّصْ! آهِ يَا رَبُّ أَنْقِذْ! مُبَارَكٌ الآتِي
+          بِاسْمِ الرَّبِّ»
+
+          <br />
+
+          <span class="reference"> مزمور 118: 25-26 </span>
+        </div>
+
+        <h3 class="section-title">الارتباط بالعهد الجديد</h3>
+
+        <div class="quote">
+          «جَمْعٌ كَثِيرٌ... وَهُمْ وَاقِفُونَ أَمَامَ الْعَرْشِ... وَسَعَفُ
+          النَّخْلِ فِي أَيْدِيهِمْ... وَهُمْ يَصْرُخُونَ بِصَوْتٍ عَظِيمٍ
+          قَائِلِينَ: الْخَلاَصُ لإِلهِنَا»
+
+          <br />
+
+          <span class="reference"> رؤيا 7: 9-10 </span>
+        </div>
+
+        <p class="text">
+          وهكذا يصبح سعف الشعانين علامة على النصرة والخلاص، ليس فقط في موكب
+          أرضي، بل في صورة الموكب السماوي الأبدي.
+        </p>
+
+        <h3 class="section-title">طقس الكنيسة</h3>
+
+        <div class="liturgy">
+          هذا هو المحور الأساسي لطقس أحد الشعانين؛ ففي عشية العيد وباكر اليوم
+          تقام دورة الشعانين، ويحمل الشعب سعف النخل، وتردد الكنيسة ألحان ومردات
+          الشعانين، ومنها:
+
+          <br /><br />
+
+          «أوصنا يا ابن داود».
+
+          <br /><br />
+
+          كما تتم دورة الشعانين داخل الكنيسة في اثنتي عشرة محطة، مع قراءات من
+          المزامير والأناجيل.
+        </div>
+
+        <div class="hymn">
+          «مبارك الآتي باسم الرب... أوصنا لابن داود، أوصنا في الأعالي.»
+        </div>
+      </section>
+
+      <!-- =========================
+         EVENT 5
+    ========================= -->
+
+      <section class="event">
+        <div class="event-number">٥</div>
+
+        <h2>غضب الفريسيين ورد المسيح عليهم</h2>
+
+        <h3 class="section-title">الحدث</h3>
+
+        <div class="quote">
+          «يَا مُعَلِّمُ، انْتَهِرْ تَلاَمِيذَكَ»
+
+          <br /><br />
+
+          فأجابهم:
+
+          <br /><br />
+
+          «إِنِّي أَقُولُ لَكُمْ: إِنَّهُ إِنْ سَكَتَ هؤُلاَءِ فَالْحِجَارَةُ
+          تَصْرُخُ»
+
+          <br />
+
+          <span class="reference"> لوقا 19: 39-40 </span>
+        </div>
+
+        <h3 class="section-title">الدرس الروحي</h3>
+
+        <div class="lesson">
+          بينما كان التلاميذ والجموع يسبحون، كان الفريسيون ممتلئين بالرفض
+          والاعتراض.
+
+          <br /><br />
+
+          وهذا يحذرنا من أن نكون قريبين من المسيح بالجسد، لكن قلوبنا بعيدة عنه.
+
+          <br /><br />
+
+          المسيح يريد قلبًا يسبح ويشهد له، وليس مجرد مظهر خارجي.
+        </div>
+
+        <h3 class="section-title">الربط الكتابي</h3>
+
+        <div class="quote">
+          «لأَنَّ الْحَجَرَ يَصْرُخُ مِنَ الْحَائِطِ، وَالْخَشَبَ يَجِيبُهُ مِنَ
+          الْعِرْفِ»
+
+          <br />
+
+          <span class="reference"> حبقوق 2: 11 </span>
+        </div>
+
+        <p class="text">
+          يمكن ربط هذه الآية بصورة الحجر الذي يشهد ويصرخ، لكنها ليست نبوة مباشرة
+          عن كلام المسيح في لوقا 19: 40.
+        </p>
+
+        <h3 class="section-title">الارتباط بالعهد الجديد</h3>
+
+        <div class="quote">
+          «لأَنِّي أَقُولُ لَكُمْ إِنَّ اللهَ قَادِرٌ أَنْ يُقِيمَ مِنْ هذِهِ
+          الْحِجَارَةِ أَوْلاَدًا لإِبْرَاهِيمَ»
+
+          <br />
+
+          <span class="reference"> متى 3: 9 </span>
+        </div>
+
+        <h3 class="section-title">طقس الكنيسة</h3>
+
+        <div class="liturgy">
+          يرتبط هذا الحدث بإنجيل لوقا ضمن قراءات أحد الشعانين، حيث تُعلن الكنيسة
+          أن هتاف المؤمنين للمسيح لا يستطيع أحد أن يمنعه.
+
+          <br /><br />
+
+          كما أن قراءات دورة الشعانين تشمل عدة فصول من الأناجيل أمام الأيقونات
+          المختلفة.
+        </div>
+
+        <div class="hymn">
+          مرد الإنجيل الخاص بقراءة الشعانين، مع مردات التسبيح التي ترددها
+          الكنيسة أثناء الدورة.
+        </div>
+      </section>
+
+      <!-- =========================
+         EVENT 6
+    ========================= -->
+
+      <section class="event">
+        <div class="event-number">٦</div>
+
+        <h2>بكاء المسيح على أورشليم</h2>
+
+        <h3 class="section-title">الحدث</h3>
+
+        <p class="reference">لوقا 19: 41-44</p>
+
+        <div class="quote">
+          «فَلَمَّا قَرُبَ وَرَأَى الْمَدِينَةَ بَكَى عَلَيْهَا، قَائِلًا:
+          إِنَّكِ لَوْ عَلِمْتِ أَنْتِ أَيْضًا، حَتَّى فِي يَوْمِكِ هذَا، مَا
+          هُوَ لِسَلاَمِكِ!»
+
+          <br /><br />
+
+          «لِأَنَّكِ لَمْ تَعْرِفِي زَمَانَ افْتِقَادِكِ»
+        </div>
+
+        <p class="text">
+          بعد كل مظاهر الفرح والاستقبال، نرى المسيح يبكي على أورشليم؛ لأنه لم
+          ينظر إلى المظاهر الخارجية، بل رأى رفض الإنسان للخلاص.
+        </p>
+
+        <h3 class="section-title">الدرس الروحي</h3>
+
+        <div class="lesson">
+          دموع المسيح تكشف لنا محبته العميقة للإنسان. فهو لا يفرح بهلاك الإنسان،
+          بل يريد خلاصه.
+
+          <br /><br />
+
+          لذلك يجب أن نسأل أنفسنا:
+
+          <br /><br />
+
+          هل أعرف «زمان افتقادي»؟
+
+          <br /><br />
+
+          وهل أستجيب عندما يفتقدني الله ويطرق باب قلبي، أم أؤجل التوبة؟
+
+          <br /><br />
+
+          والشعانين تدعونا ألا يكون هتافنا للمسيح مجرد هتاف خارجي، بل أن يتحول
+          إلى حياة حقيقية معه.
+        </div>
+
+        <h3 class="section-title">الربط الكتابي</h3>
+
+        <div class="quote">
+          «مَنْ يُعْطِي رَأْسِي مَاءً وَعَيْنِي يَنْبُوعَ دُمُوعٍ فَأَبْكِيَ
+          نَهَارًا وَلَيْلًا قَتْلَى بِنْتِ شَعْبِي؟»
+
+          <br />
+
+          <span class="reference"> إرميا 9: 1 </span>
+        </div>
+
+        <p class="text">هذه الآية تمثل صورة كتابية للحزن على شعب الله.</p>
+
+        <h3 class="section-title">طقس الكنيسة</h3>
+
+        <div class="liturgy">
+          يأتي إنجيل لوقا الذي يذكر بكاء المسيح على أورشليم ضمن قراءات أحد
+          الشعانين، ويقودنا هذا المشهد من فرح استقبال الملك إلى التأمل في محبته
+          وحزنه على الإنسان الذي لم يعرف زمان افتقاده.
+
+          <br /><br />
+
+          بعد انتهاء قداس أحد الشعانين، تُقام صلاة التجنيز العام، ثم تبدأ صلوات
+          وألحان أسبوع الآلام.
+
+          <br /><br />
+
+          وتُسدل الستور السوداء في الكنيسة مع بداية البصخة المقدسة مساء أحد
+          الشعانين.
+        </div>
+
+        <div class="hymn">
+          بعد انتهاء طقس التجنيز العام تبدأ ألحان أسبوع الآلام الحزينة، وتدخل
+          الكنيسة في جو التوبة والتأمل في آلام السيد المسيح وصلبه، استعدادًا
+          للقيامة.
+        </div>
+      </section>
+
+      <!-- =========================
+         BACK
+    ========================= -->
+
+      <div class="back-container">
+        <a href="index.html" class="back-btn">
+          ← العودة إلى خريطة أسبوع الآلام
+        </a>
+      </div>
+    </main>
+
+    <!-- =========================
+       FOOTER
+  ========================= -->
+
+    <footer>
+      <p>✝ أحد الشعانين ✝</p>
+
+      <p>دخول السيد المسيح إلى أورشليم</p>
+    </footer>
+  </body>
+</html>
