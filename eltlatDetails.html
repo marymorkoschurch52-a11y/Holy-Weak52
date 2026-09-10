@@ -1606,6 +1606,36 @@
 
 
   
+  <script>
+
+    // تأثير بسيط عند تحميل الصفحة
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+      const events = document.querySelectorAll(
+        ".event, .reading-card, .liturgy, .final-message"
+      );
+
+      events.forEach((element, index) => {
+
+        element.style.opacity = "0";
+        element.style.transform = "translateY(20px)";
+
+        setTimeout(() => {
+
+          element.style.transition =
+            "opacity 0.7s ease, transform 0.7s ease";
+
+          element.style.opacity = "1";
+          element.style.transform = "translateY(0)";
+
+        }, index * 80);
+
+      });
+
+    });
+
+  </script>
 
 </body>
 
