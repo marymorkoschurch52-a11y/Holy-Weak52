@@ -433,3 +433,9 @@ a{ color:inherit; }
 @media (min-width: 760px){
   .image-container{ flex-basis: 46%; max-width: 260px; }
 }
+
+
+.forBtn{
+  display: flex;
+  gap: 5px;
+}

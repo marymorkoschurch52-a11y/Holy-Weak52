@@ -1,0 +1,551 @@
+```html
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>سبت لعازر | أسبوع الآلام</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* =========================================
+         VARIABLES
+      ========================================= */
+
+      :root {
+        --parchment: #ecdfb8;
+        --parchment-light: #f8efd5;
+        --parchment-dark: #d4bd86;
+
+        --ink: #3e2a18;
+        --ink-soft: #654b2d;
+
+        --clay: #9c4a28;
+        --gold: #b58a3a;
+      }
+
+      /* =========================================
+         RESET
+      ========================================= */
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Tajawal", sans-serif;
+        color: var(--ink);
+        min-height: 100vh;
+
+        background: radial-gradient(
+          circle at top,
+          #faf1d7,
+          var(--parchment) 55%,
+          var(--parchment-dark)
+        );
+      }
+
+      /* =========================================
+         PAPER TEXTURE
+      ========================================= */
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.13;
+
+        background-image: radial-gradient(#654b2d 0.7px, transparent 0.7px);
+
+        background-size: 8px 8px;
+        z-index: -1;
+      }
+
+      /* =========================================
+         HEADER
+      ========================================= */
+
+      header {
+        text-align: center;
+        padding: 70px 20px 40px;
+      }
+
+      .back {
+        display: inline-block;
+        padding: 10px 22px;
+        margin-bottom: 40px;
+
+        border-radius: 50px;
+
+        background: var(--clay);
+        color: white;
+
+        text-decoration: none;
+        font-weight: 700;
+
+        transition: 0.3s;
+      }
+
+      .back:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(62, 42, 24, 0.25);
+      }
+
+      .day-number {
+        font-size: 16px;
+        font-weight: 700;
+        color: var(--clay);
+        margin-bottom: 10px;
+      }
+
+      header h1 {
+        font-family: "Aref Ruqaa", serif;
+        font-size: clamp(50px, 8vw, 85px);
+        line-height: 1.1;
+        color: var(--ink);
+      }
+
+      header .place {
+        margin-top: 15px;
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--ink-soft);
+      }
+
+      /* =========================================
+         MAIN
+      ========================================= */
+
+      main {
+        width: min(950px, 92%);
+        margin: auto;
+        padding-bottom: 100px;
+      }
+
+      /* =========================================
+         MEDIA SECTION
+      ========================================= */
+
+      .media-section {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 70px;
+      }
+
+      /* =========================================
+         MEDIA CARD
+      ========================================= */
+
+      .media-card {
+        background: rgba(248, 239, 213, 0.96);
+
+        border-radius: 22px;
+        overflow: hidden;
+
+        border: 1px solid rgba(62, 42, 24, 0.18);
+
+        box-shadow: 0 15px 40px rgba(62, 42, 24, 0.17);
+
+        transition: 0.3s;
+      }
+
+      .media-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 22px 50px rgba(62, 42, 24, 0.23);
+      }
+
+      /* =========================================
+         MEDIA TITLE
+      ========================================= */
+
+      .media-title {
+        padding: 20px 25px;
+        border-bottom: 1px solid rgba(62, 42, 24, 0.12);
+      }
+
+      .media-title span {
+        color: var(--clay);
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .media-title h2 {
+        font-family: "Aref Ruqaa", serif;
+        font-size: 30px;
+        margin-top: 5px;
+      }
+
+      /* =========================================
+         IMAGE
+      ========================================= */
+
+      .image-box {
+        width: 100%;
+        height: 500px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: #241a12;
+        overflow: hidden;
+      }
+
+      .image-box img {
+        width: 100%;
+        height: 100%;
+
+        display: block;
+
+        /* الصورة كاملة بدون قص */
+        object-fit: contain;
+
+        transition: 0.5s;
+      }
+
+      .image-box:hover img {
+        transform: scale(1.02);
+      }
+
+      /* =========================================
+         VIDEO
+      ========================================= */
+
+      .video-box {
+        width: 100%;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000;
+      }
+
+      .video-box video {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+
+      /* =========================================
+         DESCRIPTION
+      ========================================= */
+
+      .description-box {
+        margin: 0;
+        padding: 30px;
+
+        background: var(--parchment-light);
+
+        border-top: 1px solid var(--parchment-dark);
+      }
+
+      .description-box h3 {
+        margin-bottom: 15px;
+
+        color: var(--clay);
+
+        font-family: "Aref Ruqaa", serif;
+
+        font-size: 32px;
+      }
+
+      .description-box p {
+        margin: 10px 0;
+
+        color: var(--ink-soft);
+
+        font-size: 19px;
+        line-height: 2.1;
+      }
+
+      .bible-reference {
+        text-align: left;
+
+        color: var(--clay) !important;
+
+        font-weight: 700;
+
+        font-size: 17px !important;
+      }
+
+      /* =========================================
+         CONTENT
+      ========================================= */
+
+      .content-card {
+        background: rgba(248, 239, 213, 0.96);
+
+        border-radius: 22px;
+
+        padding: 40px;
+
+        border: 1px solid rgba(62, 42, 24, 0.18);
+
+        box-shadow: 0 15px 40px rgba(62, 42, 24, 0.17);
+      }
+
+      .content-card h2 {
+        font-family: "Aref Ruqaa", serif;
+
+        font-size: 38px;
+
+        color: var(--clay);
+
+        margin-bottom: 20px;
+      }
+
+      .content-card p {
+        font-size: 19px;
+
+        line-height: 2.1;
+
+        color: var(--ink-soft);
+
+        margin-bottom: 20px;
+      }
+
+      /* =========================================
+         QUOTE
+      ========================================= */
+
+      .quote {
+        margin-top: 30px;
+
+        padding: 25px 30px;
+
+        border-right: 5px solid var(--clay);
+
+        background: rgba(156, 74, 40, 0.07);
+
+        border-radius: 10px;
+      }
+
+      .quote p {
+        font-family: "Aref Ruqaa", serif;
+
+        font-size: 25px;
+
+        color: var(--ink);
+
+        margin: 0;
+      }
+
+      /* =========================================
+         FOOTER
+      ========================================= */
+
+      footer {
+        text-align: center;
+
+        padding: 30px;
+
+        border-top: 1px solid rgba(62, 42, 24, 0.15);
+
+        color: var(--ink-soft);
+      }
+
+      /* =========================================
+         MOBILE
+      ========================================= */
+
+      @media (max-width: 600px) {
+        header {
+          padding: 40px 15px 30px;
+        }
+
+        .back {
+          margin-bottom: 30px;
+        }
+
+        header h1 {
+          font-size: 50px;
+        }
+
+        header .place {
+          font-size: 17px;
+        }
+
+        main {
+          width: 94%;
+        }
+
+        .image-box {
+          height: 350px;
+        }
+
+        .media-title {
+          padding: 18px;
+        }
+
+        .media-title h2 {
+          font-size: 25px;
+        }
+
+        .description-box {
+          padding: 22px;
+        }
+
+        .description-box h3 {
+          font-size: 28px;
+        }
+
+        .description-box p {
+          font-size: 16px;
+          line-height: 2;
+        }
+
+        .content-card {
+          padding: 25px;
+        }
+
+        .content-card h2 {
+          font-size: 32px;
+        }
+
+        .content-card p {
+          font-size: 16px;
+        }
+
+        .quote p {
+          font-size: 21px;
+        }
+      }
+    
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
+      <a href="index.html" class="back"> ← العودة إلى الخريطة </a>
+
+      <div class="day-number">اليوم الأول — السبت</div>
+
+      <h1>سبت لعازر</h1>
+
+      <p class="place">بيت عنيا</p>
+    </header>
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main>
+      <section class="media-section">
+        <!-- =====================================
+             IMAGE
+        ====================================== -->
+
+        <article class="media-card">
+          <div class="media-title">
+            <span>🖼️ صورة اليوم</span>
+
+            <h2>سبت لعازر</h2>
+          </div>
+
+          <div class="image-box">
+            <img
+              src="https://www.copts-united.com/uploads/2958/51_20170407090502.JPG"
+              alt="سبت لعازر"
+            />
+          </div>
+
+          <!-- شرح الصورة -->
+
+          <div class="description-box">
+            <h3>سبت لعازر</h3>
+
+            <p>
+              «قال لها يسوع: أنا هو القيامة والحياة. من آمن بي ولو مات فسيحيا،
+              وكل من كان حيًا وآمن بي فلن يموت إلى الأبد. أتؤمنين بهذا؟»
+            </p>
+
+            <p class="bible-reference">يوحنا 11 : 25-26</p>
+          </div>
+        </article>
+
+        <!-- =====================================
+             VIDEO
+        ====================================== -->
+
+        <article class="media-card">
+          <div class="media-title">
+            <span> 🎥 فيديو اليوم </span>
+
+            <h2>تأمل في سبت لعازر</h2>
+          </div>
+
+          <div class="video-box">
+            <video controls preload="metadata">
+              <source src="video1.mp4" type="video/mp4" />
+
+              المتصفح الخاص بك لا يدعم تشغيل الفيديو.
+            </video>
+          </div>
+
+          <!-- شرح الفيديو -->
+
+          <div class="description-box">
+            <h3>شرح الفيديو</h3>
+
+            <p>اكتب هنا الشرح الخاص بالفيديو.</p>
+
+            <p>يمكنك إضافة أكثر من فقرة حسب المحتوى الذي تريد كتابته.</p>
+          </div>
+        </article>
+      </section>
+
+      <!-- =====================================
+           INFORMATION
+      ====================================== -->
+
+      <section class="content-card">
+        <h2>سبت لعازر</h2>
+
+        <p>
+          قبل دخوله أورشليم بيوم واحد، توجّه المسيح إلى بيت عنيا وأقام صديقه
+          لعازر من الموت بعد أربعة أيام في القبر.
+        </p>
+
+        <p>
+          كانت هذه المعجزة إعلانًا واضحًا عن سلطان المسيح على الموت، وتمهيدًا
+          لما سيحدث بعد أيام قليلة في القيامة.
+        </p>
+
+        <div class="quote">
+          <p>«أنا هو القيامة والحياة»</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+      <p>خريطة أسبوع الآلام — تذكار الأيام المقدّسة</p>
+    </footer>
+  </body>
+</html>
+```
