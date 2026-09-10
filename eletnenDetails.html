@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>اثنين البصخة المقدسة — الاثنين الكبير</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Tajawal", sans-serif;
+      background:
+        radial-gradient(circle at top, #3b2a1d 0%, #18120e 45%, #0b0907 100%);
+      color: #f8f1e7;
+      line-height: 1.9;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.08;
+      background-image:
+        radial-gradient(circle, #fff 1px, transparent 1px);
+      background-size: 35px 35px;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "✝";
+      position: absolute;
+      font-size: 300px;
+      color: rgba(180, 132, 70, 0.05);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 950px;
+    }
+
+    .cross {
+      font-size: 55px;
+      color: #d4a45f;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: "Aref Ruqaa", serif;
+      font-size: clamp(42px, 7vw, 85px);
+      line-height: 1.25;
+      color: #f4d49a;
+      text-shadow: 0 5px 30px rgba(0, 0, 0, 0.6);
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-family: "Aref Ruqaa", serif;
+      color: #e6c27a;
+      font-size: clamp(22px, 3vw, 34px);
+    }
+
+    .hero-description {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #d8ccc0;
+    }
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    .container {
+      width: min(1400px, 94%);
+      margin: auto;
+      padding: 40px 0 100px;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 70px;
+    }
+
+    .intro h2 {
+      font-family: "Aref Ruqaa", serif;
+      color: #e2b86b;
+      font-size: clamp(32px, 5vw, 55px);
+      margin-bottom: 15px;
+    }
+
+    .intro p {
+      color: #cfc2b5;
+      font-size: 18px;
+    }
+
+    /* =========================
+       EVENT
+    ========================= */
+
+    .event {
+      margin-bottom: 70px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(73, 51, 34, 0.75),
+          rgba(22, 16, 12, 0.92)
+        );
+      border: 1px solid rgba(212, 164, 95, 0.25);
+      border-radius: 25px;
+      padding: clamp(25px, 5vw, 55px);
+      box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px rgba(255, 255, 255, 0.04);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        #e0b86b,
+        #8b5e34,
+        transparent
+      );
+    }
+
+    .event-number {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #4b321f;
+      border: 1px solid #c79b59;
+      color: #f1cf91;
+      font-size: 23px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .event-title {
+      font-family: "Aref Ruqaa", serif;
+      font-size: clamp(28px, 4vw, 43px);
+      color: #e7c47d;
+      margin-bottom: 12px;
+    }
+
+    .event-reference {
+      display: inline-block;
+      background: rgba(212, 164, 95, 0.1);
+      border: 1px solid rgba(212, 164, 95, 0.2);
+      color: #dcb875;
+      border-radius: 30px;
+      padding: 5px 18px;
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+
+    .event p {
+      font-size: 18px;
+      color: #e1d7cd;
+      margin-bottom: 18px;
+    }
+
+    /* =========================
+       VERSE
+    ========================= */
+
+    .verse {
+      margin: 25px 0;
+      padding: 25px 30px;
+      border-right: 4px solid #c99a52;
+      background: rgba(0, 0, 0, 0.22);
+      border-radius: 15px;
+      color: #f1dfc2;
+      font-family: "Aref Ruqaa", serif;
+      font-size: 21px;
+      line-height: 2;
+    }
+
+    .verse-source {
+      display: block;
+      margin-top: 12px;
+      color: #bca58b;
+      font-family: "Tajawal", sans-serif;
+      font-size: 15px;
+    }
+
+    /* =========================
+       SECTION BOXES
+    ========================= */
+
+    .section-box {
+      margin-top: 30px;
+      padding: 28px;
+      border-radius: 18px;
+      background: rgba(0, 0, 0, 0.18);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .section-box h3 {
+      font-family: "Aref Ruqaa", serif;
+      font-size: 28px;
+      color: #e4bd73;
+      margin-bottom: 15px;
+    }
+
+    .lesson {
+      border-right: 4px solid #a96f3b;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(130, 81, 39, 0.12),
+          rgba(0, 0, 0, 0.15)
+        );
+    }
+
+    .lesson h3 {
+      color: #dca866;
+    }
+
+    .prophecy {
+      border-right: 4px solid #7f6546;
+    }
+
+    .prophecy h3 {
+      color: #cdb087;
+    }
+
+    .questions {
+      margin-top: 25px;
+      padding: 25px;
+      background: rgba(212, 164, 95, 0.06);
+      border-radius: 15px;
+    }
+
+    .questions p {
+      color: #d8c5ac;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+      text-align: center;
+      padding: 60px 20px;
+      border-top: 1px solid rgba(212, 164, 95, 0.15);
+      color: #b9a997;
+    }
+
+    .footer-cross {
+      font-size: 35px;
+      color: #c89b5a;
+      margin-bottom: 15px;
+    }
+
+    .footer p {
+      font-family: "Aref Ruqaa", serif;
+      font-size: 23px;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 700px) {
+      .hero {
+        min-height: 65vh;
+        padding: 50px 15px;
+      }
+
+      .hero::before {
+        font-size: 180px;
+      }
+
+      .container {
+        width: 92%;
+      }
+
+      .event {
+        padding: 25px 20px;
+        border-radius: 18px;
+      }
+
+      .event p {
+        font-size: 16px;
+      }
+
+      .verse {
+        padding: 20px;
+        font-size: 18px;
+      }
+
+      .section-box {
+        padding: 20px;
+      }
+
+      .section-box h3 {
+        font-size: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <header class="hero">
+    <div class="hero-content">
+
+      <span class="cross">✚</span>
+
+      <h1>
+        اثنين البصخة المقدسة
+        <br>
+        الاثنين الكبير
+      </h1>
+
+      <p class="tagline">
+        رحلة مع المسيح من بيت عنيا إلى أورشليم
+      </p>
+
+      <p class="hero-description">
+        تأمل في أحداث الاثنين الكبير، ودعوة الإنسان إلى الثمر الحقيقي
+        وتطهير القلب وقبول التوبة.
+      </p>
+
+    </div>
+  </header>
+
+
+  <main class="container">
+
+    <section class="intro">
+      <h2>أحداث الاثنين الكبير</h2>
+
+      <p>
+        في هذا اليوم نتأمل في شجرة التين، وتطهير الهيكل،
+        ومقاومة رؤساء الكهنة، وكيف يريد المسيح أن يكون لنا
+        ثمر حقيقي وحياة مقدسة.
+      </p>
+    </section>
+
+
+    <!-- =========================
+         EVENT 1
+    ========================= -->
+
+    <article class="event">
+
+      <div class="event-number">١</div>
+
+      <h2 class="event-title">
+        خروج السيد المسيح من بيت عنيا إلى أورشليم
+      </h2>
+
+      <span class="event-reference">
+        مرقس ١١ : ١٢–١٣
+      </span>
+
+      <p>
+        في صباح اليوم التالي لأحد الشعانين، خرج السيد المسيح
+        من بيت عنيا متجهًا إلى أورشليم.
+      </p>
+
+      <p>
+        وفي الطريق جاع، فنظر إلى شجرة تين من بعيد، فوجد عليها
+        ورقًا كثيرًا.
+      </p>
+
+      <div class="verse">
+        «وفي الغد لما خرجوا من بيت عنيا جاع، فنظر شجرة تين من بعيد
+        عليها ورق وجاء لعله يجد فيها شيئًا فلما جاء إليها لم يجد
+        شيئًا إلا ورقًا لأنه لم يكن وقت التين.»
+
+        <span class="verse-source">
+          مرقس ١١ : ١٢–١٣
+        </span>
+      </div>
+
+      <p>
+        كان منظر الشجرة يوحي بوجود ثمر، ولكن عندما اقترب منها
+        المسيح لم يجد فيها ثمرًا.
+      </p>
+
+      <p>
+        وهنا يبدأ أحد أهم دروس اثنين البصخة:
+        <strong>ليس المهم كثرة الأوراق والمظهر الخارجي، بل وجود الثمر.</strong>
+      </p>
+
+
+      <div class="section-box lesson">
+
+        <h3>الدرس الروحي: الله يريد الثمر وليس المظهر</h3>
+
+        <p>
+          شجرة التين كانت مليئة بالأوراق، لكنها لم تكن تحمل ثمرًا،
+          وهذا ينطبق على حياة الإنسان.
+        </p>
+
+        <p>
+          قد يكون الإنسان يصلي، ويذهب إلى الكنيسة، ويمارس طقوس الكنيسة،
+          لكن السؤال الحقيقي هو:
+        </p>
+
+        <div class="questions">
+
+          <p>هل ظهرت هذه الأمور في حياتي كثمر؟</p>
+
+          <p>هل أصبحت أشبه بالمسيح؟</p>
+
+        </div>
+
+        <p>
+          الإنسان المسيحي الحقيقي لا يتميز فقط بما يفعله من الخارج،
+          ولكن بالثمر الذي يظهر في حياته.
+        </p>
+
+      </div>
+
+
+      <div class="section-box prophecy">
+
+        <h3>النبوة المرتبطة بالمعنى</h3>
+
+        <p>
+          <strong>من النبوات: سفر التكوين ١</strong>
+        </p>
+
+        <p>
+          وتذكّرنا قصة الخليقة بأن الله خلق الإنسان وأعطاه مكانة
+          ومسؤولية، وكانت الخليقة في أصلها حسنة جدًا.
+          والقراءة تدعونا أن نحيا كما أراد الله للإنسان منذ البداية.
+        </p>
+
+        <p>
+          <strong>ومن النبوات: إشعياء ٥ : ١–٩</strong>
+        </p>
+
+        <p>
+          وفيها تشبيه شعب الله بالكرم الذي اعتنى به صاحبه وانتظر
+          منه ثمرًا، لكنه لم يُخرج الثمر المنتظر.
+          وهذا يرتبط مباشرة بفكرة المظهر والثمار التي تظهر
+          في حادثة شجرة التين.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =========================
+         EVENT 2
+    ========================= -->
+
+    <article class="event">
+
+      <div class="event-number">٢</div>
+
+      <h2 class="event-title">
+        لعن شجرة التين
+      </h2>
+
+      <span class="event-reference">
+        مرقس ١١ : ١٤، ٢٠–٢٣
+      </span>
+
+      <p>
+        قال السيد المسيح للتينة:
+      </p>
+
+      <div class="verse">
+        «لا يأكل أحد منك ثمرًا بعد إلى الأبد.»
+
+        <span class="verse-source">
+          مرقس ١١ : ١٤
+        </span>
+      </div>
+
+      <p>
+        وسمع التلاميذ هذا الكلام.
+      </p>
+
+      <p>
+        ثم دخل السيد المسيح إلى أورشليم، وفي اليوم التالي عندما
+        مروا من المكان وجدوا أن التينة قد يبست من الأصول.
+      </p>
+
+      <div class="verse">
+        «وفي الصباح إذ كانوا مجتازين رأوا التينة قد يبست من الأصول
+        فتذكر بطرس وقال يا سيد انظر التينة التي لعنتها قد يبست.»
+
+        <span class="verse-source">
+          مرقس ١١ : ٢٠–٢١
+        </span>
+      </div>
+
+      <p>
+        فأجابهم المسيح عن الإيمان:
+      </p>
+
+      <div class="verse">
+        «ليكن لكم إيمان بالله لأني الحق أقول لكم إن من قال لهذا الجبل
+        انتقل وانطرح في البحر ولا يشك في قلبه بل يؤمن أن ما يقوله
+        يكون فمهما قال يكون.»
+
+        <span class="verse-source">
+          مرقس ١١ : ٢٢–٢٣
+        </span>
+      </div>
+
+      <p>
+        وهنا نرى أن حادثة التينة ليست مجرد معجزة، لكنها تحمل تعليمًا
+        روحيًا عن الإيمان وعن ضرورة أن يكون لحياة الإنسان ثمر.
+      </p>
+
+
+      <div class="section-box lesson">
+
+        <h3>الدرس الروحي: الإيمان الحقيقي يظهر في الحياة</h3>
+
+        <p>
+          الإيمان ليس مجرد كلام أو معرفة، بل إيمان حي يظهر في حياة
+          الإنسان وأعماله وثمره.
+        </p>
+
+        <p>
+          فكما طلب المسيح ثمرًا من شجرة التين، يريد أيضًا أن يرى
+          ثمر الإيمان في حياتنا.
+        </p>
+
+      </div>
+
+
+      <div class="section-box prophecy">
+
+        <h3>النبوة المرتبطة</h3>
+
+        <p>
+          <strong>تكوين ٢ : ١٥ – ٣ : ١</strong>
+        </p>
+
+        <p>
+          وتتكلم عن الإنسان في الفردوس، والوصية التي أعطاها الله له،
+          ثم سقوط الإنسان بسبب العصيان.
+          لذلك ترتبط روحيًا بضرورة حفظ وصية الله وعدم الاكتفاء
+          بالمظهر الخارجي.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =========================
+         EVENT 3
+    ========================= -->
+
+    <article class="event">
+
+      <div class="event-number">٣</div>
+
+      <h2 class="event-title">
+        تطهير الهيكل
+      </h2>
+
+      <span class="event-reference">
+        الاثنين الكبير — الساعة السادسة
+      </span>
+
+      <p>
+        دخل السيد المسيح إلى أورشليم، ودخل الهيكل، ورأى أن بيت الله
+        قد تحول إلى مكان للمتاجرة، فطهّره.
+      </p>
+
+      <p>
+        فالهيكل هو بيت الصلاة، وليس مكانًا للمتاجرة أو استغلال العبادة.
+      </p>
+
+
+      <div class="section-box lesson">
+
+        <h3>الدرس الروحي: المسيح يطهر ولا يدلل الخطية</h3>
+
+        <p>
+          المسيح هو الوديع والمتواضع القلب، لكنه عندما رأى بيت أبيه
+          قد تحول إلى مكان للمتاجرة، طهّره.
+        </p>
+
+        <p>
+          وهذا يعلمنا أن محبة الله لا تعني أن الله يقبل الخطية.
+        </p>
+
+        <p>
+          الله يحب الإنسان، ولذلك يريد أن يطهره ويحرره من الخطية.
+        </p>
+
+        <p>
+          وكما طهر المسيح الهيكل، يريد أيضًا أن يطهر قلب الإنسان
+          ويجعله مكانًا يليق بسكنى الله.
+        </p>
+
+      </div>
+
+
+      <div class="section-box prophecy">
+
+        <h3>النبوة المرتبطة</h3>
+
+        <p>
+          <strong>خروج ٣٢ : ٧–١٥ — الساعة السادسة</strong>
+        </p>
+
+        <p>
+          هذه النبوة تتحدث عن خطية الشعب وعبادتهم للعجل وابتعادهم
+          عن الله، ولذلك ترتبط بمعنى العبادة الخاطئة وتحويل علاقة
+          الإنسان بالله إلى شيء لا يليق به.
+        </p>
+
+        <p>
+          <strong>مزمور ١٢١ : ٤ — الساعة السادسة</strong>
+        </p>
+
+        <p>
+          يأتي مع قراءة الساعة نفسها، وفيه إعلان أن الله لا يغفل
+          ولا ينام، وهو حاضر ويرى ما يحدث.
+          لذلك يوضع مع قراءة الساعة السادسة، وليس كنبوة مباشرة
+          لتطهير الهيكل.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =========================
+         EVENT 4
+    ========================= -->
+
+    <article class="event">
+
+      <div class="event-number">٤</div>
+
+      <h2 class="event-title">
+        رؤساء الكهنة والكتبة يطلبون هلاك المسيح
+      </h2>
+
+      <span class="event-reference">
+        مرقس ١١ : ١٨
+      </span>
+
+      <p>
+        عندما رأى رؤساء الكهنة والكتبة ما فعله السيد المسيح،
+        بدأوا يفكرون في طريقة يهلكونه بها.
+      </p>
+
+      <div class="verse">
+        «وسمع الكتبة ورؤساء الكهنة فطلبوا كيف يهلكونه،
+        لأنهم خافوه إذ بهت الجمع كله من تعليمه.»
+
+        <span class="verse-source">
+          مرقس ١١ : ١٨
+        </span>
+      </div>
+
+      <p>
+        فبدلًا من أن يتوبوا عندما كشف المسيح الخطأ،
+        قاوموه وقرروا التخلص منه.
+      </p>
+
+      <p>
+        وهنا يظهر الفرق بين القلب المتواضع الذي يقبل التوبيخ ويتوب،
+        والقلب المتكبر الذي يرفض الحق ويحارب من يكشف خطيته.
+      </p>
+
+
+      <div class="section-box lesson">
+
+        <h3>الدرس الروحي: قبول التوبيخ والتوبة</h3>
+
+        <p>
+          عندما يكشف الله خطيتي، هل أقبل التوبيخ وأتوب،
+          أم أبرر نفسي وأقاوم الحق؟
+        </p>
+
+        <p>
+          القلب المتواضع يقبل صوت الله ويُصلح حياته،
+          أما القلب المتكبر فيرفض التغيير حتى عندما يرى خطأه.
+        </p>
+
+      </div>
+
+
+      <div class="section-box prophecy">
+
+        <h3>المزمور المرتبط</h3>
+
+        <p>
+          <strong>مزمور ٦٤ : ٤، ٦ — الساعة التاسعة</strong>
+        </p>
+
+        <p>
+          وهو مناسب جدًا هنا لأنه يتكلم عن تدبير الأشرار
+          ومؤامراتهم ضد البار، وهو معنى واضح في طلب رؤساء
+          الكهنة والكتبة هلاك المسيح.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =========================
+         EVENT 5
+    ========================= -->
+
+    <article class="event">
+
+      <div class="event-number">٥</div>
+
+      <h2 class="event-title">
+        خروج المسيح من المدينة
+      </h2>
+
+      <span class="event-reference">
+        مرقس ١١ : ١٩
+      </span>
+
+      <p>
+        عند المساء خرج السيد المسيح من أورشليم.
+      </p>
+
+      <div class="verse">
+        «ولما صار المساء خرج إلى خارج المدينة.»
+
+        <span class="verse-source">
+          مرقس ١١ : ١٩
+        </span>
+      </div>
+
+      <p>
+        وهكذا ينتهي تسلسل أحداث اليوم.
+      </p>
+
+
+      <div class="section-box lesson">
+
+        <h3>الدرس الروحي</h3>
+
+        <p>
+          بعد أن رأينا التينة والهيكل ومقاومة رؤساء الكهنة،
+          ينتهي اليوم بدعوة الإنسان أن يفحص نفسه:
+        </p>
+
+        <div class="questions">
+
+          <p>هل في حياتي ثمر؟</p>
+
+          <p>هل قلبي هيكل للمسيح؟</p>
+
+          <p>هل أقبل توبيخ الله وأتوب؟</p>
+
+        </div>
+
+      </div>
+
+
+      <div class="section-box prophecy">
+
+        <h3>النبوة الخاصة بإعداد الطريق</h3>
+
+        <div class="verse">
+          «صَوْتُ صَارِخٍ فِي الْبَرِّيَّةِ:
+          أَعِدُّوا طَرِيقَ الرَّبِّ.
+          قَوِّمُوا فِي الْقَفْرِ سَبِيلًا لإِلَهِنَا.»
+
+          <span class="verse-source">
+            إشعياء ٤٠ : ٣
+          </span>
+        </div>
+
+        <p>
+          وتحقيقها:
+        </p>
+
+        <div class="verse">
+          «صَوْتُ صَارِخٍ فِي الْبَرِّيَّةِ:
+          أَعِدُّوا طَرِيقَ الرَّبِّ،
+          اصْنَعُوا سُبُلَهُ مُسْتَقِيمَةً.»
+
+          <span class="verse-source">
+            مرقس ١ : ٣
+          </span>
+        </div>
+
+      </div>
+
+    </article>
+
+
+  </main>
+
+
+  <footer class="footer">
+
+    <div class="footer-cross">✚</div>
+
+    <p>
+      اثنين البصخة المقدسة — الاثنين الكبير
+    </p>
+
+    <p>
+      الله يريد الثمر، ويطهر القلب، ويدعونا إلى التوبة.
+    </p>
+
+  </footer>
+
+  
+ 
+
+</body>
+</html>

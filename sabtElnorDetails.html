@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>سبت النور | سبت الفرح</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Tajawal", sans-serif;
+
+      background:
+        radial-gradient(
+          circle at top,
+          #3b2a1d 0%,
+          #18120e 45%,
+          #0b0907 100%
+        );
+
+      color: #f8f1e7;
+      line-height: 1.9;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 70vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 80px 20px;
+
+      position: relative;
+      overflow: hidden;
+
+      border-bottom: 1px solid rgba(217, 179, 108, 0.2);
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+      width: 500px;
+      height: 500px;
+
+      background: rgba(217, 179, 108, 0.08);
+
+      border-radius: 50%;
+
+      filter: blur(80px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 900px;
+    }
+
+    .cross {
+      font-size: 65px;
+      color: #d9b36c;
+
+      margin-bottom: 20px;
+
+      text-shadow:
+        0 0 20px rgba(217, 179, 108, 0.4);
+    }
+
+    .hero h1 {
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: clamp(42px, 7vw, 80px);
+
+      color: #f0d49a;
+
+      margin-bottom: 15px;
+
+      text-shadow:
+        0 5px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h2 {
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: clamp(24px, 4vw, 40px);
+
+      color: #d9b36c;
+
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      color: #ddd0bd;
+
+      font-size: 19px;
+
+      max-width: 750px;
+
+      margin: auto;
+    }
+
+    .references {
+      margin-top: 25px;
+
+      color: #a8782e;
+
+      font-size: 17px;
+
+      letter-spacing: 1px;
+    }
+
+    /* =========================
+       CONTAINER
+    ========================= */
+
+    .container {
+      width: min(1100px, 92%);
+
+      margin: auto;
+    }
+
+    /* =========================
+       SECTION TITLE
+    ========================= */
+
+    .section-title {
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: 38px;
+
+      color: #f0d49a;
+
+      text-align: center;
+
+      margin: 80px 0 40px;
+
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+
+      display: block;
+
+      width: 90px;
+      height: 2px;
+
+      background: #c99b4a;
+
+      margin: 15px auto;
+    }
+
+    /* =========================
+       EVENTS
+    ========================= */
+
+    .event {
+      position: relative;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.07),
+          rgba(255, 255, 255, 0.025)
+        );
+
+      border: 1px solid rgba(217, 179, 108, 0.22);
+
+      border-radius: 22px;
+
+      padding: 35px;
+
+      margin-bottom: 30px;
+
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+      backdrop-filter: blur(12px);
+
+      transition: 0.3s ease;
+    }
+
+    .event:hover {
+      transform: translateY(-5px);
+
+      border-color: rgba(217, 179, 108, 0.5);
+
+      box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .event-number {
+      width: 55px;
+      height: 55px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #d9b36c,
+          #a8782e
+        );
+
+      color: #18120e;
+
+      font-size: 22px;
+      font-weight: 800;
+
+      margin-bottom: 20px;
+    }
+
+    .event h3 {
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: 30px;
+
+      color: #f0d49a;
+
+      margin-bottom: 20px;
+    }
+
+    .event h4 {
+      color: #d9b36c;
+
+      font-size: 21px;
+
+      margin: 25px 0 8px;
+    }
+
+    .event p {
+      color: #eee4d7;
+
+      font-size: 17px;
+    }
+
+    /* =========================
+       SCRIPTURE
+    ========================= */
+
+    .quote {
+      margin-top: 20px;
+
+      padding: 22px 25px;
+
+      border-right: 4px solid #c99b4a;
+
+      background:
+        rgba(201, 155, 74, 0.07);
+
+      border-radius: 12px;
+
+      color: #f0d49a;
+
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: 21px;
+    }
+
+    .reference {
+      display: block;
+
+      margin-top: 10px;
+
+      color: #a8782e;
+
+      font-family: "Tajawal", sans-serif;
+
+      font-size: 15px;
+    }
+
+    /* =========================
+       LESSON
+    ========================= */
+
+    .lesson {
+      margin-top: 20px;
+
+      padding: 25px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(217, 179, 108, 0.09),
+          rgba(0, 0, 0, 0.1)
+        );
+
+      border: 1px solid rgba(217, 179, 108, 0.18);
+
+      border-radius: 15px;
+    }
+
+    .lesson strong {
+      color: #f0d49a;
+
+      font-size: 21px;
+    }
+
+    /* =========================
+       LIST
+    ========================= */
+
+    ul {
+      margin: 15px 25px 0;
+
+      padding-right: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+
+      color: #ddd0bd;
+    }
+
+    li::marker {
+      color: #c99b4a;
+    }
+
+    /* =========================
+       READING CARD
+    ========================= */
+
+    .reading-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 25px;
+    }
+
+    .reading-card {
+      background:
+        rgba(255, 255, 255, 0.045);
+
+      border: 1px solid rgba(217, 179, 108, 0.18);
+
+      border-radius: 18px;
+
+      padding: 28px;
+
+      transition: 0.3s ease;
+    }
+
+    .reading-card:hover {
+      transform: translateY(-4px);
+
+      border-color: rgba(217, 179, 108, 0.45);
+    }
+
+    .reading-card h3 {
+      font-family: "Aref Ruqaa", serif;
+
+      color: #f0d49a;
+
+      font-size: 27px;
+
+      margin-bottom: 15px;
+    }
+
+    .reading-card h4 {
+      color: #d9b36c;
+
+      margin-top: 15px;
+    }
+
+    /* =========================
+       RITE
+    ========================= */
+
+    .liturgy {
+      padding: 30px;
+
+      margin-top: 20px;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(217, 179, 108, 0.08),
+          rgba(255, 255, 255, 0.025)
+        );
+
+      border: 1px solid rgba(217, 179, 108, 0.2);
+    }
+
+    .liturgy h3 {
+      font-family: "Aref Ruqaa", serif;
+
+      color: #f0d49a;
+
+      font-size: 29px;
+
+      margin-bottom: 15px;
+    }
+
+    /* =========================
+       HYMN
+    ========================= */
+
+    .hymn {
+      margin-top: 20px;
+
+      padding: 25px;
+
+      border-radius: 15px;
+
+      background:
+        rgba(168, 120, 46, 0.08);
+
+      border-right: 4px solid #a8782e;
+    }
+
+    .hymn-title {
+      color: #d9b36c;
+
+      font-size: 21px;
+
+      font-weight: 700;
+
+      margin-bottom: 10px;
+    }
+
+    .coptic {
+      direction: ltr;
+
+      text-align: center;
+
+      color: #f0d49a;
+
+      font-size: 20px;
+
+      margin: 15px 0;
+    }
+
+    /* =========================
+       FINAL MESSAGE
+    ========================= */
+
+    .final-message {
+      text-align: center;
+
+      margin: 80px auto;
+
+      max-width: 900px;
+
+      padding: 45px 30px;
+
+      border-radius: 25px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(217, 179, 108, 0.1),
+          rgba(255, 255, 255, 0.03)
+        );
+
+      border: 1px solid rgba(217, 179, 108, 0.25);
+    }
+
+    .final-message h2 {
+      font-family: "Aref Ruqaa", serif;
+
+      color: #f0d49a;
+
+      font-size: 38px;
+
+      margin-bottom: 25px;
+    }
+
+    .final-message p {
+      color: #eee4d7;
+
+      font-size: 20px;
+
+      margin-bottom: 20px;
+    }
+
+    .final-quote {
+      color: #d9b36c;
+
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: 27px;
+    }
+
+    /* =========================
+       BACK BUTTON
+    ========================= */
+
+    .back-wrapper {
+      text-align: center;
+
+      margin: 50px 0;
+    }
+
+    .back-btn {
+      display: inline-block;
+
+      padding: 13px 30px;
+
+      border: 1px solid #c99b4a;
+
+      border-radius: 30px;
+
+      color: #f0d49a;
+
+      text-decoration: none;
+
+      transition: 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #c99b4a;
+
+      color: #18120e;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      text-align: center;
+
+      padding: 40px 20px;
+
+      border-top: 1px solid rgba(217, 179, 108, 0.15);
+
+      color: #a89884;
+    }
+
+    footer span {
+      color: #d9b36c;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+      .hero {
+        min-height: 60vh;
+
+        padding: 60px 20px;
+      }
+
+      .event {
+        padding: 25px 20px;
+      }
+
+      .reading-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+
+      .event h3 {
+        font-size: 27px;
+      }
+
+      .quote {
+        font-size: 19px;
+      }
+
+      .final-message {
+        padding: 35px 20px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="cross">✝</div>
+
+      <h1>سبت النور</h1>
+
+      <h2>سبت الفرح – السبت الكبير</h2>
+
+      <p>
+        اليوم السابع من أسبوع الآلام
+        <br>
+        يوم الانتظار بين القبر والقيامة
+      </p>
+
+      <div class="references">
+        القبر مغلق... لكن القيامة قادمة
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <main class="container">
+
+    <!-- =========================
+         INTRO
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        دلال أسبوع الآلام
+      </h2>
+
+      <div class="event">
+
+        <p>
+          دلال أسبوع الآلام يقسم يوم سبت النور إلى:
+        </p>
+
+        <ul>
+          <li>ليلة سبت الفرح – الأبوغالمسيس</li>
+          <li>باكر سبت الفرح</li>
+          <li>الساعة الثالثة</li>
+          <li>الساعة السادسة</li>
+          <li>الساعة التاسعة</li>
+          <li>قداس سبت الفرح والتوزيع</li>
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FIRST: EVENTS
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        أولًا: أحداث اليوم
+      </h2>
+
+
+      <!-- EVENT 1 -->
+
+      <article class="event">
+
+        <div class="event-number">١</div>
+
+        <h3>
+          القبر المختوم والحراس
+        </h3>
+
+        <p>
+          بعد دفن السيد المسيح، اجتمع رؤساء الكهنة والفريسيون مع بيلاطس،
+          وطلبوا وضع حراسة على القبر، خوفًا من أن يأتي التلاميذ ويسرقوا
+          جسده ويقولوا إنه قام.
+        </p>
+
+        <p>
+          فأمر بيلاطس بوضع الحراسة، وضُبط القبر وخُتم الحجر.
+        </p>
+
+        <h4>📖 الشاهد الكتابي</h4>
+
+        <div class="quote">
+
+          «فمضوا وضبطوا القبر بالحراس،
+          وختموا الحجر.»
+
+          <span class="reference">
+            متى 27: 62–66
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- EVENT 2 -->
+
+      <article class="event">
+
+        <div class="event-number">٢</div>
+
+        <h3>
+          النساء يسترحن حسب الوصية
+        </h3>
+
+        <p>
+          بعد دفن السيد المسيح، عادت النساء وأعددن الحنوط والأطياب،
+          ثم استرحن في يوم السبت حسب الوصية.
+        </p>
+
+        <h4>📖 الشاهد الكتابي</h4>
+
+        <div class="quote">
+
+          «ورجعن وأعددن حنوطًا وأطيابًا.
+          وفي السبت استرحن حسب الوصية.»
+
+          <span class="reference">
+            لوقا 23: 55–56
+          </span>
+
+        </div>
+
+      </article>
+
+
+      <!-- EVENT 3 -->
+
+      <article class="event">
+
+        <div class="event-number">٣</div>
+
+        <h3>
+          المسيح في الجحيم
+        </h3>
+
+        <p>
+          كان جسد السيد المسيح في القبر، ونزل إلى الجحيم،
+          وبشّر الأرواح التي في السجن، معلنًا انتصاره على الموت.
+        </p>
+
+        <h4>📖 الشواهد الكتابية</h4>
+
+        <ul>
+          <li>1 بطرس 3: 18–19</li>
+          <li>1 بطرس 4: 6</li>
+          <li>أفسس 4: 8–10</li>
+        </ul>
+
+      </article>
+
+    </section>
+
+
+    <!-- =========================
+         SPIRITUAL LESSON
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        ثانيًا: الدرس الروحي
+      </h2>
+
+      <div class="final-message">
+
+        <h2>
+          حين يصمت كل شيء… يكون الله يعمل
+        </h2>
+
+        <p>
+          في سبت النور كان كل شيء يبدو وكأنه انتهى:
+        </p>
+
+        <p>
+          القبر مغلق…
+          <br>
+          الحجر مختوم…
+          <br>
+          الحراس موجودون…
+          <br>
+          والتلاميذ في حزن…
+        </p>
+
+        <p>
+          لكن الحقيقة أن الله كان يعمل.
+        </p>
+
+        <div class="lesson">
+
+          <strong>
+            سبت النور يعلمنا ألا نحكم على عمل الله من خلال ما نراه الآن.
+          </strong>
+
+          <p>
+            قد يكون في حياتنا قبر مغلق أو باب لم يُفتح أو صلاة لم تُستجب بعد،
+            لكن صمت الله لا يعني غيابه.
+          </p>
+
+          <p>
+            فالذي أقام المسيح من بين الأموات قادر أن يحوّل ظلمة حياتنا
+            إلى نور ورجاء.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROPHECIES
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        ثالثًا: الربط والنبوات
+      </h2>
+
+
+      <div class="reading-grid">
+
+        <!-- Jonah -->
+
+        <div class="reading-card">
+
+          <h3>
+            🔗 يونان النبي – رمز المسيح في القبر
+          </h3>
+
+          <p>
+            كان وجود يونان في بطن الحوت ثلاثة أيام رمزًا لبقاء المسيح
+            في القبر.
+          </p>
+
+          <h4>📖 النبوة</h4>
+
+          <div class="quote">
+
+            «وكان يونان في جوف الحوت
+            ثلاثة أيام وثلاث ليال.»
+
+            <span class="reference">
+              يونان 1: 17
+            </span>
+
+          </div>
+
+          <p style="margin-top: 20px;">
+            والسيد المسيح نفسه ربط بين يونان وموته وقيامته:
+          </p>
+
+          <div class="quote">
+
+            «لأنه كما كان يونان في بطن الحوت ثلاثة أيام وثلاث ليال،
+            هكذا يكون ابن الإنسان في قلب الأرض ثلاثة أيام وثلاث ليال.»
+
+            <span class="reference">
+              متى 12: 40
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Psalm -->
+
+        <div class="reading-card">
+
+          <h3>
+            🔗 نبوة المزمور عن القيامة
+          </h3>
+
+          <div class="quote">
+
+            «لأنك لا تترك نفسي في الهاوية.
+            لن تدع تقيك يرى فسادًا.»
+
+            <span class="reference">
+              مزمور 15: 10
+            </span>
+
+          </div>
+
+          <p style="margin-top: 20px;">
+            وقد استخدم القديس بطرس هذه النبوة في حديثه عن قيامة المسيح.
+          </p>
+
+          <h4>📖 الشاهد</h4>
+
+          <p>
+            أعمال 2: 27
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         APOCALYPSIS
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        رابعًا: القراءات
+      </h2>
+
+
+      <div class="liturgy">
+
+        <h3>
+          🌙 ليلة سبت الفرح – الأبوغالمسيس
+        </h3>
+
+        <p>
+          تبدأ صلاة الأبوغالمسيس – سفر الرؤيا،
+          بعد الانتهاء من القراءات والتسابيح السابقة.
+        </p>
+
+        <h4>📖 القراءات والتسابيح</h4>
+
+        <ul>
+
+          <li>
+            التسبحة الثانية لموسى النبي – تثنية 32: 1–43
+          </li>
+
+          <li>
+            صلاة حنة أم صموئيل النبي – 1 صموئيل 2: 1–11
+          </li>
+
+          <li>
+            صلاة حبقوق النبي – حبقوق 3: 2–19
+          </li>
+
+          <li>
+            صلاة يونان النبي – يونان 2: 2–10
+          </li>
+
+          <li>
+            صلاة حزقيا الملك بعد شفائه – إشعياء 38: 10–20
+          </li>
+
+          <li>
+            صلاة منسى الملك
+          </li>
+
+          <li>
+            صلاة إشعياء النبي الأولى – إشعياء 26: 9–20
+          </li>
+
+          <li>
+            تسبحة إشعياء النبي الثانية – إشعياء 25: 1–12
+          </li>
+
+          <li>
+            تسبحة إشعياء النبي الثالثة – إشعياء 26
+          </li>
+
+          <li>
+            تسبحة إرميا النبي – مراثي 5: 16–22
+          </li>
+
+          <li>
+            تسبحة باروخ النبي – باروخ 2: 11–16
+          </li>
+
+          <li>
+            تسبحة إيليا النبي – ملوك الأول 18: 36–39
+          </li>
+
+          <li>
+            صلاة داود النبي – أخبار الأيام الأول 28: 22–30
+          </li>
+
+          <li>
+            صلاة الملك سليمان – ملوك الأول 8: 20–22
+          </li>
+
+          <li>
+            صلاة دانيال النبي – دانيال 9: 4–19
+          </li>
+
+          <li>
+            رؤيا دانيال النبي – دانيال 3
+          </li>
+
+          <li>
+            صلاة عزريا – دانيال 3: 25–51
+          </li>
+
+          <li>
+            الهوس الثالث وبقية التسابيح – دانيال 3
+          </li>
+
+          <li>
+            تسبحة العذراء مريم – لوقا 1: 46–55
+          </li>
+
+          <li>
+            صلاة زكريا الكاهن – لوقا 1: 68–79
+          </li>
+
+          <li>
+            صلاة سمعان الكاهن – لوقا 2: 29–32
+          </li>
+
+          <li>
+            سوسنة العفيفة – دانيال 13
+          </li>
+
+          <li>
+            مديح الثلاث فتية
+          </li>
+
+        </ul>
+
+        <p style="margin-top: 20px;">
+          ويوجد في دلال أسبوع الآلام ترتيب مفصل لتسابيح الأبوغالمسيس
+          بهذه القراءات.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         MATINS
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        باكر سبت الفرح
+      </h2>
+
+      <div class="liturgy">
+
+        <h3>
+          🌅 القراءات
+        </h3>
+
+        <ul>
+
+          <li>الإبصالية</li>
+
+          <li>مديحة سبت النور</li>
+
+          <li>ثيوطوكية السبت</li>
+
+          <li>الشيرات</li>
+
+        </ul>
+
+        <h4>النبوة</h4>
+
+        <p>
+          إشعياء 55: 2–13
+        </p>
+
+        <h4>البولس</h4>
+
+        <p>
+          1 كورنثوس 5: 7–13
+        </p>
+
+        <h4>المزمور</h4>
+
+        <p>
+          مزمور 88: 4؛ 44: 23، 26
+          <br>
+          مزمور 126: 2،3
+        </p>
+
+        <h4>الإنجيل</h4>
+
+        <p>
+          متى 27: 62–66
+        </p>
+
+      </div>
+
+
+      <div class="hymn">
+
+        <div class="hymn-title">
+          🎵 الألحان الموجودة في ترتيب دلال
+        </div>
+
+        <p>
+          تين أو أوشت إم إفيوت
+        </p>
+
+        <div class="coptic">
+          Tenouwst `mViwt
+        </div>
+
+        <p>
+          ثم ذكصولوجية يسوع – أيها النور الحقيقي
+        </p>
+
+        <div class="coptic">
+          Piouwini ntavmyi
+        </div>
+
+        <p>
+          وذكصولوجية العذراء – أنتِ يا أم النور
+        </p>
+
+        <div class="coptic">
+          N;o `:mau
+        </div>
+
+        <p style="margin-top: 15px;">
+          ثم ذكصولوجيات:
+        </p>
+
+        <ul>
+          <li>البخور المختار</li>
+          <li>ألوف ألوف</li>
+          <li>آباؤنا الرسل</li>
+        </ul>
+
+      </div>
+
+
+      <div class="hymn">
+
+        <div class="hymn-title">
+          ✝ لحن قانون باكر سبت الفرح
+        </div>
+
+        <p>
+          «يا رب إن كنت صرت مثل الأموات»
+        </p>
+
+        <div class="coptic">
+          إبشويس إيسجي إيكوي
+        </div>
+
+        <p>
+          يشير اللحن إلى المسيح الذي وُضع في القبر وخُتم عليه الحجر،
+          بينما هو غالب الموت ومنقذ نفوسنا.
+        </p>
+
+        <div class="quote">
+
+          «يا رب يا رب يا رب إن كنت صرت مثل الأموات
+          واليهود طرحوك في قبر وبختم ختموا عليك…»
+
+        </div>
+
+        <div class="quote">
+
+          «ونصرخ قائلين ارحمنا يا الله مخلصنا،
+          يا من وُضع في القبر، اسحق عنا شوكة الموت.»
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         THIRD HOUR
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        🕒 الساعة الثالثة
+      </h2>
+
+      <div class="liturgy">
+
+        <h3>📖 القراءات</h3>
+
+        <p>
+          المزامير:
+        </p>
+
+        <p>
+          19، 22، 23، 25، 28، 29، 33، 40، 42،
+          44، 45، 46
+        </p>
+
+        <h4>النبوة</h4>
+
+        <p>
+          إرميا 13: 15–22
+        </p>
+
+        <h4>المزمور</h4>
+
+        <p>
+          مزمور 16: 10–11
+        </p>
+
+        <h4>الإنجيل</h4>
+
+        <p>
+          متى 16: 24–28
+        </p>
+
+        <h4>🎵 الطقس واللحن</h4>
+
+        <p>
+          بعد قراءة النبوة، يُقرأ المزمور والإنجيل:
+          النصف بلحن التجنيز، ثم النصف الآخر باللحن السنوي.
+        </p>
+
+        <p>
+          ثم:
+        </p>
+
+        <ul>
+          <li>كيرياليصون 41 مرة</li>
+          <li>قدوس قدوس</li>
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SIXTH HOUR
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        🕕 الساعة السادسة
+      </h2>
+
+      <div class="liturgy">
+
+        <h3>📖 القراءات</h3>
+
+        <p>
+          المزامير:
+        </p>
+
+        <p>
+          53، 56، 60، 62، 66، 69، 83، 84، 85،
+          86، 90، 92
+        </p>
+
+        <h4>النبوة</h4>
+
+        <p>
+          إشعياء 50: 10–11؛ 51: 1–8
+        </p>
+
+        <h4>المزمور</h4>
+
+        <p>
+          مزمور 130: 1؛ 142: 7
+        </p>
+
+        <h4>الإنجيل</h4>
+
+        <p>
+          متى 5: 3–13
+        </p>
+
+        <h4>🎵 الطقس واللحن</h4>
+
+        <p>
+          يُقرأ المزمور والإنجيل:
+          النصف بلحن التجنيز، والنصف الآخر باللحن السنوي.
+        </p>
+
+        <p>
+          ثم:
+        </p>
+
+        <ul>
+          <li>كيرياليصون 41 مرة</li>
+          <li>قدوس قدوس</li>
+        </ul>
+
+        <div class="hymn">
+
+          <div class="hymn-title">
+            📖 سفر الرؤيا
+          </div>
+
+          <p>
+            ويأتي أيضًا ضمن ترتيب اليوم سفر الرؤيا،
+            بما يحمله من إعلان عن مجد الله وانتصاره.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         NINTH HOUR
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        🕘 الساعة التاسعة
+      </h2>
+
+      <div class="liturgy">
+
+        <h3>📖 القراءات</h3>
+
+        <p>
+          المزامير:
+        </p>
+
+        <p>
+          95، 96، 97، 98، 99، 100، 109، 110،
+          111، 112، 114، 115
+        </p>
+
+        <h4>النبوة الأولى</h4>
+
+        <p>
+          إشعياء 45: 15–20
+        </p>
+
+        <h4>النبوة الثانية</h4>
+
+        <p>
+          إرميا 31: 31–34
+        </p>
+
+        <h4>المزمور</h4>
+
+        <p>
+          مزمور 41: 10، 5
+        </p>
+
+        <h4>الإنجيل</h4>
+
+        <p>
+          يوحنا 5: 21–30
+        </p>
+
+      </div>
+
+
+      <div class="hymn">
+
+        <div class="hymn-title">
+          🎵 الطقس واللحن
+        </div>
+
+        <p>
+          يُقرأ المزمور والإنجيل:
+        </p>
+
+        <ul>
+          <li>النصف بلحن الحزن</li>
+          <li>ثم النصف الآخر بلحن الفرح</li>
+        </ul>
+
+        <div class="quote">
+
+          من الحزن ➜ إلى الفرح
+          <br>
+          من الموت ➜ إلى الحياة
+          <br>
+          من القبر ➜ إلى القيامة
+
+        </div>
+
+        <p>
+          ثم:
+        </p>
+
+        <ul>
+          <li>كيرياليصون 41 مرة</li>
+          <li>قدوس قدوس</li>
+        </ul>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LITURGY
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        ⛪ قداس سبت الفرح
+      </h2>
+
+      <div class="liturgy">
+
+        <h3>
+          📖 القراءات
+        </h3>
+
+        <h4>البولس</h4>
+
+        <p>
+          1 كورنثوس 15: 1–22
+        </p>
+
+        <h4>الكاثوليكون</h4>
+
+        <p>
+          1 بطرس 1: 1–9
+        </p>
+
+        <h4>الإبركسيس</h4>
+
+        <p>
+          أعمال 2: 12–21
+        </p>
+
+        <h4>المزامير</h4>
+
+        <p>
+          مزمور 3: 3،5
+          <br>
+          مزمور 72: 7
+        </p>
+
+        <h4>الإنجيل</h4>
+
+        <p>
+          متى 28: 1–20
+        </p>
+
+        <h4>إنجيل التوزيع</h4>
+
+        <p>
+          لوقا 24: 1–12
+        </p>
+
+      </div>
+
+
+      <div class="hymn">
+
+        <div class="hymn-title">
+          🎵 الطقس والألحان
+        </div>
+
+        <p>
+          لا يُقال:
+        </p>
+
+        <div class="quote">
+          «هذا هو اليوم الذي صنعه الرب»
+        </div>
+
+        <p>
+          بل تُقال:
+        </p>
+
+        <div class="quote">
+          «خلصت حقًا» – Cw;ic
+        </div>
+
+        <p>
+          ويُقرأ البولس:
+          النصف بلحن التجنيز، والنصف الآخر باللحن السنوي.
+        </p>
+
+        <p>
+          أما الإنجيل:
+          النصف بلحن التجنيز، والنصف الآخر بلحن الفرح.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CHURCH RITE
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        خامسًا: الطقس الكنسي والألحان
+      </h2>
+
+      <div class="liturgy">
+
+        <h3>
+          🌙 ليلة سبت الفرح – الأبوغالمسيس
+        </h3>
+
+        <p>
+          بعد الانتهاء من القراءات السابقة تبدأ صلاة الأبوغالمسيس
+          – سفر الرؤيا.
+        </p>
+
+        <h4>✝ ترتيب الطقس</h4>
+
+        <ul>
+          <li>٧ قناديل وتُضاء بزيت طيب</li>
+          <li>٧ شمعات</li>
+          <li>صليب في الوسط</li>
+          <li>٧ مجامر</li>
+        </ul>
+
+        <p>
+          ثم يبدأ رفع البخور وقراءة سفر الرؤيا.
+        </p>
+
+      </div>
+
+
+      <div class="hymn">
+
+        <div class="hymn-title">
+          🎵 لحن البركة / لحن الثالوث القدوس
+        </div>
+
+        <div class="coptic">
+          Tenouwst mViwt mpi`ouwini
+        </div>
+
+        <p>
+          ويُقال في بداية ترتيب الأبوغالمسيس.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SPIRITUAL MEANING
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        🌟 معنى ألحان سبت النور
+      </h2>
+
+      <div class="final-message">
+
+        <h2>
+          من الحزن إلى الفرح
+        </h2>
+
+        <p>
+          في سبت النور نرى انتقالًا جميلًا في الألحان:
+        </p>
+
+        <div class="final-quote">
+
+          من الحزن »» إلى الفرح
+          <br><br>
+          من الموت »» إلى الحياة
+          <br><br>
+          من القبر »» إلى القيامة
+
+        </div>
+
+        <p style="margin-top: 30px;">
+          فالكنيسة تعيش لحظة الانتظار،
+          لكنها تنتظر وهي تحمل في داخلها يقين القيامة.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================= -->
+
+    <section>
+
+      <div class="final-message">
+
+        <h2>
+          ✝ ختام اليوم
+        </h2>
+
+        <p>
+          سبت النور… ليس يوم النهاية،
+          بل يوم الانتظار.
+        </p>
+
+        <p>
+          القبر مغلق…
+          <br>
+          لكن القيامة قادمة.
+        </p>
+
+        <p>
+          الظلمة موجودة…
+          <br>
+          لكن النور سيشرق.
+        </p>
+
+        <p>
+          الموت يبدو منتصرًا…
+          <br>
+          لكن المسيح غالب الموت.
+        </p>
+
+        <div class="final-quote">
+
+          «لا تخف من سبت النور في حياتك؛
+          <br>
+          فبعد القبر تأتي القيامة،
+          <br>
+          وبعد الظلمة يأتي النور،
+          <br>
+          وبعد الصمت يأتي صوت الحياة.»
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BACK
+    ========================= -->
+
+    <div class="back-wrapper">
+
+      <a href="index.html" class="back-btn">
+        ← العودة إلى أسبوع الآلام
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <p>
+      أسبوع الآلام ✝
+      <span>سبت النور – سبت الفرح</span>
+    </p>
+
+    <p>
+      المسيح غالب الموت
+    </p>
+
+  </footer>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ثلاثاء البصخة المقدسة</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Tajawal", sans-serif;
+
+      background:
+        radial-gradient(
+          circle at top,
+          #3b2a1d 0%,
+          #18120e 45%,
+          #0b0907 100%
+        );
+
+      color: #f8f1e7;
+      line-height: 1.9;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 70vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
+      padding: 80px 20px;
+
+      position: relative;
+      overflow: hidden;
+
+      border-bottom: 1px solid rgba(217, 179, 108, 0.2);
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+
+      width: 500px;
+      height: 500px;
+
+      background: rgba(217, 179, 108, 0.08);
+
+      border-radius: 50%;
+
+      filter: blur(80px);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+
+      max-width: 900px;
+    }
+
+    .cross {
+      font-size: 65px;
+
+      color: #d9b36c;
+
+      margin-bottom: 20px;
+
+      text-shadow:
+        0 0 20px rgba(217, 179, 108, 0.4);
+    }
+
+    .hero h1 {
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: clamp(42px, 7vw, 80px);
+
+      color: #f0d49a;
+
+      margin-bottom: 15px;
+    }
+
+    .hero h2 {
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: clamp(24px, 4vw, 40px);
+
+      color: #d9b36c;
+
+      margin-bottom: 25px;
+    }
+
+    .hero p {
+      color: #ddd0bd;
+
+      font-size: 19px;
+
+      max-width: 750px;
+
+      margin: auto;
+    }
+
+    .references {
+      margin-top: 25px;
+
+      color: #a8782e;
+
+      font-size: 17px;
+    }
+
+    /* =========================
+       CONTAINER
+    ========================= */
+
+    .container {
+      width: min(1100px, 92%);
+
+      margin: auto;
+    }
+
+    /* =========================
+       SECTION TITLE
+    ========================= */
+
+    .section-title {
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: 38px;
+
+      color: #f0d49a;
+
+      text-align: center;
+
+      margin: 80px 0 40px;
+    }
+
+    .section-title::after {
+      content: "";
+
+      display: block;
+
+      width: 90px;
+      height: 2px;
+
+      background: #c99b4a;
+
+      margin: 15px auto;
+    }
+
+    /* =========================
+       EVENT
+    ========================= */
+
+    .event {
+      position: relative;
+
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.07),
+          rgba(255, 255, 255, 0.025)
+        );
+
+      border: 1px solid rgba(217, 179, 108, 0.22);
+
+      border-radius: 22px;
+
+      padding: 35px;
+
+      margin-bottom: 30px;
+
+      box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+      backdrop-filter: blur(12px);
+
+      transition: 0.3s ease;
+    }
+
+    .event:hover {
+      transform: translateY(-5px);
+
+      border-color: rgba(217, 179, 108, 0.5);
+
+      box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.4);
+    }
+
+    .event-number {
+      width: 55px;
+      height: 55px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          135deg,
+          #d9b36c,
+          #a8782e
+        );
+
+      color: #18120e;
+
+      font-size: 22px;
+      font-weight: 800;
+
+      margin-bottom: 20px;
+    }
+
+    .event h3 {
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: 30px;
+
+      color: #f0d49a;
+
+      margin-bottom: 20px;
+    }
+
+    .event h4 {
+      color: #d9b36c;
+
+      font-size: 21px;
+
+      margin: 25px 0 8px;
+    }
+
+    .event p {
+      color: #eee4d7;
+
+      font-size: 17px;
+    }
+
+    /* =========================
+       QUOTE
+    ========================= */
+
+    .quote {
+      margin-top: 20px;
+
+      padding: 22px 25px;
+
+      border-right: 4px solid #c99b4a;
+
+      background:
+        rgba(201, 155, 74, 0.07);
+
+      border-radius: 12px;
+
+      color: #f0d49a;
+
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: 21px;
+    }
+
+    .reference {
+      display: block;
+
+      margin-top: 10px;
+
+      color: #a8782e;
+
+      font-family: "Tajawal", sans-serif;
+
+      font-size: 15px;
+    }
+
+    /* =========================
+       LESSON
+    ========================= */
+
+    .lesson {
+      margin-top: 20px;
+
+      padding: 25px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(217, 179, 108, 0.09),
+          rgba(0, 0, 0, 0.1)
+        );
+
+      border: 1px solid rgba(217, 179, 108, 0.18);
+
+      border-radius: 15px;
+    }
+
+    .lesson strong {
+      color: #f0d49a;
+
+      font-size: 21px;
+    }
+
+    /* =========================
+       LIST
+    ========================= */
+
+    ul {
+      margin: 15px 25px 0;
+
+      padding-right: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+
+      color: #ddd0bd;
+    }
+
+    li::marker {
+      color: #c99b4a;
+    }
+
+    /* =========================
+       READING GRID
+    ========================= */
+
+    .reading-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 25px;
+    }
+
+    .reading-card {
+      background:
+        rgba(255, 255, 255, 0.045);
+
+      border: 1px solid rgba(217, 179, 108, 0.18);
+
+      border-radius: 18px;
+
+      padding: 28px;
+
+      transition: 0.3s ease;
+    }
+
+    .reading-card:hover {
+      transform: translateY(-4px);
+
+      border-color: rgba(217, 179, 108, 0.45);
+    }
+
+    .reading-card h3 {
+      font-family: "Aref Ruqaa", serif;
+
+      color: #f0d49a;
+
+      font-size: 27px;
+
+      margin-bottom: 15px;
+    }
+
+    .reading-card h4 {
+      color: #d9b36c;
+
+      margin-top: 15px;
+    }
+
+    /* =========================
+       LITURGY
+    ========================= */
+
+    .liturgy {
+      padding: 30px;
+
+      margin-top: 20px;
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(217, 179, 108, 0.08),
+          rgba(255, 255, 255, 0.025)
+        );
+
+      border: 1px solid rgba(217, 179, 108, 0.2);
+    }
+
+    .liturgy h3 {
+      font-family: "Aref Ruqaa", serif;
+
+      color: #f0d49a;
+
+      font-size: 29px;
+
+      margin-bottom: 15px;
+    }
+
+    .liturgy h4 {
+      color: #d9b36c;
+
+      font-size: 20px;
+
+      margin-top: 20px;
+    }
+
+    /* =========================
+       HYMN
+    ========================= */
+
+    .hymn {
+      margin-top: 20px;
+
+      padding: 25px;
+
+      border-radius: 15px;
+
+      background:
+        rgba(168, 120, 46, 0.08);
+
+      border-right: 4px solid #a8782e;
+    }
+
+    .hymn-title {
+      color: #d9b36c;
+
+      font-size: 21px;
+
+      font-weight: 700;
+
+      margin-bottom: 10px;
+    }
+
+    /* =========================
+       DAY SUMMARY
+    ========================= */
+
+    .summary {
+      display: grid;
+
+      grid-template-columns:
+        repeat(5, 1fr);
+
+      gap: 15px;
+
+      margin-top: 30px;
+    }
+
+    .summary-item {
+      text-align: center;
+
+      padding: 22px 12px;
+
+      border-radius: 15px;
+
+      background:
+        rgba(255, 255, 255, 0.045);
+
+      border: 1px solid rgba(217, 179, 108, 0.18);
+    }
+
+    .summary-item strong {
+      display: block;
+
+      color: #f0d49a;
+
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: 24px;
+    }
+
+    .summary-item span {
+      color: #aaa08f;
+
+      font-size: 14px;
+    }
+
+    /* =========================
+       FINAL MESSAGE
+    ========================= */
+
+    .final-message {
+      text-align: center;
+
+      margin: 80px auto;
+
+      max-width: 900px;
+
+      padding: 45px 30px;
+
+      border-radius: 25px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(217, 179, 108, 0.1),
+          rgba(255, 255, 255, 0.03)
+        );
+
+      border: 1px solid rgba(217, 179, 108, 0.25);
+    }
+
+    .final-message h2 {
+      font-family: "Aref Ruqaa", serif;
+
+      color: #f0d49a;
+
+      font-size: 38px;
+
+      margin-bottom: 25px;
+    }
+
+    .final-message p {
+      color: #eee4d7;
+
+      font-size: 20px;
+
+      margin-bottom: 20px;
+    }
+
+    .final-quote {
+      color: #d9b36c;
+
+      font-family: "Aref Ruqaa", serif;
+
+      font-size: 28px;
+
+      margin-top: 25px;
+    }
+
+    /* =========================
+       BACK BUTTON
+    ========================= */
+
+    .back-wrapper {
+      text-align: center;
+
+      margin: 50px 0;
+    }
+
+    .back-btn {
+      display: inline-block;
+
+      padding: 13px 30px;
+
+      border: 1px solid #c99b4a;
+
+      border-radius: 30px;
+
+      color: #f0d49a;
+
+      text-decoration: none;
+
+      transition: 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background: #c99b4a;
+
+      color: #18120e;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      text-align: center;
+
+      padding: 40px 20px;
+
+      border-top: 1px solid rgba(217, 179, 108, 0.15);
+
+      color: #a89884;
+    }
+
+    footer span {
+      color: #d9b36c;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .summary {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+    }
+
+    @media (max-width: 800px) {
+
+      .hero {
+        min-height: 60vh;
+
+        padding: 60px 20px;
+      }
+
+      .event {
+        padding: 25px 20px;
+      }
+
+      .reading-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .summary {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+      .section-title {
+        font-size: 32px;
+      }
+
+      .event h3 {
+        font-size: 27px;
+      }
+
+      .quote {
+        font-size: 19px;
+      }
+
+      .final-message {
+        padding: 35px 20px;
+      }
+
+    }
+
+    @media (max-width: 500px) {
+
+      .summary {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 45px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+  <!-- =========================
+       HERO
+  ========================= -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="cross">✝</div>
+
+      <h1>
+        ثلاثاء البصخة المقدسة
+      </h1>
+
+      <h2>
+        يوم التوبة والسهر والاستعداد
+      </h2>
+
+      <p>
+        يوم تكشف فيه الكنيسة للإنسان خطورة رفض النور،
+        وتدعوه إلى التوبة والإيمان والعمل والاستعداد للقاء المسيح.
+      </p>
+
+      <div class="references">
+        تُب — اسهر — آمن — اعمل — استعد
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <main class="container">
+
+
+    <!-- =========================
+         DAY INTRO
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        رسالة ثلاثاء البصخة
+      </h2>
+
+      <div class="final-message">
+
+        <p>
+          ثلاثاء البصخة ليس مجرد يوم نتأمل فيه في أحداث تاريخية،
+          لكنه يوم تقف فيه الكنيسة أمام الإنسان وتضعه أمام حقيقة خطيرة:
+        </p>
+
+        <div class="final-quote">
+          الله يدعونا باستمرار،
+          <br>
+          والإنسان يستطيع أن يرفض الدعوة،
+          <br>
+          لكن رفض النور له نتيجة.
+        </div>
+
+        <div class="summary">
+
+          <div class="summary-item">
+            <strong>تُب</strong>
+            <span>ارجع إلى الله</span>
+          </div>
+
+          <div class="summary-item">
+            <strong>اسهر</strong>
+            <span>كن مستعدًا</span>
+          </div>
+
+          <div class="summary-item">
+            <strong>آمن</strong>
+            <span>اقبل المسيح</span>
+          </div>
+
+          <div class="summary-item">
+            <strong>اعمل</strong>
+            <span>استثمر وزنتك</span>
+          </div>
+
+          <div class="summary-item">
+            <strong>استعد</strong>
+            <span>للقاء المسيح</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         EVENTS
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        أولًا: أحداث اليوم
+      </h2>
+
+
+      <!-- EVENT 1 -->
+
+      <article class="event">
+
+        <div class="event-number">١</div>
+
+        <h3>
+          الدعوة إلى الدخول من الباب الضيق والتحذير من الرفض
+        </h3>
+
+        <p>
+          يسأل أحدهم الرب:
+          «يا سيد، أقليل هم الذين يخلصون؟»
+        </p>
+
+        <p>
+          فيجيب السيد المسيح داعيًا إلى الجهاد والدخول من الباب الضيق،
+          محذرًا من الاتكال على المعرفة الخارجية دون حياة توبة وإيمان.
+        </p>
+
+        <h4>
+          📖 الحدث
+        </h4>
+
+        <div class="quote">
+          «يا سيد، أقليل هم الذين يخلصون؟»
+          <span class="reference">
+            لوقا 13: 23–30
+          </span>
+        </div>
+
+        <div class="lesson">
+
+          <strong>
+            💡 الدرس الروحي
+          </strong>
+
+          <p>
+            يوضح القديس يوحنا ذهبي الفم أن المسيح لا يريد مجرد معرفة
+            الإنسان له أو انتسابه إليه، بل يريد حياة حقيقية معه.
+          </p>
+
+          <p>
+            فالدخول من الباب الضيق يشير إلى طريق الجهاد،
+            ورفض محبة العالم والخطية.
+          </p>
+
+        </div>
+
+        <h4>
+          🔗 الربط والنبوات
+        </h4>
+
+        <p>
+          <strong>الرمز والنبوة:</strong>
+          زكريا 1: 1–6
+        </p>
+
+        <div class="quote">
+          «ارجعوا إليَّ... فأرجع إليكم»
+        </div>
+
+        <p>
+          فالطريق إلى الحياة يبدأ بالرجوع إلى الله والتوبة.
+        </p>
+
+        <p>
+          <strong>التحقيق:</strong>
+          متى 7: 13–14
+        </p>
+
+        <div class="quote">
+          «ادخلوا من الباب الضيق... لأن الباب ضيق والطريق كرب الذي يؤدي إلى الحياة»
+        </div>
+
+        <h4>
+          ⛪ الطقس الكنسي
+        </h4>
+
+        <p>
+          تأتي هذه القراءة في الساعة الأولى من ليلة الثلاثاء،
+          ويُقرأ معها سفر زكريا 1: 1–6، ثم المزمور والإنجيل والطرح.
+        </p>
+
+        <div class="hymn">
+
+          <div class="hymn-title">
+            🎵 الألحان
+          </div>
+
+          <p>
+            تُصلى الساعة بلحن البصخة الخاص، مع تسبحة البصخة
+            والطلبات والألحان الحزاينيّة بحسب ترتيب الساعة.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- EVENT 2 -->
+
+      <article class="event">
+
+        <div class="event-number">٢</div>
+
+        <h3>
+          رثاء المسيح لأورشليم ورفضها لخلاص الله
+        </h3>
+
+        <p>
+          يحذر الفريسيون السيد المسيح من هيرودس،
+          فيعلن أنه ماضٍ في طريقه نحو أورشليم،
+          ثم يرثي المدينة التي رفضت الأنبياء ورفضت أن تجتمع تحت حماية الله.
+        </p>
+
+        <div class="quote">
+
+          «يَا أُورُشَلِيمُ، يَا أُورُشَلِيمُ...
+          كَمْ مَرَّةٍ أَرَدْتُ أَنْ أَجْمَعَ أَوْلاَدَكِ...
+          وَلَمْ تُرِيدُوا»
+
+          <span class="reference">
+            لوقا 13: 31–35
+          </span>
+
+        </div>
+
+        <div class="lesson">
+
+          <strong>
+            💡 الدرس الروحي
+          </strong>
+
+          <p>
+            يرى القديس كيرلس الكبير أن حزن المسيح على أورشليم
+            يكشف محبته الحقيقية للإنسان.
+          </p>
+
+          <p>
+            فهو لا يشتهي هلاك الخاطئ، بل يريد رجوعه إليه،
+            لكن الإنسان يستطيع أن يرفض دعوة المحبة.
+          </p>
+
+        </div>
+
+        <h4>
+          🔗 الربط والنبوات
+        </h4>
+
+        <p>
+          <strong>الرمز والنبوة:</strong>
+          مزمور 118: 26
+        </p>
+
+        <div class="quote">
+          «مبارك الآتي باسم الرب»
+        </div>
+
+        <p>
+          <strong>التحقيق:</strong>
+          متى 23: 37–39
+        </p>
+
+        <p>
+          يتكرر رثاء السيد لأورشليم، معلنًا رفض المدينة للمسيح
+          وما سيترتب عليه من خرابها.
+        </p>
+
+        <h4>
+          ⛪ الطقس الكنسي
+        </h4>
+
+        <p>
+          في الساعة الثالثة من ليلة الثلاثاء تُقرأ نبوة من ملاخي
+          1: 1–9، ثم إنجيل لوقا 13: 31–35 والطرح الخاص بالساعة.
+        </p>
+
+        <div class="hymn">
+
+          <div class="hymn-title">
+            🎵 الألحان
+          </div>
+
+          <p>
+            تُقال ألحان البصخة الحزاينيّة الخاصة بالساعة،
+            مع تسبحة البصخة والطرح والطلبات.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- EVENT 3 -->
+
+      <article class="event">
+
+        <div class="event-number">٣</div>
+
+        <h3>
+          التحذير من الموت في الخطية والدعوة للإيمان بالمسيح
+        </h3>
+
+        <p>
+          يعلن السيد المسيح لليهود أنهم إن لم يؤمنوا به
+          فإنهم يموتون في خطاياهم، ويعلن أصله السماوي وعلاقته بالآب.
+        </p>
+
+        <div class="quote">
+
+          «إِنْ لَمْ تُؤْمِنُوا أَنِّي أَنَا هُوَ،
+          تَمُوتُونَ فِي خَطَايَاكُمْ»
+
+          <span class="reference">
+            يوحنا 8: 21–29
+          </span>
+
+        </div>
+
+        <div class="lesson">
+
+          <strong>
+            💡 الدرس الروحي
+          </strong>
+
+          <p>
+            يؤكد القديس يوحنا ذهبي الفم أن المشكلة ليست في عدم قدرة
+            المسيح على الخلاص، وإنما في رفض الإنسان للإيمان به.
+          </p>
+
+          <p>
+            فالخطية الحقيقية هي أن يعرف الإنسان الحق ويرفضه
+            ويصر على البُعد عن الله.
+          </p>
+
+        </div>
+
+        <h4>
+          🔗 الربط والنبوات
+        </h4>
+
+        <p>
+          <strong>الرمز والنبوة:</strong>
+          إشعياء 9: 2
+        </p>
+
+        <div class="quote">
+          «الشعب السالك في الظلمة أبصر نورًا عظيمًا»
+        </div>
+
+        <p>
+          <strong>التحقيق:</strong>
+          يوحنا 8: 12
+        </p>
+
+        <div class="quote">
+          «أنا هو نور العالم. من يتبعني فلا يمشي في الظلمة
+          بل يكون له نور الحياة»
+        </div>
+
+        <h4>
+          ⛪ الطقس الكنسي
+        </h4>
+
+        <p>
+          تأتي هذه القراءة في باكر يوم الثلاثاء،
+          حيث تُقرأ نبوات من الخروج 19: 1–9،
+          وأيوب 23: 2–24: 25،
+          وهوشع 4: 1–8،
+          ثم عظة للأنبا شنوده،
+          وإنجيل يوحنا 8: 21–29.
+        </p>
+
+        <div class="hymn">
+
+          <div class="hymn-title">
+            🎵 الألحان
+          </div>
+
+          <p>
+            تُقال ألحان البصخة، وتسبحة البصخة،
+            والطرح الخاص بباكر الثلاثاء.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- EVENT 4 -->
+
+      <article class="event">
+
+        <div class="event-number">٤</div>
+
+        <h3>
+          رثاء المسيح لأورشليم وإعلان خراب الهيكل
+        </h3>
+
+        <p>
+          بعد سلسلة التحذيرات والويلات للكتبة والفريسيين،
+          يقف المسيح أمام أورشليم معلنًا حزنه عليها،
+          ثم يخرج من الهيكل ويخبر تلاميذه أن الهيكل الذي كانوا يرونه عظيمًا
+          سيأتي عليه وقت لا يُترك فيه حجر على حجر.
+        </p>
+
+        <div class="quote">
+
+          «لا يُترك ههنا حجر على حجر لا يُنقض»
+
+          <span class="reference">
+            متى 24: 1–2
+          </span>
+
+        </div>
+
+        <div class="lesson">
+
+          <strong>
+            💡 الدرس الروحي
+          </strong>
+
+          <p>
+            تكشف القراءة أن امتلاك الشكل الديني وحده لا يكفي؛
+            فالهيكل المقدس لا قيمة له إذا تحول القلب إلى موضع للرفض والرياء.
+          </p>
+
+          <p>
+            ولذلك يصبح خراب الهيكل إنذارًا للإنسان الذي يحتفظ
+            بالمظهر الديني بينما يرفض عمل الله داخله.
+          </p>
+
+        </div>
+
+        <h4>
+          🔗 الربط والنبوات
+        </h4>
+
+        <p>
+          <strong>الرمز والنبوة:</strong>
+          دانيال 9: 26
+        </p>
+
+        <p>
+          إعلان خراب المدينة والمقدس.
+        </p>
+
+        <p>
+          <strong>التحقيق:</strong>
+          متى 24: 2
+        </p>
+
+        <div class="quote">
+          «لا يُترك ههنا حجر على حجر لا يُنقض»
+        </div>
+
+        <h4>
+          ⛪ الطقس الكنسي
+        </h4>
+
+        <p>
+          تأتي في الساعة الثالثة من يوم الثلاثاء،
+          ومعها نبوات من التثنية 8: 11–20،
+          ويشوع بن سيراخ 2: 1–9،
+          وأيوب 27: 1–20 و28: 1–2،
+          والملوك الأول 19: 9–14،
+          ثم المزمور وإنجيل متى 23: 37–24: 2.
+        </p>
+
+        <div class="hymn">
+
+          <div class="hymn-title">
+            🎵 الطرح
+          </div>
+
+          <p>
+            «كم من مرة قال الرب أردت أن أجمع بنيك يا أورشليم...»
+          </p>
+
+          <p>
+            مع مردي البصخة الخاصين بالطرح.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- EVENT 5 -->
+
+      <article class="event">
+
+        <div class="event-number">٥</div>
+
+        <h3>
+          المسيح نور العالم والتحذير من السير في الظلمة
+        </h3>
+
+        <p>
+          يعلن السيد المسيح وسط مقاومة اليهود له:
+        </p>
+
+        <div class="quote">
+
+          «أَنَا هُوَ نُورُ الْعَالَمِ»
+
+          <span class="reference">
+            يوحنا 8: 12–20
+          </span>
+
+        </div>
+
+        <p>
+          ويربط بين الإيمان به وبين الخروج من الظلمة إلى نور الحياة.
+        </p>
+
+        <div class="lesson">
+
+          <strong>
+            💡 الدرس الروحي
+          </strong>
+
+          <p>
+            الإنسان الذي يرفض المسيح، نور العالم،
+            يختار أن يبقى في الظلمة.
+          </p>
+
+          <p>
+            أما الذي يقبل المسيح فيستنير قلبه ويعرف طريق الحياة.
+          </p>
+
+          <p>
+            وهنا يرتبط إنذار الثلاثاء بحياة الإنسان نفسها:
+            هل أنا أعيش في النور أم أكتفي بالشكل الخارجي للإيمان؟
+          </p>
+
+        </div>
+
+        <h4>
+          🔗 الربط والنبوات
+        </h4>
+
+        <p>
+          <strong>الرمز والنبوة:</strong>
+          إشعياء 60: 1
+        </p>
+
+        <div class="quote">
+          «قومي استنيري لأنه قد جاء نورك»
+        </div>
+
+        <p>
+          <strong>التحقيق:</strong>
+          يوحنا 8: 12
+        </p>
+
+        <div class="quote">
+          «من يتبعني فلا يمشي في الظلمة بل يكون له نور الحياة»
+        </div>
+
+        <h4>
+          ⛪ الطقس الكنسي
+        </h4>
+
+        <p>
+          تأتي القراءة في الساعة السادسة من يوم الثلاثاء.
+          وتسبقها نبوات من حزقيال 21: 3–13،
+          ويشوع بن سيراخ 4: 23–36؛ 5: 1–2،
+          وإشعياء 1: 1–9،
+          ثم المزمور والإنجيل والطرح.
+        </p>
+
+        <div class="hymn">
+
+          <div class="hymn-title">
+            🎵 الألحان
+          </div>
+
+          <p>
+            تُقال تسبحة البصخة والألحان الحزاينيّة،
+            مع طرح الساعة السادسة:
+          </p>
+
+          <div class="quote">
+            «الإله الحقيقي الذي أتى...»
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- EVENT 6 -->
+
+      <article class="event">
+
+        <div class="event-number">٦</div>
+
+        <h3>
+          علامات المجيء الثاني وضرورة السهر
+        </h3>
+
+        <p>
+          بعد خروج المسيح من الهيكل وجلوسه على جبل الزيتون،
+          يسأله التلاميذ عن علامات مجيئه وانقضاء الدهر.
+        </p>
+
+        <p>
+          فيحدثهم عن الضيقات والحروب والمجاعات والاضطهاد
+          وظهور المسحاء الكذبة، ويؤكد ضرورة الثبات وعدم الانخداع.
+        </p>
+
+        <div class="quote">
+
+          «حينئذ يظهر في السماء علامة ابن الإنسان،
+          وحينئذ تنوح جميع قبائل الأرض»
+
+          <span class="reference">
+            متى 24: 3–35
+          </span>
+
+        </div>
+
+        <div class="lesson">
+
+          <strong>
+            💡 الدرس الروحي
+          </strong>
+
+          <p>
+            يرى القديس يوحنا ذهبي الفم أن الغرض من إعلان هذه العلامات
+            ليس أن ننشغل بتحديد موعد النهاية، بل أن نتعلم السهر والاستعداد.
+          </p>
+
+          <p>
+            فالإنسان المسيحي لا يعيش في خوف من المستقبل،
+            بل في استعداد دائم للقاء المسيح.
+          </p>
+
+        </div>
+
+        <h4>
+          🔗 الربط والنبوات
+        </h4>
+
+        <p>
+          <strong>الرمز والنبوة:</strong>
+          دانيال 12: 1–2
+        </p>
+
+        <p>
+          إشارة إلى الضيق والقيامة والدينونة.
+        </p>
+
+        <p>
+          <strong>التحقيق:</strong>
+          متى 24: 30–31
+        </p>
+
+        <p>
+          إعلان مجيء ابن الإنسان في مجده وجمع مختاريه.
+        </p>
+
+        <h4>
+          ⛪ الطقس الكنسي
+        </h4>
+
+        <p>
+          تأتي هذه القراءة في الساعة التاسعة من يوم الثلاثاء،
+          وتُقرأ معها نبوات متعددة، منها:
+        </p>
+
+        <ul>
+          <li>التكوين 6: 5–9: 6</li>
+          <li>أمثال 9: 1–11</li>
+          <li>إشعياء 40: 9–31</li>
+          <li>دانيال 7: 9–15</li>
+          <li>أمثال 8: 1–12</li>
+        </ul>
+
+        <p>
+          ثم عظة الأنبا شنوده، وإنجيل متى 24: 3–35.
+        </p>
+
+        <div class="hymn">
+
+          <div class="hymn-title">
+            🎵 الطرح
+          </div>
+
+          <p>
+            «يا جميع سكان أورشليم تعالوا لنمضي إلى جبل الزيتون...»
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- EVENT 7 -->
+
+      <article class="event">
+
+        <div class="event-number">٧</div>
+
+        <h3>
+          مثل الوزنات والدينونة والاستعداد للقاء المسيح
+        </h3>
+
+        <p>
+          يختم السيد المسيح تعليمه في هذا اليوم بمثل الوزنات،
+          ثم يتحدث عن الدينونة العامة، حيث يفصل بين الخراف والجداء،
+          ثم يعلن لتلاميذه أن الفصح قريب وأن ابن الإنسان سيسلَّم ليُصلب.
+        </p>
+
+        <div class="quote">
+
+          «كُلُّ وَاحِدٍ عَلَى قَدْرِ طَاقَتِهِ»
+
+          <span class="reference">
+            متى 25: 14–46؛ 26: 1–2
+          </span>
+
+        </div>
+
+        <div class="lesson">
+
+          <strong>
+            💡 الدرس الروحي
+          </strong>
+
+          <p>
+            الوزنة ليست شيئًا نملكه لأنفسنا،
+            بل عطية من الله ومسؤولية أمامه.
+          </p>
+
+          <p>
+            لذلك لا يكفي أن نحافظ على ما أعطانا الله دون استخدامه؛
+            المطلوب أن نثمر به في المحبة والخدمة.
+          </p>
+
+          <p>
+            وفي الدينونة يظهر أن معيار الحكم ليس الكلام فقط،
+            بل المحبة التي تُترجم إلى أعمال.
+          </p>
+
+        </div>
+
+        <h4>
+          🔗 الربط والنبوات
+        </h4>
+
+        <p>
+          <strong>الرمز والنبوة:</strong>
+          دانيال 7: 9–10
+        </p>
+
+        <div class="quote">
+          «جلس القديم الأيام... والقضاء جلس والأسفار فتحت»
+        </div>
+
+        <p>
+          <strong>التحقيق:</strong>
+          متى 25: 31–46
+        </p>
+
+        <div class="quote">
+          «ومتى جاء ابن الإنسان في مجده...
+          فيميز بعضهم من بعض كما يميز الراعي الخراف من الجداء»
+        </div>
+
+        <p>
+          وهكذا تجمع قراءة الثلاثاء بين الوزنات والسهر والدينونة:
+          الله أعطى كل إنسان عطايا، وسيأتي وقت الحساب
+          على كيفية استخدام هذه العطايا.
+        </p>
+
+        <h4>
+          ⛪ الطقس الكنسي
+        </h4>
+
+        <p>
+          تأتي القراءة في الساعة الحادية عشرة من يوم الثلاثاء.
+          وتُقرأ نبوات من إشعياء 30: 25–33،
+          وأمثال 6: 20–35؛ 7: 1–4،
+          ثم عظة للقديس يوحنا ذهبي الفم،
+          ويُقرأ إنجيل متى 25: 14–46؛ 26: 1–2.
+        </p>
+
+        <div class="hymn">
+
+          <div class="hymn-title">
+            🎵 الطرح
+          </div>
+
+          <p>
+            «لك وحدك أخطأت...»
+          </p>
+
+          <p>
+            مع الطلبات الختامية وبركة البصخة.
+          </p>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+    <!-- =========================
+         LITURGICAL NOTE
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        ⛪ ملحوظة طقسية مهمة
+      </h2>
+
+      <div class="liturgy">
+
+        <p>
+          في ترتيب أسبوع الآلام القبطي، لا تُقام قداسات أيام الاثنين
+          والثلاثاء والأربعاء.
+        </p>
+
+        <p>
+          وتستمر صلوات البصخة في الخورس الثاني،
+          وتكون القراءات مرتبة في خمس ساعات ليلية وخمس ساعات نهارية.
+        </p>
+
+        <p>
+          كما أن إنجيل متى يُقرأ في صباح يوم الثلاثاء
+          ضمن تقسيم البشائر على أيام الأسبوع.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SPIRITUAL CONCLUSION
+    ========================= -->
+
+    <section>
+
+      <h2 class="section-title">
+        🌟 الخلاصة الروحية ليوم ثلاثاء البصخة
+      </h2>
+
+      <div class="final-message">
+
+        <h2>
+          تُب — اسهر — آمن — اعمل — استعد
+        </h2>
+
+        <p>
+          تتدرج قراءات اليوم من الدعوة إلى التوبة،
+          إلى التحذير من رفض المسيح،
+          ثم خراب أورشليم والهيكل،
+          ثم علامات النهاية والسهر،
+          وتنتهي بالوزنات والدينونة.
+        </p>
+
+        <p>
+          ثلاثاء البصخة يضع الإنسان أمام سؤال واضح:
+          ماذا سأفعل بالنور الذي أعطاني الله؟
+        </p>
+
+        <div class="final-quote">
+
+          «لا تكتفِ بأن تعرف المسيح...
+          <br>
+          بل عِش معه.
+          <br><br>
+          لا تكتفِ بأن تسمع...
+          <br>
+          بل اعمل.
+          <br><br>
+          لا تؤجل التوبة...
+          <br>
+          اسهر واستعد.»
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BACK BUTTON
+    ========================= -->
+
+    <div class="back-wrapper">
+
+      <a href="index.html" class="back-btn">
+        ← العودة إلى أسبوع الآلام
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    <p>
+      أسبوع الآلام ✝
+      <span>ثلاثاء البصخة المقدسة</span>
+    </p>
+
+    <p>
+      تُب — اسهر — آمن — اعمل — استعد
+    </p>
+
+  </footer>
+
+
+  
+
+</body>
+
+</html>
