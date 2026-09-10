@@ -388,7 +388,7 @@ a{ color:inherit; }
 .c1{
   display: flex;
   flex-direction: row;
-  gap:20px
+ 
 }
 
 
@@ -397,6 +397,8 @@ a{ color:inherit; }
     height: 281px;
     overflow: hidden;
     border-radius: 15px;
+    /* background-color: red; */
+    padding: 20px;
 }
 
 .image-container img {
