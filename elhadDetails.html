@@ -523,6 +523,58 @@
           transform: translateY(0);
         }
       }
+      .credit {
+  margin-top: 25px;
+
+  font-family: "Aref Ruqaa", serif;
+
+  font-size: 18px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 10px 22px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(217, 179, 108, 0.3);
+
+  background: rgba(217, 179, 108, 0.06);
+}
+
+.credit .heart {
+  display: inline-block;
+
+  animation: beat 1.2s ease-in-out infinite;
+}
+
+.credit .name {
+  background: linear-gradient(90deg, #a8782e, #f0d49a, #d9b36c, #f0d49a, #a8782e);
+
+  background-size: 300% auto;
+
+  -webkit-background-clip: text;
+
+  background-clip: text;
+
+  color: transparent;
+
+  font-weight: 700;
+
+  animation: shine 4s linear infinite;
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+@keyframes shine {
+  to { background-position: 300% center; }
+}
     </style>
   </head>
 
@@ -1092,6 +1144,11 @@
       <p>✝ أحد الشعانين ✝</p>
 
       <p>دخول السيد المسيح إلى أورشليم</p>
+      <div class="credit">
+        <span class="heart">✝</span>
+        <span class="name">Mina Hany</span> Made by
+        <span class="heart">✝</span>
+      </div>
     </footer>
   </body>
 </html>
