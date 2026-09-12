@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>خريطة أسبوع الآلام — من أجلنا... مات وقام</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- خلفية زخرفية ثابتة -->
+    <div class="paper-texture" aria-hidden="true"></div>
+
+    <!-- شريط تنقّل جانبي للمحطات (سطح المكتب فقط) -->
+    <nav class="station-nav" aria-label="التنقل بين محطات الأسبوع">
+      <ol id="stationDots"></ol>
+    </nav>
+
+    <header class="hero">
+      <div class="hero-sky" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="scroll-banner">
+          <span class="cross" aria-hidden="true">✚</span>
+          <h1>خريطة<br />أسبوع الآلام</h1>
+          <p class="tagline">من أجلنا… مات وقام</p>
+        </div>
+        <p class="hero-sub">
+          رحلة تسعة أيام، من بيت عنيا إلى الجلجلثة، ومن القبر إلى القيامة
+        </p>
+        <a href="#path" class="scroll-cue" aria-label="ابدأ الرحلة">
+          <span>ابدأ الرحلة</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 4v16M12 20l-6-6M12 20l6-6"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section id="path" class="path">
+        <div class="progress-rail" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+
+        <article class="station" id="station-1" data-side="right">
+          <div class="station-marker"><span class="marker-num">1</span></div>
+          <div class="station-card c1">
+            <div>
+              <p class="station-eyebrow"><br /><br />اليوم الأول — السبت</p>
+              <h2>سبت لعازر</h2>
+              <p class="station-place">بيت عنيا</p>
+              <p class="station-summary">إقامة لعازر من الموت في بيت عنيا</p>
+              <div class="forBtn">
+                <button
+                  class="expand-btn"
+                  onclick="window.location.href = 'elsabtDetails.html'"
+                >
+                  تأملات
+                </button>
+
+                <button
+                  class="expand-btn"
+                  onclick="window.location.href = 'galleryElsabt.html'"
+                >
+                  المعرض
+                </button>
+              </div>
+            </div>
+            <div class="image-container">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4PZMfRXBkMtfZ2VoyGdu9p3Bk1FM4_VSD0Ex3kHeVfg&s=10"
+                alt="سبت لعازر"
+              />
+            </div>
+          </div>
+        </article>
+
+        <article class="station" id="station-2" data-side="left">
+          <div class="station-marker"><span class="marker-num">2</span></div>
+
+          <div class="station-card c1">
+            <div class="image-container">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5537d482e4b0cda0deb18bb7/1583805836956-32SV3TW1Z3WP2WVWRKGK/palm-sunday-coptic.png"
+                alt="احد الشعانين"
+              />
+            </div>
+            <div>
+              <p class="station-eyebrow"><br /><br />اليوم الثاني — الأحد</p>
+              <h2>أحد الشعانين</h2>
+              <p class="station-place">جبل الزيتون ← أورشليم</p>
+              <p class="station-summary">
+                الدخول الاحتفالي إلى أورشليم عبر جبل الزيتون
+              </p>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'elhadDetails.html'"
+              >
+                تأملات
+              </button>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'galleryElsabt.html'"
+              >
+                المعرض
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="station" id="station-3" data-side="right">
+          <div class="station-marker"><span class="marker-num">3</span></div>
+
+          <!--  -->
+          <div class="station-card c1">
+            <div>
+              <p class="station-eyebrow"><br /><br />اليوم الثالث — الإثنين</p>
+              <h2>إثنين البصخة</h2>
+              <p class="station-place">الهيكل، أورشليم</p>
+              <p class="station-summary">تطهير الهيكل والتعليم فيه</p>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'eletnenDetails.html'"
+              >
+                تأملات
+              </button>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'galleryElsabt.html'"
+              >
+                المعرض
+              </button>
+            </div>
+
+            <div class="image-container">
+              <img
+                src="https://z-p3-scontent.fcai15-1.fna.fbcdn.net/v/t39.30808-6/666065076_1422695976552947_1053682225617132009_n.jpg?stp=dst-jpg_tt6&cstp=mx759x960&ctp=s704x704&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_ohc=HRP7ZrRHY-gQ7kNvwHgdz-8&_nc_oc=AdrZZldhGH4VrvTJd3CWTUFrcp9WM1ZdyzxbPqZ0YfzRKnYT6llzISUXtYY2pd2nR6s&_nc_zt=23&_nc_ht=z-p3-scontent.fcai15-1.fna&_nc_gid=SDfUzyYg8cljHy4uz7sPEQ&_nc_ss=7b2a8&oh=00_AQJoNfqpYodDX-ao8ZirdD_GtpkGAmKHRkh_qLm4wlRV3Q&oe=6AA7791D"
+                alt="اثتنين البصخة"
+              />
+            </div>
+          </div>
+          <!--  -->
+        </article>
+
+        <article class="station" id="station-4" data-side="left">
+          <div class="station-marker"><span class="marker-num">4</span></div>
+
+          <!--  -->
+          <div class="station-card c1">
+            <div class="image-container">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqSbK4NkDXqp-QAy42s8Hv8mUCbADUpKKp4Sti9mIGcQ&s=10"
+                alt="ثلاثاء البصخة"
+              />
+            </div>
+            <div>
+              <p class="station-eyebrow"><br /><br />اليوم الرابع — الثلاثاء</p>
+              <h2>ثلاثاء البصخة</h2>
+              <p class="station-place">الهيكل، أورشليم</p>
+              <p class="station-summary">التعاليم والإنذارات في الهيكل</p>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'eltlatDetails.html'"
+              >
+                تأملات
+              </button>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'galleryElsabt.html'"
+              >
+                المعرض
+              </button>
+            </div>
+          </div>
+          <!--  -->
+        </article>
+
+        <article class="station" id="station-5" data-side="right">
+          <div class="station-marker"><span class="marker-num">5</span></div>
+          <!--  -->
+          <div class="station-card c1">
+            <div>
+              <p class="station-eyebrow"><br /><br />اليوم الخامس — الأربعاء</p>
+              <h2>أربعاء البصخة</h2>
+              <p class="station-place">بيت عنيا</p>
+              <p class="station-summary">
+                سكب الطيب في بيت عنيا وتآمر رؤساء الكهنة
+              </p>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'elarbaaDetails.html'"
+              >
+                تأملات
+              </button>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'galleryElsabt.html'"
+              >
+                المعرض
+              </button>
+            </div>
+
+            <div class="image-container">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVE3-fXcvDsewM9Nlo5OZ5gvzBe8_Af-cLfxv5_w7y4Q&s=10"
+                alt="اربعاء البصخة"
+              />
+            </div>
+          </div>
+          <!--  -->
+        </article>
+
+        <article class="station" id="station-6" data-side="left">
+          <div class="station-marker"><span class="marker-num">6</span></div>
+
+          <!--  -->
+          <div class="station-card c1">
+            <div class="image-container">
+              <img
+                src="https://st-takla.org/Gallery/var/albums/Jesus-Christ/12-The-Last-Supper/www-St-Takla-org--The-Last-Supper-03.jpg"
+                alt="خميس العهد"
+              />
+            </div>
+            <div>
+              <p class="station-eyebrow"><br /><br />اليوم السادس — الخميس</p>
+              <h2>خميس العهد</h2>
+              <p class="station-place">علّية صهيون</p>
+              <p class="station-summary">العشاء الأخير في العلّية المفروشة</p>
+              <button class="expand-btn" aria-expanded="false">تأملات</button>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'galleryElsabt.html'"
+              >
+                المعرض
+              </button>
+            </div>
+          </div>
+          <!--  -->
+        </article>
+
+        <article class="station station-major" id="station-7" data-side="right">
+          <div class="station-marker"><span class="marker-num">7</span></div>
+
+          <!--  -->
+          <div class="station-card c1">
+            <div>
+              <p class="station-eyebrow"><br /><br />اليوم السابع — الجمعة</p>
+              <h2>الجمعة العظيمة</h2>
+              <p class="station-place">الجلجلة (موقع الصلب)</p>
+              <p class="station-summary">
+                طريق الآلام، الصلب، ثم الدفن في القبر
+              </p>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'elgom3a.html'"
+              >
+                تأملات
+              </button>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'galleryElsabt.html'"
+              >
+                المعرض
+              </button>
+            </div>
+
+            <div class="image-container">
+              <img
+                src="https://i.pinimg.com/736x/3d/86/ce/3d86ce3fc5719854dd83e0e3918383d4.jpg"
+                alt="سبت لعازر"
+              />
+            </div>
+          </div>
+          <!--  -->
+        </article>
+
+        <article class="station" id="station-8" data-side="left">
+          <div class="station-marker"><span class="marker-num">8</span></div>
+
+          <!--  -->
+          <div class="station-card c1">
+            <div class="image-container">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5-FFqRq7MXS9wTcaH86wvxfIn7uNeEMLcC4VCmAGgm8SDOdKESr7ubvww&s=10"
+                alt="سبت النور"
+              />
+            </div>
+            <div>
+              <p class="station-eyebrow"><br /><br />اليوم الثامن — السبت</p>
+              <h2>سبت النور</h2>
+              <p class="station-place">القبر</p>
+              <p class="station-summary">الدفن في القبر وانتظار القيامة</p>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'sabtElnorDetails.html'"
+              >
+                تأملات
+              </button>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'galleryElsabt.html'"
+              >
+                المعرض
+              </button>
+            </div>
+          </div>
+          <!--  -->
+        </article>
+
+        <article class="station station-major" id="station-9" data-side="right">
+          <div class="station-marker BB">
+            <span class="marker-num CC">9</span>
+          </div>
+
+          <!--  -->
+          <div class="station-card c1">
+            <div>
+              <p class="station-eyebrow"><br /><br />اليوم التاسع — الأحد</p>
+              <h2>أحد القيامة</h2>
+              <p class="station-place">القبر الفارغ</p>
+              <p class="station-summary">قيامة المسيح من بين الأموات</p>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'El3ed.html'"
+              >
+                تأملات
+              </button>
+              <button
+                class="expand-btn"
+                onclick="window.location.href = 'galleryEl3ed.html'"
+              >
+                المعرض
+              </button>
+            </div>
+            <div class="image-container">
+              <img
+                src="https://st-takla.org/Gallery/var/resizes/Art-Portraits-Paintings/Christian/Artists/G/gerges-samir/2-jesus/7-resurrection/www-st-takla-org--gerges-samir--resurrection-01a.jpg?m=1537702040"
+                alt="احد القيامة"
+              />
+            </div>
+          </div>
+          <!--  -->
+        </article>
+      </section>
+
+      <section class="reflection">
+        <div class="scroll-banner scroll-banner--footer">
+          <span class="leaf leaf--right" aria-hidden="true">🌿</span>
+          <p>نتأمّل في عِظَم محبتِه وتضحيتِه</p>
+          <span class="leaf leaf--left" aria-hidden="true">🌿</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>خريطة أسبوع الآلام — تذكار الأيام المقدّسة</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

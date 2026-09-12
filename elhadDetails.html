@@ -507,6 +507,22 @@
           font-size: 20px;
         }
       }
+      body {
+        opacity: 0;
+        animation: pageOpen 1s ease forwards;
+      }
+
+      @keyframes pageOpen {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
     </style>
   </head>
 
@@ -1062,7 +1078,7 @@
     ========================= -->
 
       <div class="back-container">
-        <a href="index.html" class="back-btn">
+        <a href="home.html" class="back-btn">
           ← العودة إلى خريطة أسبوع الآلام
         </a>
       </div>
@@ -1077,7 +1093,5 @@
 
       <p>دخول السيد المسيح إلى أورشليم</p>
     </footer>
-
-
   </body>
 </html>

@@ -1,16 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const stations = Array.from(document.querySelectorAll('.station'));
 
-  /* ---- expand / collapse each station's reflection text ---- */
-  stations.forEach((station) => {
-    const btn = station.querySelector('.expand-btn');
-    if (!btn) return;
-    btn.addEventListener('click', () => {
-      const isOpen = station.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', String(isOpen));
-      btn.textContent = isOpen ? 'إخفاء' : 'تأمل أكثر';
-    });
-  });
 
   /* ---- build the side navigation dots ---- */
   const dotsList = document.getElementById('stationDots');
