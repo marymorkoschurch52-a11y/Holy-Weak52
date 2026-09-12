@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>الجمعة العظيمة | أسبوع الآلام</title>
+    <title>ثلاثاء البصخة المقدسة | أسبوع الآلام</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,10 +16,6 @@
     />
 
     <style>
-      /* =========================================
-         VARIABLES
-      ========================================= */
-
       :root {
         --parchment: #ecdfb8;
         --parchment-light: #f8efd5;
@@ -31,10 +27,6 @@
         --clay: #9c4a28;
         --gold: #b58a3a;
       }
-
-      /* =========================================
-         RESET
-      ========================================= */
 
       * {
         margin: 0;
@@ -57,11 +49,10 @@
           var(--parchment) 55%,
           var(--parchment-dark)
         );
-      }
 
-      /* =========================================
-         PAPER TEXTURE
-      ========================================= */
+        opacity: 0;
+        animation: pageOpen 1s ease forwards;
+      }
 
       body::before {
         content: "";
@@ -76,9 +67,7 @@
         z-index: -1;
       }
 
-      /* =========================================
-         HEADER
-      ========================================= */
+      /* HEADER */
 
       header {
         text-align: center;
@@ -127,9 +116,7 @@
         color: var(--ink-soft);
       }
 
-      /* =========================================
-         MAIN
-      ========================================= */
+      /* MAIN */
 
       main {
         width: min(950px, 92%);
@@ -137,20 +124,12 @@
         padding-bottom: 100px;
       }
 
-      /* =========================================
-         MEDIA SECTION
-      ========================================= */
-
       .media-section {
         display: flex;
         flex-direction: column;
         gap: 35px;
         margin-bottom: 70px;
       }
-
-      /* =========================================
-         MEDIA CARD
-      ========================================= */
 
       .media-card {
         background: rgba(248, 239, 213, 0.96);
@@ -170,10 +149,6 @@
         box-shadow: 0 22px 50px rgba(62, 42, 24, 0.23);
       }
 
-      /* =========================================
-         MEDIA TITLE
-      ========================================= */
-
       .media-title {
         padding: 20px 25px;
         border-bottom: 1px solid rgba(62, 42, 24, 0.12);
@@ -191,9 +166,7 @@
         margin-top: 5px;
       }
 
-      /* =========================================
-         IMAGE
-      ========================================= */
+      /* IMAGE */
 
       .image-box {
         width: 100%;
@@ -213,7 +186,6 @@
 
         display: block;
 
-        /* الصورة كاملة بدون قص */
         object-fit: contain;
 
         transition: 0.5s;
@@ -223,9 +195,7 @@
         transform: scale(1.02);
       }
 
-      /* =========================================
-         VIDEO
-      ========================================= */
+      /* VIDEO */
 
       .video-box {
         width: 100%;
@@ -252,9 +222,7 @@
         display: block;
       }
 
-      /* =========================================
-         DESCRIPTION
-      ========================================= */
+      /* DESCRIPTION */
 
       .description-box {
         margin: 0;
@@ -294,9 +262,7 @@
         font-size: 17px !important;
       }
 
-      /* =========================================
-         CONTENT
-      ========================================= */
+      /* CONTENT */
 
       .content-card {
         background: rgba(248, 239, 213, 0.96);
@@ -330,9 +296,7 @@
         margin-bottom: 20px;
       }
 
-      /* =========================================
-         QUOTE
-      ========================================= */
+      /* QUOTE */
 
       .quote {
         margin-top: 30px;
@@ -356,9 +320,7 @@
         margin: 0;
       }
 
-      /* =========================================
-         FOOTER
-      ========================================= */
+      /* FOOTER */
 
       footer {
         text-align: center;
@@ -370,9 +332,7 @@
         color: var(--ink-soft);
       }
 
-      /* =========================================
-         MOBILE
-      ========================================= */
+      /* MOBILE */
 
       @media (max-width: 600px) {
         header {
@@ -437,14 +397,7 @@
         }
       }
 
-      /* =========================================
-         PAGE OPEN ANIMATION
-      ========================================= */
-
-      body {
-        opacity: 0;
-        animation: pageOpen 1s ease forwards;
-      }
+      /* PAGE OPEN ANIMATION */
 
       @keyframes pageOpen {
         from {
@@ -473,6 +426,7 @@
         border: 0;
         display: block;
       }
+
       .credit {
         margin: 20px auto 0;
         width: fit-content;
@@ -507,6 +461,7 @@
           #a8782e,
           #2b1a0a
         );
+
         background-size: 300% auto;
 
         -webkit-background-clip: text;
@@ -533,6 +488,7 @@
         100% {
           transform: scale(1);
         }
+
         50% {
           transform: scale(1.25);
         }
@@ -554,61 +510,54 @@
   </head>
 
   <body>
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+    <!-- HEADER -->
 
     <header>
       <a href="home.html" class="back"> ← العودة إلى الخريطة </a>
 
-      <div class="day-number">اليوم السادس — الجمعة</div>
+      <div class="day-number">اليوم الثالث — الثلاثاء</div>
 
-      <h1>الجمعة العظيمة</h1>
+      <h1>ثلاثاء البصخة المقدسة</h1>
 
-      <p class="place">الجلجثة — أورشليم</p>
+      <p class="place">أورشليم</p>
     </header>
 
-    <!-- =========================================
-         MAIN
-    ========================================== -->
+    <!-- MAIN -->
 
     <main>
       <section class="media-section">
-        <!-- =====================================
-             IMAGE
-        ====================================== -->
+        <!-- IMAGE -->
 
         <article class="media-card">
           <div class="media-title">
-            <h2>صلب المسيح</h2>
+            <h2>تعاليم المسيح في الهيكل</h2>
           </div>
 
           <div class="image-box">
-            <img src="/media/friday.png" alt="صلب المسيح في الجمعة العظيمة" />
+            <img
+              src="https://scontent.fcai20-6.fna.fbcdn.net/v/t1.6435-9/57504041_2612297698797794_1975884010714300416_n.jpg?stp=dst-jpg_tt6&cstp=mx480x708&ctp=s704x704&_nc_cat=104&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHC-VyC8NX2BSguVhSsCWaQqQtvdgoEl9KpC292CgSX0g6ctlrdoAeklqzH_t3txpxNjj_JitCWQA_nIhKaqNi_&_nc_ohc=RYNVhUr5DwsQ7kNvwH37EI-&_nc_oc=AdqDte6q9e0AVp0rmXE7zN-yqhRhTwBxjsBeofWSh9gdXpNov_yoZD-4QyjslZEhQkg&_nc_zt=23&_nc_ht=scontent.fcai20-6.fna&_nc_gid=yj6YyUvIBlnuwDgMBroBZg&_nc_ss=7b2a8&oh=00_AQK6u2mWqV6v-5KcDsWr7WDWh5qHoWkhpRC2dZB6AjGqvw&oe=6ACCF7F8"
+              alt="ثلاثاء البصخة المقدسة"
+            />
           </div>
 
-          <!-- شرح الصورة -->
-
           <div class="description-box">
-            <p>«فلما أخذ يسوع الخل قال: قد أُكمل. ونكس رأسه وأسلم الروح.»</p>
+            <p>«السماء والأرض تزولان ولكن كلامي لا يزول.»</p>
 
-            <p class="bible-reference">يوحنا 19 : 30</p>
+            <p class="bible-reference">متى 24 : 35</p>
           </div>
         </article>
 
-        <!-- =====================================
-             VIDEO
-        ====================================== -->
+        <!-- VIDEO -->
 
         <article class="media-card">
           <div class="media-title">
-            <h2>تأمل في الجمعة العظيمة</h2>
+            <h2>تأمل في ثلاثاء البصخة</h2>
           </div>
 
           <div class="video-box">
             <iframe
-              src="https://www.youtube.com/embed/iJrtjaM8aRM?si=DWERBX85fgvAnIPj"
-              title="تأمل في أحد القيامة"
+              src="https://www.youtube.com/embed/Kq4Wm3Hwrs8?si=EW2ejW4mfpB5vWwy"
+              title="تأمل في ثلاثاء البصخة"
               frameborder="0"
               allow="
                 accelerometer;
@@ -626,73 +575,78 @@
 
           <div class="description-box">
             <p>
-              في الجمعة العظيمة نتأمل في محبة المسيح الذي بذل نفسه من أجل خلاص
-              العالم، وقبل الصليب بإرادته من أجلنا.
+              في ثلاثاء البصخة نتأمل في تعاليم المسيح، ونتعلم أن نسمع كلمته
+              ونعيش بها، وأن نكون أمناء في إيماننا ومحبتنا لله وللآخرين.
             </p>
           </div>
         </article>
-
         <article class="media-card">
           <div class="media-title">
-            <h2>تأمل في الجمعة العظيمة</h2>
+            <h2>تأمل في ثلاثاء البصخة للاطفال</h2>
           </div>
 
           <div class="video-box">
             <iframe
-              src="./media/great-friday.pdf"
-              title="تأمل في الجمعة العظيمة"
+              src="https://www.youtube.com/embed/auQcaErdUM0?si=hjXM-EnGc4yJpHmy"
+              title="تأمل في ثلاثاء البصخة"
               frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
             >
             </iframe>
           </div>
 
           <div class="description-box">
             <p>
-              في الجمعة العظيمة نتأمل في محبة المسيح الذي بذل نفسه من أجل خلاص
-              العالم، وقبل الصليب بإرادته من أجلنا.
+              في ثلاثاء البصخة نتعلم من المسيح أن نسمع كلامه ونعيش به، ونكون
+              دائمًا محبين لله وللناس من حولنا. ونتعلم أيضًا أن نصلي ونفعل الخير
+              ونكون مستعدين للقاء المسيح بقلوب مليئة بالمحبة والإيمان.
             </p>
           </div>
         </article>
 
-        <!-- =====================================
-             SECOND VIDEO
-        ====================================== -->
+        <!-- PDF -->
       </section>
 
-      <!-- =========================================
-           INFORMATION
-      ========================================== -->
+      <!-- INFORMATION -->
 
       <section class="content-card">
-        <h2>الجمعة العظيمة</h2>
+        <h2>ثلاثاء البصخة المقدسة</h2>
 
         <p>
-          في هذا اليوم المقدس نتذكر آلام ربنا يسوع المسيح وصلبه وموته على الصليب
-          من أجل خلاص البشرية.
+          في ثلاثاء البصخة المقدسة نتأمل في تعاليم السيد المسيح الأخيرة قبل
+          الصليب، وفي دعوته لنا أن نسهر ونستعد ونثبت في الإيمان.
         </p>
 
         <p>
-          حمل المسيح الصليب، وقَبِل الآلام والعار بإرادته، وبذل نفسه حبًا في
-          الإنسان، حتى تمم عمل الفداء وقال:
+          ويعلمنا المسيح أن نكون أمناء في حياتنا، وأن نستخدم ما أعطانا الله من
+          مواهب في الخير، وأن نكون مستعدين دائمًا لمجيئه.
         </p>
 
         <div class="quote">
-          <p>«قد أُكمل»</p>
+          <p>«اسهروا إذًا لأنكم لا تعرفون اليوم ولا الساعة»</p>
         </div>
 
         <p>
-          ليست الجمعة العظيمة مجرد تذكار للألم، بل هي إعلان عن أعظم محبة؛ محبة
-          المسيح الذي أحبنا إلى المنتهى وبذل نفسه من أجلنا.
+          لذلك يدعونا هذا اليوم إلى مراجعة حياتنا، والتمسك بكلمة الله،
+          والاستعداد الدائم للقاء المسيح بقلب مملوء بالإيمان والمحبة.
         </p>
       </section>
     </main>
 
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
+    <!-- FOOTER -->
 
     <footer>
       <p>خريطة أسبوع الآلام — تذكار الأيام المقدّسة</p>
+
       <div class="credit">
         <span class="heart">+</span>
         <span class="name">Mina Hany</span> Made by

@@ -1,11 +1,10 @@
-```html
 <!doctype html>
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>سبت لعازر | أسبوع الآلام</title>
+    <title>خميس العهد | أسبوع الآلام</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,10 +16,6 @@
     />
 
     <style>
-      /* =========================================
-         VARIABLES
-      ========================================= */
-
       :root {
         --parchment: #ecdfb8;
         --parchment-light: #f8efd5;
@@ -32,10 +27,6 @@
         --clay: #9c4a28;
         --gold: #b58a3a;
       }
-
-      /* =========================================
-         RESET
-      ========================================= */
 
       * {
         margin: 0;
@@ -58,11 +49,10 @@
           var(--parchment) 55%,
           var(--parchment-dark)
         );
-      }
 
-      /* =========================================
-         PAPER TEXTURE
-      ========================================= */
+        opacity: 0;
+        animation: pageOpen 1s ease forwards;
+      }
 
       body::before {
         content: "";
@@ -77,25 +67,8 @@
         z-index: -1;
       }
 
-      /* =========================================
-         HEADER
-      ========================================= */
+      /* HEADER */
 
-      .video-box {
-        width: 100%;
-        max-width: 800px;
-        aspect-ratio: 16 / 9;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 12px;
-      }
-
-      .video-box iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-        display: block;
-      }
       header {
         text-align: center;
         padding: 70px 20px 40px;
@@ -143,9 +116,7 @@
         color: var(--ink-soft);
       }
 
-      /* =========================================
-         MAIN
-      ========================================= */
+      /* MAIN */
 
       main {
         width: min(950px, 92%);
@@ -153,20 +124,12 @@
         padding-bottom: 100px;
       }
 
-      /* =========================================
-         MEDIA SECTION
-      ========================================= */
-
       .media-section {
         display: flex;
         flex-direction: column;
         gap: 35px;
         margin-bottom: 70px;
       }
-
-      /* =========================================
-         MEDIA CARD
-      ========================================= */
 
       .media-card {
         background: rgba(248, 239, 213, 0.96);
@@ -186,10 +149,6 @@
         box-shadow: 0 22px 50px rgba(62, 42, 24, 0.23);
       }
 
-      /* =========================================
-         MEDIA TITLE
-      ========================================= */
-
       .media-title {
         padding: 20px 25px;
         border-bottom: 1px solid rgba(62, 42, 24, 0.12);
@@ -207,9 +166,7 @@
         margin-top: 5px;
       }
 
-      /* =========================================
-         IMAGE
-      ========================================= */
+      /* IMAGE */
 
       .image-box {
         width: 100%;
@@ -229,7 +186,6 @@
 
         display: block;
 
-        /* الصورة كاملة بدون قص */
         object-fit: contain;
 
         transition: 0.5s;
@@ -239,31 +195,34 @@
         transform: scale(1.02);
       }
 
-      /* =========================================
-         VIDEO
-      ========================================= */
+      /* VIDEO */
+
       .video-box {
         width: 100%;
         max-width: 800px;
         height: 400px;
         margin: 0 auto;
+
         background: #000;
+
         border-radius: 15px;
         overflow: hidden;
+
         display: flex;
         justify-content: center;
         align-items: center;
       }
+
       .video-box video {
         width: 100%;
         height: 100%;
+
         object-fit: contain;
+
         display: block;
       }
 
-      /* =========================================
-         DESCRIPTION
-      ========================================= */
+      /* DESCRIPTION */
 
       .description-box {
         margin: 0;
@@ -303,9 +262,7 @@
         font-size: 17px !important;
       }
 
-      /* =========================================
-         CONTENT
-      ========================================= */
+      /* CONTENT */
 
       .content-card {
         background: rgba(248, 239, 213, 0.96);
@@ -339,9 +296,7 @@
         margin-bottom: 20px;
       }
 
-      /* =========================================
-         QUOTE
-      ========================================= */
+      /* QUOTE */
 
       .quote {
         margin-top: 30px;
@@ -365,9 +320,7 @@
         margin: 0;
       }
 
-      /* =========================================
-         FOOTER
-      ========================================= */
+      /* FOOTER */
 
       footer {
         text-align: center;
@@ -379,9 +332,7 @@
         color: var(--ink-soft);
       }
 
-      /* =========================================
-         MOBILE
-      ========================================= */
+      /* MOBILE */
 
       @media (max-width: 600px) {
         header {
@@ -445,10 +396,8 @@
           font-size: 21px;
         }
       }
-      body {
-        opacity: 0;
-        animation: pageOpen 1s ease forwards;
-      }
+
+      /* PAGE OPEN ANIMATION */
 
       @keyframes pageOpen {
         from {
@@ -460,6 +409,22 @@
           opacity: 1;
           transform: translateY(0);
         }
+      }
+
+      .video-box {
+        width: 100%;
+        max-width: 800px;
+        aspect-ratio: 16 / 9;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+
+      .video-box iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
       }
 
       .credit {
@@ -496,6 +461,7 @@
           #a8782e,
           #2b1a0a
         );
+
         background-size: 300% auto;
 
         -webkit-background-clip: text;
@@ -522,6 +488,7 @@
         100% {
           transform: scale(1);
         }
+
         50% {
           transform: scale(1.25);
         }
@@ -543,67 +510,83 @@
   </head>
 
   <body>
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+    <!-- HEADER -->
 
     <header>
       <a href="home.html" class="back"> ← العودة إلى الخريطة </a>
 
-      <div class="day-number">اليوم الأول — السبت</div>
+      <div class="day-number">اليوم الخامس — الخميس</div>
 
-      <h1>سبت لعازر</h1>
+      <h1>خميس العهد</h1>
 
-      <p class="place">بيت عنيا</p>
+      <p class="place">أورشليم</p>
     </header>
 
-    <!-- =========================================
-         MAIN
-    ========================================== -->
+    <!-- MAIN -->
 
     <main>
       <section class="media-section">
-        <!-- =====================================
-             IMAGE
-        ====================================== -->
+        <!-- IMAGE 1 -->
 
         <article class="media-card">
           <div class="media-title">
-            <h2>سبت لعازر</h2>
+            <h2>غسل المسيح لأرجل التلاميذ</h2>
           </div>
 
           <div class="image-box">
             <img
-              src="https://www.copts-united.com/uploads/2958/51_20170407090502.JPG"
-              alt="سبت لعازر"
+              src="/media/khames-1.jpg"
+              alt="غسل المسيح لأرجل التلاميذ"
             />
           </div>
 
-          <!-- شرح الصورة -->
-
           <div class="description-box">
             <p>
-              «قال لها يسوع: أنا هو القيامة والحياة. من آمن بي ولو مات فسيحيا،
-              وكل من كان حيًا وآمن بي فلن يموت إلى الأبد. أتؤمنين بهذا؟»
+              «فإن كنت وأنا السيد والمعلم قد غسلت أرجلكم، فأنتم يجب عليكم أن
+              يغسل بعضكم أرجل بعض.»
             </p>
 
-            <p class="bible-reference">يوحنا 11 : 25-26</p>
+            <p class="bible-reference">يوحنا 13 : 14</p>
           </div>
         </article>
 
-        <!-- =====================================
-             VIDEO
-        ====================================== -->
+        <!-- IMAGE 2 -->
 
         <article class="media-card">
           <div class="media-title">
-            <h2>تأمل في سبت لعازر</h2>
+            <h2>العشاء الأخير</h2>
+          </div>
+
+          <div class="image-box">
+            <img
+              src="/media/khames-2.jpg"
+              alt="العشاء الأخير"
+            />
+          </div>
+
+          <div class="description-box">
+            <p>
+              في خميس العهد نتذكر العشاء الأخير، حين اجتمع المسيح مع تلاميذه
+              وأعلن لهم محبته، وقدم لهم جسده ودمه في سر الإفخارستيا.
+            </p>
+
+            <p class="bible-reference">متى 26 : 26-28</p>
+          </div>
+        </article>
+
+    
+
+        <!-- VIDEO -->
+
+        <article class="media-card">
+          <div class="media-title">
+            <h2>تأمل في خميس العهد</h2>
           </div>
 
           <div class="video-box">
             <iframe
-              src="https://www.youtube.com/embed/7CxcO3vrTFQ?si=O5OWkfhx0g-xnvJj"
-              title="تأمل في سبت لعازر"
+              src="https://www.youtube.com/embed/4wUO4r0pxYs?si=daWaUYHFq8TNoIQe"
+              title="تأمل في خميس العهد"
               frameborder="0"
               allow="
                 accelerometer;
@@ -621,24 +604,23 @@
 
           <div class="description-box">
             <p>
-              في سبت لعازر نتأمل في معجزة إقامة لعازر من الموت، ونرى فيها
-              إعلانًا واضحًا عن سلطان المسيح على الموت، وعن حقيقة قوله: «أنا هو
-              القيامة والحياة». وتدعونا هذه المعجزة إلى أن نثق في المسيح حتى في
-              أصعب الظروف، وأن نؤمن أن محبته أقوى من الموت وأنه قادر أن يمنح
-              الحياة والرجاء لكل من يلجأ إليه.
+              في خميس العهد نتأمل في تواضع المسيح ومحبته، ونتعلم منه أن نخدم
+              الآخرين بمحبة، وأن نغفر ونحب كما أحبنا هو.
             </p>
           </div>
         </article>
 
+        <!-- VIDEO FOR CHILDREN -->
+
         <article class="media-card">
           <div class="media-title">
-            <h2>قصة سبت لعازر للأطفال</h2>
+            <h2>تأمل في خميس العهد للأطفال</h2>
           </div>
 
           <div class="video-box">
             <iframe
-              src="https://www.youtube.com/embed/kH3aTRzmUmw?si=ZuYWi6JAibPdAzh5"
-              title="قصة سبت لعازر للأطفال"
+              src="https://www.youtube.com/embed/IFB1K-2-5xg?si=1lhqW0HbSyAJNYW0"
+              title="تأمل في خميس العهد للأطفال"
               frameborder="0"
               allow="
                 accelerometer;
@@ -656,44 +638,46 @@
 
           <div class="description-box">
             <p>
-              في سبت لعازر نتذكر معجزة جميلة صنعها السيد المسيح، عندما أقام
-              لعازر من الموت بعد أن كان قد مضى على موته أربعة أيام. نتعلم من هذه
-              القصة أن المسيح يحبنا دائمًا، وأنه هو القيامة والحياة، لذلك نثق
-              فيه ونصلي ونضع حياتنا بين يديه.
+              في خميس العهد نتعلم من المسيح أن نحب بعضنا بعضًا، وأن نساعد
+              الآخرين ونخدمهم بمحبة وتواضع، كما فعل المسيح عندما غسل أرجل
+              تلاميذه.
             </p>
           </div>
         </article>
       </section>
 
-      <!-- =====================================
-           INFORMATION
-      ====================================== -->
+      <!-- INFORMATION -->
 
       <section class="content-card">
-        <h2>سبت لعازر</h2>
+        <h2>خميس العهد</h2>
 
         <p>
-          قبل دخوله أورشليم بيوم واحد، توجّه المسيح إلى بيت عنيا وأقام صديقه
-          لعازر من الموت بعد أربعة أيام في القبر.
+          في خميس العهد نتذكر العشاء الأخير الذي جمع السيد المسيح بتلاميذه،
+          وفيه أعلن لهم محبته الكبيرة وأعطاهم وصية المحبة، كما غسل أرجلهم
+          ليعلّمهم معنى التواضع والخدمة.
         </p>
 
         <p>
-          كانت هذه المعجزة إعلانًا واضحًا عن سلطان المسيح على الموت، وتمهيدًا
-          لما سيحدث بعد أيام قليلة في القيامة.
+          وفي هذا اليوم نتأمل في تأسيس سر الإفخارستيا، حين قدم المسيح جسده
+          ودمه، وأعلن أن حياته تُبذل من أجل خلاص العالم.
         </p>
 
         <div class="quote">
-          <p>«أنا هو القيامة والحياة»</p>
+          <p>«وصية جديدة أنا أعطيكم: أن تحبوا بعضكم بعضًا، كما أحببتكم أنا»</p>
         </div>
+
+        <p>
+          لذلك يدعونا خميس العهد إلى أن نعيش المحبة الحقيقية، وأن نخدم من حولنا
+          بتواضع، ونغفر للآخرين، ونتذكر دائمًا محبة المسيح التي بذلها من أجلنا.
+        </p>
       </section>
     </main>
 
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
+    <!-- FOOTER -->
 
     <footer>
       <p>خريطة أسبوع الآلام — تذكار الأيام المقدّسة</p>
+
       <div class="credit">
         <span class="heart">+</span>
         <span class="name">Mina Hany</span> Made by

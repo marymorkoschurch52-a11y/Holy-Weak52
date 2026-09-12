@@ -1,0 +1,1123 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>خميس العهد المقدس — خميس الأسرار</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Tajawal", sans-serif;
+        background: radial-gradient(
+          circle at top,
+          #3b2a1d 0%,
+          #18120e 45%,
+          #0b0907 100%
+        );
+        color: #f8f1e7;
+        line-height: 1.9;
+        min-height: 100vh;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.08;
+        background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+        background-size: 35px 35px;
+      }
+
+      /* =========================
+       HERO
+    ========================= */
+
+      .hero {
+        min-height: 75vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 70px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        font-size: 300px;
+        color: rgba(180, 132, 70, 0.05);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 950px;
+      }
+
+      .back-container {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .back-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: #1a1107;
+        background: linear-gradient(135deg, #e2bd71, #a8782e);
+        padding: 13px 35px;
+        border-radius: 30px;
+        font-weight: 900;
+        font-size: 17px;
+        transition: 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .back-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+      }
+      .cross {
+        font-size: 55px;
+        color: #d4a45f;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .hero h1 {
+        font-family: "Aref Ruqaa", serif;
+        font-size: clamp(42px, 7vw, 85px);
+        line-height: 1.25;
+        color: #f4d49a;
+        text-shadow: 0 5px 30px rgba(0, 0, 0, 0.6);
+        margin-bottom: 20px;
+      }
+
+      .tagline {
+        font-family: "Aref Ruqaa", serif;
+        color: #e6c27a;
+        font-size: clamp(22px, 3vw, 34px);
+      }
+
+      .hero-description {
+        margin-top: 30px;
+        font-size: 20px;
+        color: #d8ccc0;
+      }
+
+      /* =========================
+       MAIN
+    ========================= */
+
+      .container {
+        width: min(1400px, 94%);
+        margin: auto;
+        padding: 40px 0 100px;
+      }
+
+      .intro {
+        text-align: center;
+        margin-bottom: 70px;
+      }
+
+      .intro h2 {
+        font-family: "Aref Ruqaa", serif;
+        color: #e2b86b;
+        font-size: clamp(32px, 5vw, 55px);
+        margin-bottom: 15px;
+      }
+
+      .intro p {
+        color: #cfc2b5;
+        font-size: 18px;
+      }
+
+      /* =========================
+       EVENT
+    ========================= */
+
+      .event {
+        margin-bottom: 70px;
+        background: linear-gradient(
+          145deg,
+          rgba(73, 51, 34, 0.75),
+          rgba(22, 16, 12, 0.92)
+        );
+        border: 1px solid rgba(212, 164, 95, 0.25);
+        border-radius: 25px;
+        padding: clamp(25px, 5vw, 55px);
+        box-shadow:
+          0 20px 60px rgba(0, 0, 0, 0.35),
+          inset 0 1px rgba(255, 255, 255, 0.04);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .event::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 5px;
+        height: 100%;
+        background: linear-gradient(to bottom, #e0b86b, #8b5e34, transparent);
+      }
+
+      .event-number {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #4b321f;
+        border: 1px solid #c79b59;
+        color: #f1cf91;
+        font-size: 23px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .event-title {
+        font-family: "Aref Ruqaa", serif;
+        font-size: clamp(28px, 4vw, 43px);
+        color: #e7c47d;
+        margin-bottom: 12px;
+      }
+
+      .event-reference {
+        display: inline-block;
+        background: rgba(212, 164, 95, 0.1);
+        border: 1px solid rgba(212, 164, 95, 0.2);
+        color: #dcb875;
+        border-radius: 30px;
+        padding: 5px 18px;
+        margin-bottom: 25px;
+        font-size: 16px;
+      }
+
+      .event p {
+        font-size: 18px;
+        color: #e1d7cd;
+        margin-bottom: 18px;
+      }
+
+      /* =========================
+       VERSE
+    ========================= */
+
+      .verse {
+        margin: 25px 0;
+        padding: 25px 30px;
+        border-right: 4px solid #c99a52;
+        background: rgba(0, 0, 0, 0.22);
+        border-radius: 15px;
+        color: #f1dfc2;
+        font-family: "Aref Ruqaa", serif;
+        font-size: 21px;
+        line-height: 2;
+      }
+
+      .verse-source {
+        display: block;
+        margin-top: 12px;
+        color: #bca58b;
+        font-family: "Tajawal", sans-serif;
+        font-size: 15px;
+      }
+
+      /* =========================
+       SECTION BOXES
+    ========================= */
+
+      .section-box {
+        margin-top: 30px;
+        padding: 28px;
+        border-radius: 18px;
+        background: rgba(0, 0, 0, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .section-box h3 {
+        font-family: "Aref Ruqaa", serif;
+        font-size: 28px;
+        color: #e4bd73;
+        margin-bottom: 15px;
+      }
+
+      .lesson {
+        border-right: 4px solid #a96f3b;
+        background: linear-gradient(
+          90deg,
+          rgba(130, 81, 39, 0.12),
+          rgba(0, 0, 0, 0.15)
+        );
+      }
+
+      .lesson h3 {
+        color: #dca866;
+      }
+
+      .prophecy {
+        border-right: 4px solid #7f6546;
+      }
+
+      .prophecy h3 {
+        color: #cdb087;
+      }
+
+      .liturgy-note {
+        border-right: 4px solid #6e5637;
+        background: rgba(212, 164, 95, 0.05);
+      }
+
+      .liturgy-note h3 {
+        color: #c7a678;
+      }
+
+      .questions {
+        margin-top: 25px;
+        padding: 25px;
+        background: rgba(212, 164, 95, 0.06);
+        border-radius: 15px;
+      }
+
+      .questions p {
+        color: #d8c5ac;
+        font-size: 19px;
+        margin-bottom: 10px;
+      }
+
+      .section-box ul {
+        margin: 10px 25px 0;
+        padding-right: 20px;
+      }
+
+      .section-box li {
+        margin-bottom: 9px;
+        color: #e1d7cd;
+        font-size: 17px;
+      }
+
+      .section-box li::marker {
+        color: #dcb875;
+      }
+
+      .section-box strong {
+        color: #f1cf91;
+      }
+
+      /* =========================
+       FOOTER
+    ========================= */
+
+      .footer {
+        text-align: center;
+        padding: 60px 20px;
+        border-top: 1px solid rgba(212, 164, 95, 0.15);
+        color: #b9a997;
+      }
+
+      .footer-cross {
+        font-size: 35px;
+        color: #c89b5a;
+        margin-bottom: 15px;
+      }
+
+      .footer p {
+        font-family: "Aref Ruqaa", serif;
+        font-size: 23px;
+      }
+
+      /* =========================
+       RESPONSIVE
+    ========================= */
+
+      @media (max-width: 700px) {
+        .hero {
+          min-height: 65vh;
+          padding: 50px 15px;
+        }
+
+        .hero::before {
+          font-size: 180px;
+        }
+
+        .container {
+          width: 92%;
+        }
+
+        .event {
+          padding: 25px 20px;
+          border-radius: 18px;
+        }
+
+        .event p {
+          font-size: 16px;
+        }
+
+        .verse {
+          padding: 20px;
+          font-size: 18px;
+        }
+
+        .section-box {
+          padding: 20px;
+        }
+
+        .section-box h3 {
+          font-size: 24px;
+        }
+      }
+      body {
+        opacity: 0;
+        animation: pageOpen 1s ease forwards;
+      }
+
+      @keyframes pageOpen {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .credit {
+        margin-top: 25px;
+
+        font-family: "Aref Ruqaa", serif;
+
+        font-size: 18px;
+
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 8px;
+
+        padding: 10px 22px;
+
+        border-radius: 30px;
+
+        border: 1px solid rgba(217, 179, 108, 0.3);
+
+        background: rgba(217, 179, 108, 0.06);
+      }
+
+      .credit .heart {
+        display: inline-block;
+
+        animation: beat 1.2s ease-in-out infinite;
+      }
+
+      .credit .name {
+        background: linear-gradient(
+          90deg,
+          #2b1a0a,
+          #a8782e,
+          #2b1a0a,
+          #a8782e,
+          #2b1a0a
+        );
+
+        background-size: 300% auto;
+
+        -webkit-background-clip: text;
+
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+
+        font-weight: 800;
+
+        animation: shine 4s linear infinite;
+      }
+
+      @supports not (-webkit-background-clip: text) {
+        .credit .name {
+          color: #2b1a0a;
+          background: none;
+          -webkit-text-fill-color: initial;
+        }
+      }
+
+      @keyframes beat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.25); }
+      }
+
+      @keyframes shine {
+        to { background-position: 300% center; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- =========================
+       HERO
+  ========================= -->
+
+    <header class="hero">
+      <div class="hero-content">
+        <span class="cross">✚</span>
+
+        <h1>
+          خميس العهد المقدس
+          <br />
+          خميس الأسرار
+        </h1>
+
+        <p class="tagline">أعطانا فيه الرب جسده ودمه الأقدسين</p>
+
+        <p class="hero-description">
+          تأمل في اليوم الذي أسس فيه ربنا يسوع المسيح سر الإفخارستيا، وغسل
+          أرجل تلاميذه، وأعطانا مثالًا للتواضع والمحبة حتى المنتهى.
+        </p>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="intro">
+        <h2>أحداث خميس العهد</h2>
+
+        <p>
+          خميس العهد هو اليوم الذي أسس فيه ربنا يسوع المسيح سر الإفخارستيا،
+          وسُمّي بهذا الاسم لأن السيد المسيح أعطانا فيه العهد الجديد، عهد
+          محبته وخلاصه. وهو أحد الأعياد السيدية الصغرى في الكنيسة القبطية
+          الأرثوذكسية.
+        </p>
+      </section>
+
+      <!-- =========================
+         EVENT 1
+    ========================= -->
+
+      <article class="event">
+        <div class="event-number">١</div>
+
+        <h2 class="event-title">غسل أرجل التلاميذ (اللقان)</h2>
+
+        <span class="event-reference"> يوحنا ١٣ : ٤–١٧ </span>
+
+        <p>
+          قام السيد المسيح عن العشاء، وخلع ثيابه، وأخذ منشفة واتّزر بها، ثم
+          صبّ ماءً في مغسل، وابتدأ يغسل أرجل التلاميذ ويمسحها بالمنشفة.
+        </p>
+
+        <div class="verse">
+          «إِنْ كُنْتُ وَأَنَا السَّيِّدُ وَالْمُعَلِّمُ قَدْ غَسَلْتُ
+          أَرْجُلَكُمْ، فَأَنْتُمْ يَجِبُ عَلَيْكُمْ أَنْ يَغْسِلَ بَعْضُكُمْ
+          أَرْجُلَ بَعْضٍ، لأَنِّي أَعْطَيْتُكُمْ مِثَالاً، حَتَّى كَمَا
+          صَنَعْتُ أَنَا بِكُمْ تَصْنَعُونَ أَنْتُمْ أَيْضًا.»
+
+          <span class="verse-source"> يوحنا ١٣ : ١٤–١٥ </span>
+        </div>
+
+        <p>
+          وعندما قال بطرس: "لن تغسل رجليّ أبدًا"، أجابه يسوع: "إن كنت لا
+          أغسلك فليس لك معي نصيب".
+        </p>
+
+        <div class="section-box lesson">
+          <h3>الدرس الروحي: التواضع والتطهير المستمر</h3>
+
+          <p>
+            فالمغسلة رمز لغسيل الأخطاء اليومية، والخدمة الحقيقية تبدأ بنزول
+            الإنسان تحت أقدام الآخرين.
+          </p>
+
+          <div class="verse">
+            «التواضع هو الثوب الإلهي الذي اتزر به الرب؛ فمن يلبس التواضع
+            يلبس المسيح نفسه.»
+            <span class="verse-source">القديس مار إسحق السرياني</span>
+          </div>
+
+          <div class="verse">
+            «انظر كيف يغسل رب المجد أرجل عبيده، ليس فقط من أجل النظافة، بل
+            لكي يطبع في أذهاننا رسم التواضع.»
+            <span class="verse-source">القديس يوحنا ذهبي الفم</span>
+          </div>
+        </div>
+
+        <div class="section-box prophecy">
+          <h3>الرمز والنبوة</h3>
+
+          <p>
+            <strong>الرمز:</strong> مرحضة النحاس في خيمة الاجتماع التي كان
+            يغتسل فيها الكهنة قبل دخول القدس (خروج ٣٠: ١٨).
+          </p>
+
+          <p>
+            <strong>النبوة:</strong> «تَغْتَسِلُونَ فَتَطْهُرُونَ. عَزِلُوا
+            شَرَّ أَفْعَالِكُمْ مِنْ أَمَامِ عَيْنَيَّ» (إشعياء ١: ١٦).
+          </p>
+        </div>
+
+        <div class="section-box liturgy-note">
+          <h3>طقس الكنيسة</h3>
+          <p>
+            صلاة لقان خميس العهد؛ حيث يُصلى على الماء برتبة خاصة ويقوم الكاهن
+            بغسل أرجل الشعب تذكارًا لما فعله الرب.
+          </p>
+        </div>
+      </article>
+
+      <!-- =========================
+         EVENT 2
+    ========================= -->
+
+      <article class="event">
+        <div class="event-number">٢</div>
+
+        <h2 class="event-title">
+          الفصح اليهودي وتأسيس الفصح الجديد (سر الإفخارستيا)
+        </h2>
+
+        <span class="event-reference"> متى ٢٦ : ٢٠–٢٩ </span>
+
+        <p>
+          ولما كان المساء اتكأ يسوع مع الاثني عشر، وفيما هم يأكلون أخذ الخبز
+          وبارك وكسّر وأعطى التلاميذ.
+        </p>
+
+        <div class="verse">
+          «خُذُوا كُلُوا. هذَا هُوَ جَسَدِي.»
+          <span class="verse-source"> متى ٢٦ : ٢٦ </span>
+        </div>
+
+        <p>ثم أخذ الكأس وشكر وأعطاهم قائلًا:</p>
+
+        <div class="verse">
+          «اشْرَبُوا مِنْهَا كُلُّكُمْ. لأَنَّ هذَا هُوَ دَمِي لِلْعَهْدِ
+          الْجَدِيدِ.»
+          <span class="verse-source"> متى ٢٦ : ٢٧–٢٨ </span>
+        </div>
+
+        <div class="section-box lesson">
+          <h3>الدرس الروحي: الاتحاد الكامل بالمسيح والشكر الثابت</h3>
+
+          <p>
+            فالإفخارستيا هي سر الحياة الأبدية والاستمرار في جسد الرب الواحد.
+          </p>
+
+          <div class="verse">
+            «هذا السر يجعلنا شركاء في الطبيعة الإلهية، فنحن لا نتناول مجرد
+            رمز، بل نُسري في عروقنا حياة المسيح نفسه.»
+            <span class="verse-source">القديس كيرلس الكبير</span>
+          </div>
+
+          <div class="verse">
+            «هذا الجسد الذي بُسط على الصليب هو الذي نأكله، والدم الذي جرى
+            من جنبه هو الذي نشربه للخلاص.»
+            <span class="verse-source">القديس كيرلس الأورشليمي</span>
+          </div>
+        </div>
+
+        <div class="section-box prophecy">
+          <h3>الرمز والنبوة</h3>
+
+          <p>
+            <strong>الرمز:</strong> خروف الفصح الذي ذُبح في خروج ١٢ وكان دمه
+            علامة الخلاص، ومنه مَنّ القفر وزقاق ملكي صادق (تكوين ١٤: ١٨).
+          </p>
+
+          <p>
+            <strong>النبوة:</strong> «رَأَيْتُ أَنَّ الرَّبَّ قَدْ صَنَعَ
+            عَهْداً جَدِيداً» (إرميا ٣١: ٣١).
+          </p>
+
+          <p>
+            <strong>الارتباط بالعهد الجديد:</strong> تحوّل الفصح الرمزي إلى
+            سر حقيقي بذبح "حمل الله الذي يرفع خطية العالم" (١ كورنثوس ١١:
+            ٢٣–٢٦).
+          </p>
+        </div>
+
+        <div class="section-box liturgy-note">
+          <h3>طقس الكنيسة</h3>
+          <p>
+            إقامة قداس خميس العهد، وهو القداس الوحيد الذي لا يُقال فيه صلح
+            أو يُقبَّل فيه بعضنا بعضًا بالقبلة المقدسة بسبب خيانة يهوذا.
+          </p>
+        </div>
+      </article>
+
+      <!-- =========================
+         EVENT 3
+    ========================= -->
+
+      <article class="event">
+        <div class="event-number">٣</div>
+
+        <h2 class="event-title">كشف خيانة يهوذا وتبكيت الضمير</h2>
+
+        <span class="event-reference"> يوحنا ١٣ : ٢١–٣٠ </span>
+
+        <p>
+          لما قال يسوع هذا اضطرب بالروح، وشهد وقال: "الحق الحق أقول لكم: إن
+          واحدًا منكم سيسلمني". فغمس اللقمة وأعطاها ليهوذا الإسخريوطي.
+        </p>
+
+        <div class="verse">
+          «فَبَعْدَ اللُّقْمَةِ دَخَلَهُ الشَّيْطَانُ. فَقَالَ لَهُ يَسُوعُ:
+          مَا أَنْتَ تَعْمَلُهُ فَاعْمَلْهُ بِأَكْثَرِ سُرْعَةٍ.»
+          <span class="verse-source"> يوحنا ١٣ : ٢٧ </span>
+        </div>
+
+        <p>فذاك لما أخذ اللقمة خرج للوقت، وكان ليلًا.</p>
+
+        <div class="section-box lesson">
+          <h3>الدرس الروحي: خطورة الطمع ومقاومة صوت النعمة</h3>
+
+          <p>
+            فالقرب الظاهري من الأقداس لا يخلّص بدون قلب نقي وتوبة حقيقية.
+          </p>
+
+          <div class="verse">
+            «لم يسقط يهوذا فجأة، بل كانت محبة المال تنخر في قلبه كالسوس يومًا
+            فيوم، حتى أظلمت عيناه تمامًا عن النور.»
+            <span class="verse-source">القديس يوحنا ذهبي الفم</span>
+          </div>
+
+          <div class="verse">
+            «لم يمنع الرب يهوذا من المشاركة حتى لا يترك له حجة، لكن الشغف
+            بالمال أعمى عينيه عن النور.»
+            <span class="verse-source">القديس أغسطينوس</span>
+          </div>
+        </div>
+
+        <div class="section-box prophecy">
+          <h3>الرمز والنبوة</h3>
+
+          <p>
+            <strong>الرمز:</strong> إخوة القديس يوسف الذين باعوه بثلاثين من
+            الفضة (تكوين ٣٧: ٢٨).
+          </p>
+
+          <p>
+            <strong>النبوة:</strong> «رَجُلُ سَلاَمَتِي الَّذِي وَثِقْتُ
+            بِهِ، الآكِلُ خُبْزِي، رَفَعَ عَلَيَّ عَقِبَهُ» (مزمور ٤١: ٩).
+          </p>
+        </div>
+
+        <div class="section-box liturgy-note">
+          <h3>طقس الكنيسة</h3>
+          <p>
+            امتناع الكنيسة عن التقبيل في هذا اليوم وفي صلوات البصخة (قبلة
+            يهوذا)، وقراءة فصل الإنجيل الخاص برفض الخيانة.
+          </p>
+        </div>
+      </article>
+
+      <!-- =========================
+         EVENT 4
+    ========================= -->
+
+      <article class="event">
+        <div class="event-number">٤</div>
+
+        <h2 class="event-title">صلاة جثسيماني</h2>
+
+        <span class="event-reference"> لوقا ٢٢ : ٤٠–٤٦ </span>
+
+        <p>
+          ولما صار إلى المكان قال لهم: "صلّوا لكي لا تدخلوا في تجربة". وانفصل
+          عنهم نحو رمية حجر وجثا على ركبتيه وصلّى.
+        </p>
+
+        <div class="verse">
+          «يَا أَبَتَاهُ، إِنْ شِئْتَ أَنْ تُجِيزَ عَنِّي هذِهِ الْكَأْسَ.
+          وَلكِنْ لِتَكُنْ لاَ إِرَادَتِي بَلْ إِرَادَتُكَ.»
+          <span class="verse-source"> لوقا ٢٢ : ٤٢ </span>
+        </div>
+
+        <p>
+          وظهر له ملاك من السماء يقوّيه، وصار عرقه كقطرات دم نازلة على
+          الأرض، ثم قام وجاء إلى تلاميذه فوجدهم نيامًا من الحزن.
+        </p>
+
+        <div class="section-box lesson">
+          <h3>الدرس الروحي: التسليم الكامل لمشيئة الله</h3>
+
+          <p>
+            في لحظات الألم والشدة، وأهمية السهر والصلاة للغلبة على التجربة.
+          </p>
+
+          <div class="verse">
+            «عندما تصلي قاطعًا إرادتك لإرادة الله قائلًا: "لتكن مشيئتك"،
+            تنهدم حصون الشرير ويبدأ سلام الله الذي يفوق كل عقل.»
+            <span class="verse-source">القديس يوحنا كاسيان</span>
+          </div>
+
+          <div class="verse">
+            «صلّى كإنسان لكي يعلّمنا كيف نصلي، وأظهر ضعفه الطبيعي لكي يبتلع
+            ضعفنا بقوته الإلهية.»
+            <span class="verse-source">القديس أثناسيوس الرسولي</span>
+          </div>
+        </div>
+
+        <div class="section-box prophecy">
+          <h3>النبوة</h3>
+          <p>
+            «أَمَّا الرَّبُّ فَسُرَّ بِأَنْ يَضْحَقَهُ بِالْحَزَنِ. إِنْ
+            جَعَلَ نَفْسَهُ ذَبِيحَةَ إِثْمٍ» (إشعياء ٥٣: ١٠).
+          </p>
+        </div>
+
+        <div class="section-box liturgy-note">
+          <h3>طقس الكنيسة</h3>
+          <p>
+            صلوات الساعة السادسة من ليلة الجمعة من البصخة المقدسة، والتركيز
+            على قراءات آلام البستان والصلاة الدائمة.
+          </p>
+        </div>
+      </article>
+
+      <!-- =========================
+         EVENT 5
+    ========================= -->
+
+      <article class="event">
+        <div class="event-number">٥</div>
+
+        <h2 class="event-title">القبض على المسيح وتسليمه</h2>
+
+        <span class="event-reference"> مرقس ١٤ : ٤٣–٥٤ </span>
+
+        <p>
+          أقبل يهوذا ومعه جمع كثير بسيوف وعصيّ من عند رؤساء الكهنة، وتقدّم
+          إلى يسوع قائلًا: "يا سيدي، يا سيدي" وقبّله.
+        </p>
+
+        <div class="verse">
+          «كَأَنَّهُ عَلَى لِصٍّ خَرَجْتُمْ بِسُيُوفٍ وَعِصِيٍّ لِتَأْخُذُونِي
+          ... وَلكِنْ لِكَيْ تُكْمَلَ الْكُتُبُ.»
+          <span class="verse-source"> مرقس ١٤ : ٤٨–٤٩ </span>
+        </div>
+
+        <p>فتركه الجميع وهربوا، ومضوا بيسوع إلى رئيس الكهنة.</p>
+
+        <div class="section-box lesson">
+          <h3>الدرس الروحي</h3>
+          <p>«لاَ يَغْلِبَنَّكَ الشَّرُّ بَلِ اغْلِبِ الشَّرَّ بِالْخَيْرِ.» (رومية ١٢: ٢١)</p>
+
+          <div class="verse">
+            «ربطوا يديه اللتين باركتا الجميع، واقتادوه مقيدًا وهو الذي يفكّ
+            أسارى الخطاة، ليمنحنا الحرية الحقيقية.»
+            <span class="verse-source">القديس أفرام السرياني</span>
+          </div>
+        </div>
+
+        <div class="section-box prophecy">
+          <h3>الرمز والنبوة</h3>
+
+          <p>
+            <strong>الرمز:</strong> كبش الموقعة الذي عُلّق بقرنيه في الغابة
+            واُفتُدي به إسحاق (تكوين ٢٢: ١٣).
+          </p>
+
+          <p>
+            <strong>النبوة:</strong> «ارْبِطُوا الْمَحْرَقَةَ بِرُبُطٍ إِلَى
+            قُرُونِ الْمَذْبَحِ» (مزمور ١١٨: ٢٧).
+          </p>
+        </div>
+
+        <div class="section-box liturgy-note">
+          <h3>طقس الكنيسة</h3>
+          <p>الساعة التاسعة من البصخة المقدسة ليلة الجمعة العظيمة.</p>
+        </div>
+      </article>
+
+      <!-- =========================
+         EVENT 6
+    ========================= -->
+
+      <article class="event">
+        <div class="event-number">٦</div>
+
+        <h2 class="event-title">المحاكمة الليلية الأولى</h2>
+
+        <span class="event-reference"> يوحنا ١٨ : ١٣–٢٧ </span>
+
+        <p>
+          مضوا به إلى حنّان أولًا، ثم سأله رئيس الكهنة عن تلاميذه وعن تعليمه،
+          فأجابه يسوع أنه كلّم العالم علانية.
+        </p>
+
+        <div class="verse">
+          «وَلَمَّا قَالَ هذَا لَطَمَ يَسُوعَ وَاحِدٌ مِنَ الْخُدَّامِ ...
+          إِنْ كُنْتُ قَدْ تَكَلَّمْتُ رَدِيًّا فَاشْهَدْ عَلَى الرَّدِيِّ.»
+          <span class="verse-source"> يوحنا ١٨ : ٢٢–٢٣ </span>
+        </div>
+
+        <p>
+          وفي هذه الأثناء أنكر بطرس معرفته بالمسيح ثلاث مرات، وللوقت صاح
+          الديك.
+        </p>
+
+        <div class="section-box lesson">
+          <h3>الدرس الروحي</h3>
+          <p>
+            «الَّذِي إِذْ شُتِمَ لَمْ يَكُنْ يَشْتِمُ عِوَضاً، وَإِذْ
+            تَأَلَّمَ لَمْ يَكُنْ يُهَدِّدُ بلْ كَانَ يُسَلِّمُ لِمَنْ
+            يَقْضِي بِعَدْلٍ» (١ بطرس ٢: ٢٣).
+          </p>
+
+          <div class="verse">
+            «الذي يقيس السحاب بقبضته لُطِم على وجهه من عبد، لكي يُرمّم
+            الكرامة التي فقدناها بالسقوط.»
+            <span class="verse-source">القديس يوحنا ذهبي الفم</span>
+          </div>
+
+          <div class="verse">
+            «وقف الديّان ليُدان، وكسى الخجل وجوه القضاة الأرضيين بينما أظهر
+            هو جلال الصبر والصمت.»
+            <span class="verse-source">القديس أغسطينوس</span>
+          </div>
+        </div>
+
+        <div class="section-box prophecy">
+          <h3>الرمز والنبوة</h3>
+
+          <p>
+            <strong>الرمز:</strong> محاكمة يوسف الصديق ظلمًا وزورًا وإلقاؤه
+            في السجن بعد اتهام زوجة فوتيفار له (تكوين ٣٩).
+          </p>
+
+          <p>
+            <strong>النبوة:</strong> «قَامُوا عَلَيَّ شُهُودُ زُورٍ، وَنَافِثُ
+            ظُلْمٍ. لَوْلاَ أَنِّي آمَنْتُ بِأَنْ أَرَى جُودَ الرَّبِّ فِي
+            أَرْضِ الأَحْيَاءِ» (مزمور ٢٧: ١٢–١٣).
+          </p>
+        </div>
+
+        <div class="section-box liturgy-note">
+          <h3>طقس الكنيسة</h3>
+          <p>
+            قراءات الساعة الحادية عشرة من بصخة ليلة الجمعة العظيمة، بالتركيز
+            على محاكمة بيت قيافا وإنكار بطرس.
+          </p>
+        </div>
+      </article>
+
+      <!-- =========================
+         الطقس الكنسي التفصيلي
+    ========================= -->
+
+      <section class="intro">
+        <h2>الطقس الكنسي ليوم خميس العهد</h2>
+        <p>
+          ترتيب الصلوات والألحان الخاصة باليوم، من صلاة باكر حتى نهاية
+          القداس الإلهي.
+        </p>
+      </section>
+
+      <article class="event">
+        <div class="event-number">✦</div>
+        <h2 class="event-title">صلاة باكر ودورة يهوذا المخالف</h2>
+
+        <p>
+          تبدأ الكنيسة يوم خميس العهد بصلاة باكر من البصخة المقدسة، وتقام
+          دورة يهوذا المخالف، وهي من أهم العلامات الطقسية المميزة لهذا اليوم.
+          والنغمة الأساسية في صلوات البصخة هي النغمة الحزاينية.
+        </p>
+
+        <div class="section-box lesson">
+          <h3>ترتيب باكر بصورة مبسطة</h3>
+          <ul>
+            <li>النبوات</li>
+            <li>لحن ثوك تي تي جوم</li>
+            <li>فتح ستر الهيكل</li>
+            <li>صلاة الشكر</li>
+            <li>أرباع الناقوس</li>
+            <li>المزمور الخمسون</li>
+            <li>أوشية المرضى</li>
+            <li>أوشية القرابين</li>
+            <li>تسبحة الملائكة والثلاثة تقديسات</li>
+            <li>الذكصولوجيات</li>
+            <li>قانون الإيمان</li>
+            <li>إفنوتي ناي نان</li>
+            <li>لحن فاي إيطاف إنف</li>
+            <li>الإبركسيس</li>
+            <li>دورة يهوذا المخالف</li>
+            <li>أوشية الإنجيل</li>
+            <li>المزمور والإنجيل</li>
+            <li>تكملة صلوات البصخة</li>
+          </ul>
+        </div>
+
+        <div class="section-box prophecy">
+          <h3>العلامات الطقسية لدورة يهوذا المخالف</h3>
+          <ul>
+            <li>تتم في الخورس الأول</li>
+            <li>تكون في اتجاه مخالف للدورة المعتادة</li>
+            <li>لا يرتدي الشمامسة التونية أثناء الدورة</li>
+            <li>لا يسير فيها آباء كهنة</li>
+            <li>لا تُستخدم الشورية أو الشموع</li>
+            <li>لا يُستخدم الناقوس بالطريقة المعتادة</li>
+            <li>لحن الدورة شاذّ وغير منتظم موسيقيًا</li>
+            <li>يتكرر اسم يهوذا ست مرات، رمزًا للنقص</li>
+          </ul>
+        </div>
+
+        <div class="section-box liturgy-note">
+          <h3>المعنى الروحي</h3>
+          <p>
+            يهوذا كان واحدًا من التلاميذ وعاش مع المسيح وسمع تعاليمه، لكنه
+            خان الرب بسبب محبة المال. لذلك تدعونا الكنيسة في هذا اليوم أن
+            نسأل أنفسنا: هل المسيح غالٍ في حياتي؟ هل أعيش بأمانة مع المسيح؟
+            هل أبيع محبته من أجل أي شيء؟
+          </p>
+        </div>
+      </article>
+
+      <article class="event">
+        <div class="event-number">✦</div>
+        <h2 class="event-title">صلاة اللقان وغسل الأرجل</h2>
+
+        <p>
+          اللقان هو صلاة تقديس للماء، وتقام في الكنيسة في ثلاث مناسبات: عيد
+          الغطاس، خميس العهد، وعيد الرسل. وفي خميس العهد يُصلى اللقان تذكارًا
+          لغسل السيد المسيح أرجل تلاميذه، وتعليمًا للتواضع والخدمة.
+        </p>
+
+        <div class="section-box lesson">
+          <h3>قراءات اللقان</h3>
+          <p><strong>النبوة الأولى:</strong> تكوين ١٨: ١–٢٣ — ظهور الرب لإبراهيم وغسل الأرجل في استقبال الضيوف.</p>
+          <p><strong>النبوة الثانية:</strong> خروج ١٤: ١٥–٢٧ — عبور البحر الأحمر، رمزًا للخلاص والتطهير.</p>
+          <p><strong>النبوة الثالثة:</strong> يشوع ٣: ٧–١٧ — عبور نهر الأردن ودخول أرض الموعد.</p>
+          <p><strong>البولس:</strong> ١ تيموثاوس ٤: ٩–١٦؛ ٥: ١–١٠.</p>
+          <p><strong>المزمور:</strong> مزمور ٥٠: ٧–١٠ — «تنضح عليّ بزوفاك فأطهر».</p>
+          <p><strong>الإنجيل:</strong> يوحنا ١٣: ١–١٧ — غسل السيد المسيح أرجل التلاميذ.</p>
+        </div>
+
+        <div class="section-box prophecy">
+          <h3>ترتيب غسل الأرجل</h3>
+          <ul>
+            <li>يغسل الكاهن الخديم أرجل الكاهن الآخر أو رئيس الكهنة</li>
+            <li>يغسل رئيس الكهنة أو الكاهن أرجل الكهنة</li>
+            <li>تُغسل أرجل الشمامسة</li>
+            <li>تُغسل أرجل الشعب</li>
+            <li>ينشف الكاهن الأرجل بشملة أخرى</li>
+            <li>يعطي الكاهن البركة من ماء الطاس ليمسح الشعب وجوههم وأيديهم</li>
+          </ul>
+          <p style="margin-top: 15px;">
+            ويُرتل الشمامسة أثناء ذلك المزمور المائة والحادي والخمسين
+            بالنغمة السنوية.
+          </p>
+        </div>
+
+        <div class="section-box liturgy-note">
+          <h3>ألحان ومردات اللقان</h3>
+          <p><strong>إك إسمارؤوت:</strong> ومعناه "مبارك أنت بالحقيقة"، يُقال في بداية خدمة اللقان.</p>
+          <p><strong>تين أوؤشت إمموك:</strong> ومعناه "نسجد لك أيها المسيح"، وفي آخره تُقال عبارة "لأنك صُلبت".</p>
+          <p><strong>الثلاثة تقديسات:</strong> تُقال مع "لأنك صُلبت" في كل مرة.</p>
+        </div>
+      </article>
+
+      <article class="event">
+        <div class="event-number">✦</div>
+        <h2 class="event-title">القداس الإلهي لخميس العهد</h2>
+
+        <p>
+          قداس خميس العهد له ترتيب خاص بسبب ارتباطه بأسبوع الآلام، وبأن السيد
+          المسيح لم يتمم الفداء على الصليب بعد.
+        </p>
+
+        <div class="section-box lesson">
+          <h3>الاختصارات الطقسية</h3>
+          <ul>
+            <li>لا يُقال كيرياليسون ٤١ مرة وقت تقديم الحمل</li>
+            <li>لا يُقال لحن الليلويا فاي بي بي إيوؤ</li>
+            <li>لا يُقال سوتيس آمين</li>
+            <li>لا يُقرأ الكاثوليكون ولا الإبركسيس في القداس</li>
+            <li>لا تُصلى صلاة الصلح ولا يُصلى المجمع أو الترحيم</li>
+            <li>لا يُقال مزمور التوزيع ١٥٠</li>
+          </ul>
+        </div>
+
+        <div class="section-box prophecy">
+          <h3>ألحان القداس الخاصة باليوم</h3>
+          <p><strong>لحن تو ذيبنو:</strong> مرتبط بتذكار العشاء الأخير وتأسيس سر الإفخارستيا.</p>
+          <p><strong>لحن فاي إيطاف إنف:</strong> يُقال في باكر خميس العهد ضمن مردات اليوم.</p>
+          <p><strong>لحن تين أوؤشت:</strong> يُقال في اللقان ومرداته.</p>
+          <p><strong>أرباع الناقوس:</strong> ومنها "بي سوما نيم بي إسنوف" ومعناها "الجسد والدم".</p>
+        </div>
+
+        <div class="section-box liturgy-note">
+          <h3>ملحوظة</h3>
+          <p>
+            أثناء التناول تُصلى الساعة الحادية عشرة كتوزيع خميس العهد، وينتهي
+            القداس ويصرف الكاهن الشعب.
+          </p>
+        </div>
+      </article>
+
+      <!-- =========================
+         أسئلة للمخدومين
+    ========================= -->
+
+      <article class="event">
+        <div class="event-number">؟</div>
+        <h2 class="event-title">أسئلة للمخدومين</h2>
+
+        <div class="questions">
+          <p><strong>لماذا سُمّي خميس العهد بهذا الاسم؟</strong> لأنه فيه أعطانا المسيح العهد الجديد، وأسس سر الإفخارستيا.</p>
+          <p><strong>ما أهم طقس مميز في خميس العهد؟</strong> دورة يهوذا المخالف، واللقان وغسل الأرجل، والقداس الإلهي الخاص.</p>
+          <p><strong>ما معنى غسل الأرجل؟</strong> التواضع والخدمة ومحبة الآخرين.</p>
+          <p><strong>ما هو سر الإفخارستيا؟</strong> سر التناول الذي أسسه ربنا يسوع المسيح في العشاء الأخير، وأعطانا فيه جسده ودمه الأقدسين.</p>
+          <p><strong>ما هي أهم رسالة روحية في خميس العهد؟</strong> أن المسيح غالٍ في حياتي، وأن أعيش الأمانة والتواضع والخدمة.</p>
+        </div>
+      </article>
+
+      <div class="back-container">
+        <a href="home.html" class="back-btn">
+          ← العودة إلى خريطة أسبوع الآلام
+        </a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-cross">✚</div>
+
+      <p>خميس العهد المقدس — خميس الأسرار</p>
+
+      <p>كما صنع المسيح معنا، نصنع نحن أيضًا بالآخرين.</p>
+
+      <div class="credit" dir="ltr">
+        <span class="heart">+</span>
+        Made by <span class="name">Mina Hany</span>
+        <span class="heart">+</span>
+      </div>
+    </footer>
+  </body>
+</html>
