@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>أحد الشعانين | أسبوع الآلام</title>
+    <title>الجمعة العظيمة | أسبوع الآلام</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -213,6 +213,7 @@
 
         display: block;
 
+        /* الصورة كاملة بدون قص */
         object-fit: contain;
 
         transition: 0.5s;
@@ -223,23 +224,31 @@
       }
 
       /* =========================================
-         VIDEO / PDF
+         VIDEO
       ========================================= */
 
       .video-box {
         width: 100%;
         max-width: 800px;
-        aspect-ratio: 16 / 9;
+        height: 400px;
         margin: 0 auto;
-        overflow: hidden;
-        border-radius: 12px;
+
         background: #000;
+
+        border-radius: 15px;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      .video-box iframe {
+      .video-box video {
         width: 100%;
         height: 100%;
-        border: 0;
+
+        object-fit: contain;
+
         display: block;
       }
 
@@ -361,100 +370,6 @@
         color: var(--ink-soft);
       }
 
-      .credit {
-        margin: 20px auto 0;
-        width: fit-content;
-
-        font-family: "Aref Ruqaa", serif;
-        font-size: 16px;
-
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-
-        padding: 9px 22px;
-        border-radius: 30px;
-
-        border: 1px solid rgba(217, 179, 108, 0.3);
-        background: rgba(0, 0, 0, 0.07);
-
-        color: #000000;
-      }
-
-      .credit .heart {
-        display: inline-block;
-        animation: creditBeat 1.2s ease-in-out infinite;
-      }
-
-      .credit .name {
-        background: linear-gradient(
-          90deg,
-          #2b1a0a,
-          #a8782e,
-          #2b1a0a,
-          #a8782e,
-          #2b1a0a
-        );
-
-        background-size: 300% auto;
-
-        -webkit-background-clip: text;
-        background-clip: text;
-
-        -webkit-text-fill-color: transparent;
-        color: transparent;
-
-        font-weight: 800;
-
-        animation: creditShine 4s linear infinite;
-      }
-
-      @supports not (-webkit-background-clip: text) {
-        .credit .name {
-          color: #2b1a0a;
-          background: none;
-          -webkit-text-fill-color: initial;
-        }
-      }
-
-      @keyframes creditBeat {
-        0%,
-        100% {
-          transform: scale(1);
-        }
-
-        50% {
-          transform: scale(1.25);
-        }
-      }
-
-      @keyframes creditShine {
-        to {
-          background-position: 300% center;
-        }
-      }
-
-      /* =========================================
-         PAGE OPEN ANIMATION
-      ========================================= */
-
-      body {
-        opacity: 0;
-        animation: pageOpen 1s ease forwards;
-      }
-
-      @keyframes pageOpen {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
       /* =========================================
          MOBILE
       ========================================= */
@@ -520,7 +435,116 @@
         .quote p {
           font-size: 21px;
         }
+      }
 
+      /* =========================================
+         PAGE OPEN ANIMATION
+      ========================================= */
+
+      body {
+        opacity: 0;
+        animation: pageOpen 1s ease forwards;
+      }
+
+      @keyframes pageOpen {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .video-box {
+        width: 100%;
+        max-width: 800px;
+        aspect-ratio: 16 / 9;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 12px;
+      }
+
+      .video-box iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        display: block;
+      }
+      .credit {
+        margin: 20px auto 0;
+        width: fit-content;
+
+        font-family: "Aref Ruqaa", serif;
+        font-size: 16px;
+
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 9px 22px;
+        border-radius: 30px;
+
+        border: 1px solid rgba(217, 179, 108, 0.3);
+        background: rgba(0, 0, 0, 0.07);
+
+        color: #000000;
+      }
+
+      .credit .heart {
+        display: inline-block;
+        animation: creditBeat 1.2s ease-in-out infinite;
+      }
+
+      .credit .name {
+        background: linear-gradient(
+          90deg,
+          #2b1a0a,
+          #a8782e,
+          #2b1a0a,
+          #a8782e,
+          #2b1a0a
+        );
+        background-size: 300% auto;
+
+        -webkit-background-clip: text;
+        background-clip: text;
+
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+
+        font-weight: 800;
+
+        animation: creditShine 4s linear infinite;
+      }
+
+      @supports not (-webkit-background-clip: text) {
+        .credit .name {
+          color: #2b1a0a;
+          background: none;
+          -webkit-text-fill-color: initial;
+        }
+      }
+
+      @keyframes creditBeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.25);
+        }
+      }
+
+      @keyframes creditShine {
+        to {
+          background-position: 300% center;
+        }
+      }
+
+      @media (max-width: 600px) {
         .credit {
           font-size: 14px;
           padding: 7px 16px;
@@ -537,11 +561,11 @@
     <header>
       <a href="home.html" class="back"> ← العودة إلى الخريطة </a>
 
-      <div class="day-number">اليوم الرابع — الأحد</div>
+      <div class="day-number">اليوم السادس — الجمعة</div>
 
-      <h1>أحد الشعانين</h1>
+      <h1>الجمعة العظيمة</h1>
 
-      <p class="place">أورشليم</p>
+      <p class="place">الجلجثة — أورشليم</p>
     </header>
 
     <!-- =========================================
@@ -556,40 +580,19 @@
 
         <article class="media-card">
           <div class="media-title">
-            <h2>دخول المسيح إلى أورشليم</h2>
+            <h2>صلب المسيح</h2>
           </div>
 
           <div class="image-box">
-            <img
-              src="/media/palm-sunday.jpg"
-              alt="دخول المسيح إلى أورشليم في أحد الشعانين"
-            />
+            <img src="/media/friday.png" alt="صلب المسيح في الجمعة العظيمة" />
           </div>
+
+          <!-- شرح الصورة -->
 
           <div class="description-box">
-            <p>
-              «هوذا ملكك يأتي إليك هو عادل ومنصور، وديع وراكب على حمار وعلى جحش
-              ابن أتان.»
-            </p>
+            <p>«فلما أخذ يسوع الخل قال: قد أُكمل. ونكس رأسه وأسلم الروح.»</p>
 
-            <p class="bible-reference">متى 21 : 5</p>
-          </div>
-        </article>
-        <article class="media-card">
-          <div class="media-title">
-            <h2>دخول المسيح إلى أورشليم</h2>
-          </div>
-
-          <div class="image-box">
-            <img
-              src="/media/palm-sunday-2.jpg"
-              alt="دخول المسيح إلى أورشليم في أحد الشعانين"
-            />
-          </div>
-
-          <div class="description-box">
-            <p>«مبارك الآتي باسم الرب! أوصنا في الأعالي.»</p>
-            <p class="bible-reference">متى 21 : 5</p>
+            <p class="bible-reference">يوحنا 19 : 30</p>
           </div>
         </article>
 
@@ -599,13 +602,13 @@
 
         <article class="media-card">
           <div class="media-title">
-            <h2>تأمل في أحد الشعانين</h2>
+            <h2>تأمل في الجمعة العظيمة</h2>
           </div>
 
           <div class="video-box">
             <iframe
-              src="https://www.youtube.com/embed/5MUUhoIpgb8?si=RlEQw4e1RuYzqJeP"
-              title="تأمل في أحد الشعانين"
+              src="https://www.youtube.com/embed/iJrtjaM8aRM?si=DWERBX85fgvAnIPj"
+              title="تأمل في أحد القيامة"
               frameborder="0"
               allow="
                 accelerometer;
@@ -623,51 +626,37 @@
 
           <div class="description-box">
             <p>
-              في أحد الشعانين نفرح بدخول المسيح إلى أورشليم، مستقبِلينه بقلوبٍ
-              تشتاق إلى حضوره، كما استقبله الشعب بأغصان النخيل والزيتون هاتفين:
-              «أوصنا لابن داود». وفي وسط فرح هذا اليوم، نتذكر أن المسيح لم يدخل
-              المدينة ليملك بمجدٍ أرضي، بل دخلها وديعًا، عالمًا بما ينتظره من
-              آلام وصليب، ليقدم نفسه من أجل خلاص العالم. فلنستقبل المسيح في
-              قلوبنا، ولنفتح له أبواب حياتنا، سائلين أن يقودنا معه في طريق
-              الآلام، حتى نشارك معه أيضًا في فرح القيامة.
+              في الجمعة العظيمة نتأمل في محبة المسيح الذي بذل نفسه من أجل خلاص
+              العالم، وقبل الصليب بإرادته من أجلنا.
             </p>
           </div>
         </article>
+
         <article class="media-card">
           <div class="media-title">
-            <h2>تأمل في أحد الشعانين</h2>
+            <h2>تأمل في الجمعة العظيمة</h2>
           </div>
 
           <div class="video-box">
             <iframe
-              src="https://www.youtube.com/embed/oizfdINC80I?si=pT6GhQgqTRYciH77"
-              title="تأمل في أحد الشعانين"
+              src="./media/great-friday.pdf"
+              title="تأمل في الجمعة العظيمة"
               frameborder="0"
-              allow="
-                accelerometer;
-                autoplay;
-                clipboard-write;
-                encrypted-media;
-                gyroscope;
-                picture-in-picture;
-                web-share;
-              "
-              allowfullscreen
             >
             </iframe>
           </div>
 
           <div class="description-box">
             <p>
-              في أحد الشعانين نفرح لأن المسيح دخل أورشليم، واستقبله الناس بفرح
-              وهم يحملون أغصان النخيل والزيتون ويقولون: «أوصنا لابن داود». ونحن
-              أيضًا نستقبل المسيح في قلوبنا ونفرح به، ونتعلم منه أن نكون محبين
-              وودعاء. ونتذكر أن المسيح دخل أورشليم لأنه كان يعرف أنه سيقدم نفسه
-              من أجلنا، لذلك نشكره على محبته الكبيرة لنا ونستعد معه لأيام الآلام
-              والقيامة.
+              في الجمعة العظيمة نتأمل في محبة المسيح الذي بذل نفسه من أجل خلاص
+              العالم، وقبل الصليب بإرادته من أجلنا.
             </p>
           </div>
         </article>
+
+        <!-- =====================================
+             SECOND VIDEO
+        ====================================== -->
       </section>
 
       <!-- =========================================
@@ -675,26 +664,25 @@
       ========================================== -->
 
       <section class="content-card">
-        <h2>أحد الشعانين</h2>
+        <h2>الجمعة العظيمة</h2>
 
         <p>
-          في أحد الشعانين نحتفل بدخول ربنا يسوع المسيح إلى أورشليم، مستقبَلًا
-          بهتاف الجموع: «أوصنا لابن داود! مبارك الآتي باسم الرب!».
+          في هذا اليوم المقدس نتذكر آلام ربنا يسوع المسيح وصلبه وموته على الصليب
+          من أجل خلاص البشرية.
         </p>
 
         <p>
-          حمل الناس أغصان النخيل والزيتون، وفرشوا ثيابهم في الطريق، معلنين فرحهم
-          بملكوت المسيح. وفي هذا اليوم يبدأ الطريق الذي يقودنا إلى آلام المسيح
-          وصلبه وقيامته المجيدة.
+          حمل المسيح الصليب، وقَبِل الآلام والعار بإرادته، وبذل نفسه حبًا في
+          الإنسان، حتى تمم عمل الفداء وقال:
         </p>
 
         <div class="quote">
-          <p>«مبارك الآتي باسم الرب! أوصنا في الأعالي»</p>
+          <p>«قد أُكمل»</p>
         </div>
 
         <p>
-          فلنستقبل المسيح في قلوبنا، لا كملكٍ على الأرض فقط، بل كملكٍ على
-          حياتنا، ولنسر معه في طريق أسبوع الآلام بقلبٍ تائب ومحب.
+          ليست الجمعة العظيمة مجرد تذكار للألم، بل هي إعلان عن أعظم محبة؛ محبة
+          المسيح الذي أحبنا إلى المنتهى وبذل نفسه من أجلنا.
         </p>
       </section>
     </main>
@@ -705,11 +693,9 @@
 
     <footer>
       <p>خريطة أسبوع الآلام — تذكار الأيام المقدّسة</p>
-
       <div class="credit">
         <span class="heart">+</span>
-        <span class="name">Mina Hany</span>
-        Made by
+        <span class="name">Mina Hany</span> Made by
         <span class="heart">+</span>
       </div>
     </footer>

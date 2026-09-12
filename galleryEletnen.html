@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>أحد الشعانين | أسبوع الآلام</title>
+    <title>اثنين البصخة المقدسة | أسبوع الآلام</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,10 +16,6 @@
     />
 
     <style>
-      /* =========================================
-         VARIABLES
-      ========================================= */
-
       :root {
         --parchment: #ecdfb8;
         --parchment-light: #f8efd5;
@@ -31,10 +27,6 @@
         --clay: #9c4a28;
         --gold: #b58a3a;
       }
-
-      /* =========================================
-         RESET
-      ========================================= */
 
       * {
         margin: 0;
@@ -57,11 +49,10 @@
           var(--parchment) 55%,
           var(--parchment-dark)
         );
-      }
 
-      /* =========================================
-         PAPER TEXTURE
-      ========================================= */
+        opacity: 0;
+        animation: pageOpen 1s ease forwards;
+      }
 
       body::before {
         content: "";
@@ -76,9 +67,7 @@
         z-index: -1;
       }
 
-      /* =========================================
-         HEADER
-      ========================================= */
+      /* HEADER */
 
       header {
         text-align: center;
@@ -127,9 +116,7 @@
         color: var(--ink-soft);
       }
 
-      /* =========================================
-         MAIN
-      ========================================= */
+      /* MAIN */
 
       main {
         width: min(950px, 92%);
@@ -137,20 +124,12 @@
         padding-bottom: 100px;
       }
 
-      /* =========================================
-         MEDIA SECTION
-      ========================================= */
-
       .media-section {
         display: flex;
         flex-direction: column;
         gap: 35px;
         margin-bottom: 70px;
       }
-
-      /* =========================================
-         MEDIA CARD
-      ========================================= */
 
       .media-card {
         background: rgba(248, 239, 213, 0.96);
@@ -170,19 +149,9 @@
         box-shadow: 0 22px 50px rgba(62, 42, 24, 0.23);
       }
 
-      /* =========================================
-         MEDIA TITLE
-      ========================================= */
-
       .media-title {
         padding: 20px 25px;
         border-bottom: 1px solid rgba(62, 42, 24, 0.12);
-      }
-
-      .media-title span {
-        color: var(--clay);
-        font-size: 14px;
-        font-weight: 700;
       }
 
       .media-title h2 {
@@ -191,9 +160,7 @@
         margin-top: 5px;
       }
 
-      /* =========================================
-         IMAGE
-      ========================================= */
+      /* IMAGE */
 
       .image-box {
         width: 100%;
@@ -222,30 +189,30 @@
         transform: scale(1.02);
       }
 
-      /* =========================================
-         VIDEO / PDF
-      ========================================= */
+      /* VIDEO */
 
       .video-box {
         width: 100%;
         max-width: 800px;
         aspect-ratio: 16 / 9;
+
         margin: 0 auto;
-        overflow: hidden;
-        border-radius: 12px;
+
         background: #000;
+
+        border-radius: 12px;
+        overflow: hidden;
       }
 
       .video-box iframe {
         width: 100%;
         height: 100%;
+
         border: 0;
         display: block;
       }
 
-      /* =========================================
-         DESCRIPTION
-      ========================================= */
+      /* DESCRIPTION */
 
       .description-box {
         margin: 0;
@@ -254,16 +221,6 @@
         background: var(--parchment-light);
 
         border-top: 1px solid var(--parchment-dark);
-      }
-
-      .description-box h3 {
-        margin-bottom: 15px;
-
-        color: var(--clay);
-
-        font-family: "Aref Ruqaa", serif;
-
-        font-size: 32px;
       }
 
       .description-box p {
@@ -285,9 +242,7 @@
         font-size: 17px !important;
       }
 
-      /* =========================================
-         CONTENT
-      ========================================= */
+      /* CONTENT */
 
       .content-card {
         background: rgba(248, 239, 213, 0.96);
@@ -321,9 +276,7 @@
         margin-bottom: 20px;
       }
 
-      /* =========================================
-         QUOTE
-      ========================================= */
+      /* QUOTE */
 
       .quote {
         margin-top: 30px;
@@ -347,9 +300,7 @@
         margin: 0;
       }
 
-      /* =========================================
-         FOOTER
-      ========================================= */
+      /* FOOTER */
 
       footer {
         text-align: center;
@@ -409,11 +360,17 @@
         animation: creditShine 4s linear infinite;
       }
 
-      @supports not (-webkit-background-clip: text) {
-        .credit .name {
-          color: #2b1a0a;
-          background: none;
-          -webkit-text-fill-color: initial;
+      /* ANIMATIONS */
+
+      @keyframes pageOpen {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
 
@@ -434,30 +391,7 @@
         }
       }
 
-      /* =========================================
-         PAGE OPEN ANIMATION
-      ========================================= */
-
-      body {
-        opacity: 0;
-        animation: pageOpen 1s ease forwards;
-      }
-
-      @keyframes pageOpen {
-        from {
-          opacity: 0;
-          transform: translateY(10px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* =========================================
-         MOBILE
-      ========================================= */
+      /* MOBILE */
 
       @media (max-width: 600px) {
         header {
@@ -496,10 +430,6 @@
           padding: 22px;
         }
 
-        .description-box h3 {
-          font-size: 28px;
-        }
-
         .description-box p {
           font-size: 16px;
           line-height: 2;
@@ -530,83 +460,73 @@
   </head>
 
   <body>
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+    <!-- HEADER -->
 
     <header>
-      <a href="home.html" class="back"> ← العودة إلى الخريطة </a>
+      <a href="home.html" class="back">← العودة إلى الخريطة</a>
 
-      <div class="day-number">اليوم الرابع — الأحد</div>
+      <div class="day-number">اليوم الثاني — الاثنين</div>
 
-      <h1>أحد الشعانين</h1>
+      <h1>اثنين البصخة المقدسة</h1>
 
       <p class="place">أورشليم</p>
     </header>
 
-    <!-- =========================================
-         MAIN
-    ========================================== -->
+    <!-- MAIN -->
 
     <main>
       <section class="media-section">
-        <!-- =====================================
-             IMAGE
-        ====================================== -->
+        <!-- IMAGE -->
 
         <article class="media-card">
           <div class="media-title">
-            <h2>دخول المسيح إلى أورشليم</h2>
+            <h2>لعنة التينة وتطهير الهيكل</h2>
           </div>
 
           <div class="image-box">
-            <img
-              src="/media/palm-sunday.jpg"
-              alt="دخول المسيح إلى أورشليم في أحد الشعانين"
-            />
+            <img src="/media/monday-2.jpg" alt="اثنين البصخة المقدسة" />
           </div>
 
           <div class="description-box">
             <p>
-              «هوذا ملكك يأتي إليك هو عادل ومنصور، وديع وراكب على حمار وعلى جحش
-              ابن أتان.»
+              «وفي الغد لما خرجوا من بيت عنيا جاع، فنظر شجرة تين من بعيد عليها
+              ورق، وجاء لعله يجد فيها شيئًا، فلما جاء إليها لم يجد شيئًا إلا
+              ورقًا، لأنه لم يكن وقت التين.»
             </p>
 
-            <p class="bible-reference">متى 21 : 5</p>
+            <p class="bible-reference">مرقس 11 : 12-13</p>
           </div>
         </article>
         <article class="media-card">
           <div class="media-title">
-            <h2>دخول المسيح إلى أورشليم</h2>
+            <h2>لعنة التينة وتطهير الهيكل</h2>
           </div>
 
           <div class="image-box">
-            <img
-              src="/media/palm-sunday-2.jpg"
-              alt="دخول المسيح إلى أورشليم في أحد الشعانين"
-            />
+            <img src="/media/monday-1.jpg" alt="اثنين البصخة المقدسة" />
           </div>
 
           <div class="description-box">
-            <p>«مبارك الآتي باسم الرب! أوصنا في الأعالي.»</p>
-            <p class="bible-reference">متى 21 : 5</p>
+            <p>
+              «ودخل يسوع إلى الهيكل وابتدأ يُخرج الذين كانوا يبيعون ويشترون فيه،
+              وقال لهم: مكتوب: بيتي بيت الصلاة، وأنتم جعلتموه مغارة لصوص.»
+            </p>
+
+            <p class="bible-reference">مرقس 11 : 15-17</p>
           </div>
         </article>
 
-        <!-- =====================================
-             VIDEO
-        ====================================== -->
+        <!-- VIDEO -->
 
         <article class="media-card">
           <div class="media-title">
-            <h2>تأمل في أحد الشعانين</h2>
+            <h2>تأمل في اثنين البصخة المقدسة</h2>
           </div>
 
           <div class="video-box">
             <iframe
-              src="https://www.youtube.com/embed/5MUUhoIpgb8?si=RlEQw4e1RuYzqJeP"
-              title="تأمل في أحد الشعانين"
-              frameborder="0"
+              src="https://www.youtube.com/embed/8ZRG6pE7QgA?si=wz5pW-ALr-JnYfqR"
+              title="تأمل في اثنين البصخة المقدسة"
               allow="
                 accelerometer;
                 autoplay;
@@ -617,32 +537,26 @@
                 web-share;
               "
               allowfullscreen
-            >
-            </iframe>
+            ></iframe>
           </div>
 
           <div class="description-box">
             <p>
-              في أحد الشعانين نفرح بدخول المسيح إلى أورشليم، مستقبِلينه بقلوبٍ
-              تشتاق إلى حضوره، كما استقبله الشعب بأغصان النخيل والزيتون هاتفين:
-              «أوصنا لابن داود». وفي وسط فرح هذا اليوم، نتذكر أن المسيح لم يدخل
-              المدينة ليملك بمجدٍ أرضي، بل دخلها وديعًا، عالمًا بما ينتظره من
-              آلام وصليب، ليقدم نفسه من أجل خلاص العالم. فلنستقبل المسيح في
-              قلوبنا، ولنفتح له أبواب حياتنا، سائلين أن يقودنا معه في طريق
-              الآلام، حتى نشارك معه أيضًا في فرح القيامة.
+              في اثنين البصخة نتأمل في أحداث هذا اليوم المقدس، ونتذكر دعوة
+              المسيح لنا أن تكون حياتنا مثمرة، وأن يكون إيماننا حيًا وليس مجرد
+              مظهر خارجي.
             </p>
           </div>
         </article>
         <article class="media-card">
           <div class="media-title">
-            <h2>تأمل في أحد الشعانين</h2>
+            <h2>تأمل في اثنين البصخة المقدسة</h2>
           </div>
 
           <div class="video-box">
             <iframe
-              src="https://www.youtube.com/embed/oizfdINC80I?si=pT6GhQgqTRYciH77"
-              title="تأمل في أحد الشعانين"
-              frameborder="0"
+              src="https://www.youtube.com/embed/QZsbpdmxuhU?si=M6KPKRzL8ubsFdED"
+              title="تأمل في اثنين البصخة المقدسة"
               allow="
                 accelerometer;
                 autoplay;
@@ -653,63 +567,57 @@
                 web-share;
               "
               allowfullscreen
-            >
-            </iframe>
+            ></iframe>
           </div>
 
           <div class="description-box">
             <p>
-              في أحد الشعانين نفرح لأن المسيح دخل أورشليم، واستقبله الناس بفرح
-              وهم يحملون أغصان النخيل والزيتون ويقولون: «أوصنا لابن داود». ونحن
-              أيضًا نستقبل المسيح في قلوبنا ونفرح به، ونتعلم منه أن نكون محبين
-              وودعاء. ونتذكر أن المسيح دخل أورشليم لأنه كان يعرف أنه سيقدم نفسه
-              من أجلنا، لذلك نشكره على محبته الكبيرة لنا ونستعد معه لأيام الآلام
-              والقيامة.
+              في اثنين البصخة نتعلم من المسيح أن نكون أشخاصًا طيبين ونفعل الخير،
+              ليس بالكلام فقط، بل بأفعالنا ومحبتنا للآخرين. كما نتعلم أن قلبنا
+              يكون مثل بيت الصلاة، مليئًا بالمحبة والإيمان.
             </p>
           </div>
         </article>
       </section>
 
-      <!-- =========================================
-           INFORMATION
-      ========================================== -->
+      <!-- INFORMATION -->
 
       <section class="content-card">
-        <h2>أحد الشعانين</h2>
+        <h2>اثنين البصخة المقدسة</h2>
 
         <p>
-          في أحد الشعانين نحتفل بدخول ربنا يسوع المسيح إلى أورشليم، مستقبَلًا
-          بهتاف الجموع: «أوصنا لابن داود! مبارك الآتي باسم الرب!».
+          في اثنين البصخة المقدسة نتأمل في أحداث اليوم الثاني من أسبوع الآلام،
+          حيث دخل السيد المسيح إلى الهيكل، ولعن شجرة التين غير المثمرة.
         </p>
 
         <p>
-          حمل الناس أغصان النخيل والزيتون، وفرشوا ثيابهم في الطريق، معلنين فرحهم
-          بملكوت المسيح. وفي هذا اليوم يبدأ الطريق الذي يقودنا إلى آلام المسيح
-          وصلبه وقيامته المجيدة.
+          وتكشف لنا شجرة التين معنى مهمًا؛ فالمسيح لا يريد منا مجرد المظهر
+          الخارجي، بل يريد حياة مثمرة بالإيمان والمحبة والتوبة.
         </p>
 
         <div class="quote">
-          <p>«مبارك الآتي باسم الرب! أوصنا في الأعالي»</p>
+          <p>«كل شجرة لا تصنع ثمرًا جيدًا تقطع وتلقى في النار»</p>
         </div>
 
         <p>
-          فلنستقبل المسيح في قلوبنا، لا كملكٍ على الأرض فقط، بل كملكٍ على
-          حياتنا، ولنسر معه في طريق أسبوع الآلام بقلبٍ تائب ومحب.
+          لذلك يدعونا هذا اليوم أن نفحص حياتنا، ونسأل أنفسنا: هل حياتنا تحمل
+          ثمرًا يليق بالله؟ وهل إيماننا يظهر في أعمالنا ومحبتنا للآخرين؟
         </p>
       </section>
     </main>
 
-    <!-- =========================================
-         FOOTER
-    ========================================== -->
+    <!-- FOOTER -->
 
     <footer>
       <p>خريطة أسبوع الآلام — تذكار الأيام المقدّسة</p>
 
       <div class="credit">
         <span class="heart">+</span>
+
         <span class="name">Mina Hany</span>
+
         Made by
+
         <span class="heart">+</span>
       </div>
     </footer>
