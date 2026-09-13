@@ -632,3 +632,106 @@ body {
     transform: translateY(0);
   }
 }
+
+
+
+/* ============================================================
+   Facebook Video Section
+   ============================================================ */
+
+.youtube-section {
+  width: min(900px, 92%);
+  margin: 70px auto 60px;
+  background: rgba(248, 239, 213, 0.8);
+  border: 1px solid rgba(181, 138, 58, 0.35);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(62, 42, 24, 0.12);
+}
+
+/* Title */
+
+.youtube-title {
+  padding: 25px 30px 20px;
+  text-align: center;
+}
+
+.youtube-title span {
+  font-size: 28px;
+}
+
+.youtube-title h2 {
+  margin: 8px 0 0;
+  font-family: "Aref Ruqaa", serif;
+  font-size: 34px;
+  color: #3e2a18;
+}
+
+/* Video */
+
+.youtube-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.youtube-box iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+/* Description */
+
+.youtube-description {
+  padding: 25px 30px 30px;
+  border-top: 1px solid rgba(181, 138, 58, 0.3);
+  text-align: right;
+}
+
+.youtube-description h3 {
+  margin: 0 0 12px;
+  font-family: "Aref Ruqaa", serif;
+  font-size: 28px;
+  color: #9c4a28;
+}
+
+.youtube-description p {
+  margin: 8px 0;
+  font-family: "Tajawal", sans-serif;
+  font-size: 18px;
+  line-height: 2;
+  color: #654b2d;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .youtube-section {
+    width: 92%;
+    margin: 50px auto 40px;
+    border-radius: 18px;
+  }
+
+  .youtube-title {
+    padding: 20px;
+  }
+
+  .youtube-title h2 {
+    font-size: 28px;
+  }
+
+  .youtube-description {
+    padding: 20px;
+  }
+
+  .youtube-description h3 {
+    font-size: 25px;
+  }
+
+  .youtube-description p {
+    font-size: 16px;
+    line-height: 2;
+  }
+}

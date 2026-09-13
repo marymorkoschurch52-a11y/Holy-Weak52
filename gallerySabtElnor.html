@@ -1,10 +1,11 @@
 <!doctype html>
+
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>سبت لعازر | أسبوع الآلام</title>
+    <title>سبت النور | أسبوع الآلام</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,10 +17,6 @@
     />
 
     <style>
-      /* =========================================
-               VARIABLES
-            ========================================= */
-
       :root {
         --parchment: #ecdfb8;
         --parchment-light: #f8efd5;
@@ -31,10 +28,6 @@
         --clay: #9c4a28;
         --gold: #b58a3a;
       }
-
-      /* =========================================
-               RESET
-            ========================================= */
 
       * {
         margin: 0;
@@ -57,11 +50,10 @@
           var(--parchment) 55%,
           var(--parchment-dark)
         );
-      }
 
-      /* =========================================
-               PAPER TEXTURE
-            ========================================= */
+        opacity: 0;
+        animation: pageOpen 1s ease forwards;
+      }
 
       body::before {
         content: "";
@@ -76,9 +68,7 @@
         z-index: -1;
       }
 
-      /* =========================================
-               HEADER
-            ========================================= */
+      /* HEADER */
 
       header {
         text-align: center;
@@ -127,9 +117,7 @@
         color: var(--ink-soft);
       }
 
-      /* =========================================
-               MAIN
-            ========================================= */
+      /* MAIN */
 
       main {
         width: min(950px, 92%);
@@ -137,20 +125,12 @@
         padding-bottom: 100px;
       }
 
-      /* =========================================
-               MEDIA SECTION
-            ========================================= */
-
       .media-section {
         display: flex;
         flex-direction: column;
         gap: 35px;
         margin-bottom: 70px;
       }
-
-      /* =========================================
-               MEDIA CARD
-            ========================================= */
 
       .media-card {
         background: rgba(248, 239, 213, 0.96);
@@ -170,19 +150,9 @@
         box-shadow: 0 22px 50px rgba(62, 42, 24, 0.23);
       }
 
-      /* =========================================
-               MEDIA TITLE
-            ========================================= */
-
       .media-title {
         padding: 20px 25px;
         border-bottom: 1px solid rgba(62, 42, 24, 0.12);
-      }
-
-      .media-title span {
-        color: var(--clay);
-        font-size: 14px;
-        font-weight: 700;
       }
 
       .media-title h2 {
@@ -191,9 +161,7 @@
         margin-top: 5px;
       }
 
-      /* =========================================
-               IMAGE
-            ========================================= */
+      /* IMAGE */
 
       .image-box {
         width: 100%;
@@ -213,7 +181,6 @@
 
         display: block;
 
-        /* الصورة كاملة بدون قص */
         object-fit: contain;
 
         transition: 0.5s;
@@ -223,31 +190,32 @@
         transform: scale(1.02);
       }
 
-      /* =========================================
-               VIDEO
-            ========================================= */
+      /* VIDEO */
+
       .video-box {
         width: 100%;
         max-width: 800px;
-        height: 400px;
+        aspect-ratio: 16 / 9;
         margin: 0 auto;
+
         background: #000;
+
         border-radius: 15px;
         overflow: hidden;
+
         display: flex;
         justify-content: center;
         align-items: center;
       }
-      .video-box video {
+
+      .video-box iframe {
         width: 100%;
         height: 100%;
-        object-fit: contain;
+        border: 0;
         display: block;
       }
 
-      /* =========================================
-               DESCRIPTION
-            ========================================= */
+      /* DESCRIPTION */
 
       .description-box {
         margin: 0;
@@ -287,9 +255,7 @@
         font-size: 17px !important;
       }
 
-      /* =========================================
-               CONTENT
-            ========================================= */
+      /* CONTENT */
 
       .content-card {
         background: rgba(248, 239, 213, 0.96);
@@ -323,9 +289,7 @@
         margin-bottom: 20px;
       }
 
-      /* =========================================
-               QUOTE
-            ========================================= */
+      /* QUOTE */
 
       .quote {
         margin-top: 30px;
@@ -349,9 +313,7 @@
         margin: 0;
       }
 
-      /* =========================================
-               FOOTER
-            ========================================= */
+      /* FOOTER */
 
       footer {
         text-align: center;
@@ -363,9 +325,7 @@
         color: var(--ink-soft);
       }
 
-      /* =========================================
-               MOBILE
-            ========================================= */
+      /* MOBILE */
 
       @media (max-width: 600px) {
         header {
@@ -429,10 +389,8 @@
           font-size: 21px;
         }
       }
-      body {
-        opacity: 0;
-        animation: pageOpen 1s ease forwards;
-      }
+
+      /* PAGE OPEN ANIMATION */
 
       @keyframes pageOpen {
         from {
@@ -445,23 +403,9 @@
           transform: translateY(0);
         }
       }
-      .video-box {
-        width: 100%;
-        max-width: 800px;
-        aspect-ratio: 16 / 9;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 12px;
-      }
 
-      .video-box iframe {
-        width: 100%;
-        height: 100%;
-        border: 0;
-        display: block;
-      }
+      /* CREDIT */
 
-      /* ===================== CREDIT ===================== */
       .credit {
         margin-top: 30px;
         font-family: "Tajawal", sans-serif;
@@ -492,8 +436,7 @@
         opacity: 0.75;
       }
 
-      /* السطر الجامع بين Team و Made by */
-      .credit .credit-line {
+      .credit-line {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -503,23 +446,23 @@
         margin-top: 4px;
       }
 
-      .credit .credit-line .divider {
+      .credit-line .divider {
         opacity: 0.4;
       }
 
-      .credit .developer {
+      .developer {
         display: flex;
         align-items: center;
         gap: 6px;
       }
 
-      .credit .heart {
+      .heart {
         display: inline-block;
         color: #b5451b;
         animation: creditBeat 1.2s ease-in-out infinite;
       }
 
-      .credit .name {
+      .name {
         background: linear-gradient(
           90deg,
           #2b1a0a,
@@ -535,14 +478,6 @@
         color: transparent;
         font-weight: 800;
         animation: creditShine 4s linear infinite;
-      }
-
-      @supports not (-webkit-background-clip: text) {
-        .credit .name {
-          color: #2b1a0a;
-          background: none;
-          -webkit-text-fill-color: initial;
-        }
       }
 
       @keyframes creditBeat {
@@ -561,46 +496,53 @@
         }
       }
 
-      .contact-btn {
-        margin-top: 8px;
-        padding: 8px 20px;
-        border: 1px solid rgba(217, 179, 108, 0.45);
-        border-radius: 20px;
-        color: #2b1a0a;
-        background: rgba(217, 179, 108, 0.12);
-        text-decoration: none;
-        font-family: "Tajawal", sans-serif;
+      .credit .supervision {
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 500;
+        color: #2b1a0a;
+        margin-top: 2px;
+      }
+
+      .contact-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 8px;
+      }
+
+      .contact-label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #2b1a0a;
+      }
+
+      .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid rgba(217, 179, 108, 0.45);
+        background: rgba(217, 179, 108, 0.12);
+        color: #2b1a0a;
         transition: 0.3s ease;
       }
 
-      .contact-btn:hover {
+      .icon-btn:hover {
         transform: translateY(-2px);
         background: #2b1a0a;
         color: #ecdfb8;
       }
 
-      @media (max-width: 600px) {
-        .credit {
-          font-size: 13px;
-          padding: 14px 18px;
-          gap: 6px;
-        }
-        .credit .occasion {
-          font-size: 12px;
-        }
-        .credit .credit-line {
-          font-size: 12px;
-          gap: 4px 10px;
-        }
-        .contact-btn {
-          font-size: 13px;
-          padding: 6px 16px;
-        }
+      .icon-btn svg {
+        width: 17px;
+        height: 17px;
+        fill: currentColor;
       }
 
-      .credit .meta-line {
+      .meta-line {
         margin-top: 10px;
         padding-top: 10px;
         border-top: 1px solid rgba(217, 179, 108, 0.25);
@@ -615,190 +557,157 @@
         direction: ltr;
       }
 
-      .credit .meta-line .handle {
+      .meta-line .handle {
         font-weight: 700;
         opacity: 1;
         color: #a8782e;
       }
 
       @media (max-width: 600px) {
-        .credit .meta-line {
-          font-size: 11px;
+        .credit {
+          font-size: 13px;
+          padding: 14px 18px;
+          gap: 6px;
         }
-      }
 
-      .credit .supervision {
-        font-size: 14px;
-        font-weight: 500;
-        color: #2b1a0a;
-        margin-top: 2px;
-      }
-
-      @media (max-width: 600px) {
-        .credit .supervision {
+        .credit .occasion {
           font-size: 12px;
         }
-      }
 
-      .credit .contact-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 8px;
-      }
+        .credit-line {
+          font-size: 12px;
+          gap: 4px 10px;
+        }
 
-      .credit .icon-btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 34px;
-        height: 34px;
-        border-radius: 50%;
-        border: 1px solid rgba(217, 179, 108, 0.45);
-        background: rgba(217, 179, 108, 0.12);
-        color: #2b1a0a;
-        transition: 0.3s ease;
-      }
+        .contact-row {
+          gap: 8px;
+        }
 
-      .credit .icon-btn:hover {
-        transform: translateY(-2px);
-        background: #2b1a0a;
-        color: #ecdfb8;
-      }
-
-      .credit .icon-btn svg {
-        width: 17px;
-        height: 17px;
-        fill: currentColor;
-      }
-
-      @media (max-width: 600px) {
-        .credit .icon-btn {
+        .icon-btn {
           width: 30px;
           height: 30px;
         }
-        .credit .icon-btn svg {
+
+        .icon-btn svg {
           width: 15px;
           height: 15px;
         }
-      }
-      .credit .contact-label {
-        font-size: 14px;
-        font-weight: 500;
-        color: #2b1a0a;
+
+        .credit .supervision {
+          font-size: 12px;
+        }
+
+        .meta-line {
+          font-size: 11px;
+        }
       }
     </style>
+    ```
   </head>
 
   <body>
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+    <!-- HEADER -->
 
+    ```
     <header>
-      <a href="home.html" class="back">← العودة إلى الخريطة</a>
+      <a href="home.html" class="back"> ← العودة إلى الخريطة </a>
 
-      <div class="day-number">اليوم التاسع — الأحد</div>
+      <div class="day-number">اليوم السابع — السبت</div>
 
-      <h1>أحد القيامة المجيد</h1>
+      <h1>سبت النور</h1>
 
       <p class="place">أورشليم</p>
     </header>
 
-    <!-- =========================================
-     MAIN
-========================================== -->
+    <!-- MAIN -->
 
     <main>
       <section class="media-section">
-        <!-- =====================================
-         IMAGE
-    ====================================== -->
+        <!-- IMAGE 1 -->
 
         <article class="media-card">
           <div class="media-title">
-            <h2>قيامة ربنا يسوع المسيح</h2>
+            <h2>المسيح في القبر</h2>
           </div>
 
           <div class="image-box">
             <img
-              src="https://img.wataninet.com/2023/04/images-31.jpeg"
-              alt="قيامة ربنا يسوع المسيح"
-            />
-          </div>
-
-          <div class="description-box">
-            <p>«ليس هو ههنا، لكنه قام! اذكرن كيف كلمكن وهو بعد في الجليل»</p>
-
-            ```
-            <p class="bible-reference">لوقا 24 : 6</p>
-            ```
-          </div>
-        </article>
-
-        <article class="media-card">
-          <div class="media-title">
-            <h2>ظهور المسيح للنسوة</h2>
-          </div>
-
-          <div class="image-box">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_BpeE0kczcKeCIyvaIT0G0wZorKlnTGqcaZeX9etejR175_LW7Vd-3QKx&s=10"
-              alt="ظهور السيد المسيح للنسوة"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxDcV5jDqblYnhT9htUrK9nplHcTIgLLyu3MLx4WOImioUYQ_nxXToVpk&s=10"
+              alt="المسيح في القبر"
             />
           </div>
 
           <div class="description-box">
             <p>
-              ظهر السيد المسيح للنسوة بعد قيامته، فامتلأت قلوبهن فرحًا، وأصبحن
-              أول من حملن خبر القيامة إلى التلاميذ.
+              في سبت النور نتذكر جسد السيد المسيح وهو في القبر، بينما نعلن
+              إيماننا بأنه لم يترك الموت أن يغلبه، بل كان الموت طريقًا إلى إعلان
+              النصرة والقيامة.
             </p>
 
-            ```
-            <p class="bible-reference">متى 28 : 8-10</p>
-            ```
+            <p class="bible-reference">متى 27 : 59-60</p>
           </div>
         </article>
 
+        <!-- IMAGE 2 -->
+
         <article class="media-card">
           <div class="media-title">
-            <h2>ظهور المسيح لتلميذي عمواس</h2>
+            <h2>نزول المسيح إلى الجحيم</h2>
           </div>
 
           <div class="image-box">
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtZQLP_-QYpBGFu6Guihwc1DOV_V87ohinTmUqwtA2auU2RmY4gv-Lipk&s=10"
-              alt="ظهور المسيح لتلميذي عمواس"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgPehFUP2MSZm2kd8el7db7jcJOdpHNAZQ1MrdhdaqaOC_hOw1mxj9UI7G&s=10"
+              alt="المسيح والانتصار على الموت"
             />
           </div>
 
           <div class="description-box">
             <p>
-              ظهر السيد المسيح لتلميذي عمواس وهما في طريقهما، وشرح لهما ما كُتب
-              عنه في الكتب، ثم عرفاه عند كسر الخبز، فعادت قلوبهما تمتلئ بالفرح
-              والإيمان.
+              بينما كان جسد المسيح في القبر، نزل بروحه إلى الجحيم، وبشّر الأرواح
+              التي في السجن، معلنًا انتصاره على الموت، وفتح الطريق إلى الفردوس.
             </p>
 
-            ```
-            <p class="bible-reference">لوقا 24 : 13-35</p>
-            ```
+            <p class="bible-reference">١ بطرس 3 : 18-19</p>
           </div>
         </article>
 
-        <!-- =====================================
-         VIDEO 1
-    ====================================== -->
+        <!-- IMAGE 3 -->
 
         <article class="media-card">
           <div class="media-title">
-            <h2>تأمل في أحد القيامة</h2>
+            <h2>نور المسيح في الظلمة</h2>
+          </div>
+
+          <div class="image-box">
+            <img
+              src="https://media.elwatannews.com/media/img/Medium/2025/4/19/2025_4_19_2_50_52_626.jpg"
+              alt="نور المسيح والقيامة"
+            />
+          </div>
+
+          <div class="description-box">
+            <p>
+              سُمّي هذا اليوم «سبت النور» لأن نور المسيح أشرق في ظلمة الموت،
+              فصار القبر الذي بدا مكانًا للنهاية شاهدًا على بداية الحياة
+              والانتصار على الموت.
+            </p>
+
+            <p class="bible-reference">متى 4 : 16</p>
+          </div>
+        </article>
+
+        <!-- VIDEO -->
+
+        <article class="media-card">
+          <div class="media-title">
+            <h2>تأمل في سبت النور</h2>
           </div>
 
           <div class="video-box">
             <iframe
-              src="https://www.youtube.com/embed/tXPxFgS1UgE?si=p7AecWJKxY8cPn5S"
-              title="تأمل في أحد القيامة"
+              src="https://www.youtube.com/embed/t-bam29TVao?si=PKovjPrU-H_gH3ie"
+              title="تأمل في سبت النور"
               frameborder="0"
               allow="
                 accelerometer;
@@ -816,27 +725,23 @@
 
           <div class="description-box">
             <p>
-              في أحد القيامة نفرح بقيامة المسيح من بين الأموات، ونتأمل في محبته
-              التي غلبت الموت، وفي الرجاء الجديد الذي منحنا إياه بقيامته
-              المجيدة.
-            </p>
-
-            <p>
-              تأمل في معنى القيامة في حياتنا، وكيف تدعونا إلى أن نعيش في فرح
-              ورجاء، واثقين أن المسيح قام حقًا وانتصر على الموت.
+              في سبت النور نتأمل في سر المسيح الذي دخل إلى الموت لكي يهزم الموت،
+              وننتظر بفرح إعلان القيامة وانبثاق نور المسيح.
             </p>
           </div>
         </article>
 
+        <!-- VIDEO FOR CHILDREN -->
+
         <article class="media-card">
           <div class="media-title">
-            <h2>تأمل في أحد القيامة للأطفال</h2>
+            <h2>تأمل في سبت النور للأطفال</h2>
           </div>
 
           <div class="video-box">
             <iframe
-              src="https://www.youtube.com/embed/p8caL-DPDDo?si=E65mU_Db15r8IwIq"
-              title="تأمل في أحد القيامة للأطفال"
+              src="https://www.youtube.com/embed/XbQNOEao6pc?si=kqYnKtxG0eb6pC1q"
+              title="تأمل في سبت النور للأطفال"
               frameborder="0"
               allow="
                 accelerometer;
@@ -854,61 +759,73 @@
 
           <div class="description-box">
             <p>
-              في أحد القيامة نفرح لأن المسيح قام وانتصر على الموت، ونتعلم أن
-              نفرح ونعيش دائمًا في محبته، ونثق أن المسيح معنا ويعطينا الرجاء
-              والفرح.
+              سبت النور هو يوم ننتظر فيه فرح القيامة، ونتعلم أن المسيح هو النور
+              الذي يبدد الظلمة، وأنه غلب الموت وأعطانا رجاء الحياة.
             </p>
           </div>
         </article>
       </section>
 
-      <!-- =====================================
-       INFORMATION
-  ====================================== -->
+      <!-- INFORMATION -->
 
       <section class="content-card">
-        <h2>أحد القيامة المجيد</h2>
+        <h2>سبت النور</h2>
 
         <p>
-          في فجر الأحد، جاءت النسوة إلى القبر فوجدنه فارغًا، لأن ربنا يسوع
-          المسيح قام من بين الأموات، كما سبق ووعد تلاميذه.
+          سبت النور هو السبت الكبير، وفيه نتذكر وجود السيد المسيح في القبر
+          بالجسد، بينما نحتفل سرًا بانتصاره على الموت ونزوله إلى الجحيم.
         </p>
 
         <p>
-          القيامة هي أساس الإيمان المسيحي، ففيها غلب المسيح الموت وأعلن انتصاره
-          على الخطية، وفتح لنا طريق الحياة الأبدية والرجاء.
+          وفي هذا اليوم تعيش الكنيسة حالة من الانتظار والصمت المقدس، استعدادًا
+          لإعلان فرح القيامة، فالمسيح الذي ذاق الموت من أجلنا لم يبقَ تحت سلطان
+          الموت، بل كسر شوكته وأعلن النصرة.
         </p>
 
         <div class="quote">
-          <p>«ليس هو ههنا، لكنه قام»</p>
+          <p>
+            «المسيح قام من بين الأموات، ووطئ الموت بالموت، والذين في القبور أنعم
+            عليهم بالحياة»
+          </p>
         </div>
+
+        <p>
+          لذلك يُدعى هذا اليوم «سبت النور»، لأن نور المسيح أشرق في ظلمة الجحيم،
+          ولأن الكنيسة تقف في انتظار النور والقيامة، معلنة أن الموت لم يعد
+          النهاية، بل صار طريقًا إلى الحياة الأبدية.
+        </p>
       </section>
     </main>
 
-    <!-- =========================================
-     FOOTER
-========================================== -->
+    <!-- FOOTER -->
 
     <footer class="site-footer">
       <div class="credit" dir="rtl">
         <p>خريطة أسبوع الآلام — تذكار الأيام المقدّسة</p>
 
         <p class="church-name">كنيسة مارمرقس الرسول – شبرا الخيمة</p>
+
         <p class="occasion">أسبوع الآلام ٢٠٢٦</p>
+
         <p class="supervision">تحت إشراف أبونا ذكريا وأبونا يحنس</p>
 
         <div class="credit-line">
-          <span> <span class="name">أواني مختارة 52</span></span>
+          <span>
+            <span class="name">أواني مختارة 52</span>
+          </span>
+
           <span class="divider">|</span>
+
           <span class="developer">
             <span class="heart">+</span>
-            <span class="name">Mina Hany</span> Made by
+            <span class="name">Mina Hany</span>
+            Made by
             <span class="heart">+</span>
           </span>
         </div>
 
         <div class="contact-row">
-          <span class="contact-label">تواصل معنا</span>
+          <span class="contact-label"> تواصل معنا </span>
 
           <a
             href="https://wa.me/201286052628"
@@ -924,6 +841,7 @@
             </svg>
           </a>
         </div>
+
         <div class="meta-line">
           <span>© 2026</span>
           <span>·</span>
