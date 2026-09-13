@@ -350,39 +350,60 @@
       /* =========================================
          FOOTER
       ========================================= */
-
-      footer {
+      .credit {
+        margin-top: 30px;
+        font-family: "Tajawal", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-
-        padding: 30px;
-
-        border-top: 1px solid rgba(62, 42, 24, 0.15);
-
-        color: var(--ink-soft);
+        gap: 8px;
+        padding: 18px 28px;
+        border-radius: 18px;
+        border: 1px solid rgba(217, 179, 108, 0.35);
+        background: rgba(0, 0, 0, 0.05);
       }
 
-      .credit {
-        margin: 20px auto 0;
-        width: fit-content;
+      .credit p {
+        margin: 0;
+      }
 
+      .credit .church-name {
         font-family: "Aref Ruqaa", serif;
-        font-size: 16px;
+        font-size: 19px;
+        font-weight: 700;
+        color: #2b1a0a;
+      }
 
-        display: inline-flex;
+      .credit .occasion {
+        font-size: 14px;
+        opacity: 0.75;
+      }
+
+      /* السطر الجامع بين Team و Made by */
+      .credit .credit-line {
+        display: flex;
         align-items: center;
-        gap: 8px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+        font-size: 14px;
+        margin-top: 4px;
+      }
 
-        padding: 9px 22px;
-        border-radius: 30px;
+      .credit .credit-line .divider {
+        opacity: 0.4;
+      }
 
-        border: 1px solid rgba(217, 179, 108, 0.3);
-        background: rgba(0, 0, 0, 0.07);
-
-        color: #000000;
+      .credit .developer {
+        display: flex;
+        align-items: center;
+        gap: 6px;
       }
 
       .credit .heart {
         display: inline-block;
+        color: #b5451b;
         animation: creditBeat 1.2s ease-in-out infinite;
       }
 
@@ -395,17 +416,12 @@
           #a8782e,
           #2b1a0a
         );
-
         background-size: 300% auto;
-
         -webkit-background-clip: text;
         background-clip: text;
-
         -webkit-text-fill-color: transparent;
         color: transparent;
-
         font-weight: 800;
-
         animation: creditShine 4s linear infinite;
       }
 
@@ -422,7 +438,6 @@
         100% {
           transform: scale(1);
         }
-
         50% {
           transform: scale(1.25);
         }
@@ -434,6 +449,133 @@
         }
       }
 
+      .contact-btn {
+        margin-top: 8px;
+        padding: 8px 20px;
+        border: 1px solid rgba(217, 179, 108, 0.45);
+        border-radius: 20px;
+        color: #2b1a0a;
+        background: rgba(217, 179, 108, 0.12);
+        text-decoration: none;
+        font-family: "Tajawal", sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        transition: 0.3s ease;
+      }
+
+      .contact-btn:hover {
+        transform: translateY(-2px);
+        background: #2b1a0a;
+        color: #ecdfb8;
+      }
+
+      @media (max-width: 600px) {
+        .credit {
+          font-size: 13px;
+          padding: 14px 18px;
+          gap: 6px;
+        }
+        .credit .occasion {
+          font-size: 12px;
+        }
+        .credit .credit-line {
+          font-size: 12px;
+          gap: 4px 10px;
+        }
+        .contact-btn {
+          font-size: 13px;
+          padding: 6px 16px;
+        }
+      }
+
+      .credit .meta-line {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(217, 179, 108, 0.25);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px 10px;
+        font-size: 12px;
+        opacity: 0.7;
+        direction: ltr;
+      }
+
+      .credit .meta-line .handle {
+        font-weight: 700;
+        opacity: 1;
+        color: #a8782e;
+      }
+
+      @media (max-width: 600px) {
+        .credit .meta-line {
+          font-size: 11px;
+        }
+      }
+
+      .credit .supervision {
+        font-size: 14px;
+        font-weight: 500;
+        color: #2b1a0a;
+        margin-top: 2px;
+      }
+
+      @media (max-width: 600px) {
+        .credit .supervision {
+          font-size: 12px;
+        }
+      }
+
+      .credit .contact-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 8px;
+      }
+
+      .credit .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid rgba(217, 179, 108, 0.45);
+        background: rgba(217, 179, 108, 0.12);
+        color: #2b1a0a;
+        transition: 0.3s ease;
+      }
+
+      .credit .icon-btn:hover {
+        transform: translateY(-2px);
+        background: #2b1a0a;
+        color: #ecdfb8;
+      }
+
+      .credit .icon-btn svg {
+        width: 17px;
+        height: 17px;
+        fill: currentColor;
+      }
+
+      @media (max-width: 600px) {
+        .credit .icon-btn {
+          width: 30px;
+          height: 30px;
+        }
+        .credit .icon-btn svg {
+          width: 15px;
+          height: 15px;
+        }
+      }
+      .credit .contact-label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #2b1a0a;
+      }
       /* =========================================
          PAGE OPEN ANIMATION
       ========================================= */
@@ -561,7 +703,7 @@
 
           <div class="image-box">
             <img
-              src="/media/palm-sunday.jpg"
+              src="https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/657344986_1381238907373359_5751923411046413328_n.jpg?stp=dst-jpg_tt6&cstp=mx800x978&ctp=s704x704&_nc_cat=105&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeGp1JhbrXmyb5BqUqjzXKez0aT-e2ZCEInRpP57ZkIQiT-ntBoRTwdKEIyxXBJvrPq5Mez0CXeY4NctfK7kZCJs&_nc_ohc=R3yTM8F2HAUQ7kNvwFGMA9R&_nc_oc=AdquHL_5vNO5zrF_Y6iNGw23ey51QSyDwOm8HExEKNBkVMYPtsmVcCmi3EjSmAcENHs&_nc_zt=23&_nc_ht=scontent.fcai20-1.fna&_nc_gid=NdRj-5RTP5k0CjvDKAU2cw&_nc_ss=7b2a8&oh=00_AQK1yFdHOYT-rmEOX3W_iLwNtlMGv0wZ_4FmEU_BSvAvWA&oe=6AAC7D95"
               alt="دخول المسيح إلى أورشليم في أحد الشعانين"
             />
           </div>
@@ -582,7 +724,7 @@
 
           <div class="image-box">
             <img
-              src="/media/palm-sunday-2.jpg"
+              src="https://scontent.fcai20-1.fna.fbcdn.net/v/t39.30808-6/660464669_4403308983278046_3568423830383325489_n.jpg?stp=dst-jpg_tt6&cstp=mx960x960&ctp=s900x900&_nc_cat=108&_nc_map=urlgen_bucketless&ccb=1-7&_nc_sid=aa7b47&_nc_eui2=AeHeObC5119hEmASCgv7rR63H5g82ByCGSofmDzYHIIZKvcQJBCWAlT7LVYOGBJddDlv-nj1awMOF8hERa9nCSZj&_nc_ohc=9ImVcC0yHbIQ7kNvwFjJVrA&_nc_oc=AdoD1f_n4866OOgt-NdJtIdE9X7Mh8DPNoBJuTFwLzs5Q_g6y7998UoS4_Sl2WUV-xU&_nc_zt=23&_nc_ht=scontent.fcai20-1.fna&_nc_gid=fDq5MeA8MgY27Z1gtzPwjQ&_nc_ss=7b2a8&oh=00_AQKbyhF-sQ_Um6XOuAhiX9_FFSFxcdWHLrKVAakvst2q1Q&oe=6AAC956C"
               alt="دخول المسيح إلى أورشليم في أحد الشعانين"
             />
           </div>
@@ -593,12 +735,9 @@
           </div>
         </article>
 
-
-
         <!-- =====================================
              VIDEO
         ====================================== -->
-
 
         <article class="media-card">
           <div class="media-title">
@@ -705,16 +844,53 @@
     <!-- =========================================
          FOOTER
     ========================================== -->
+  <footer class="site-footer">
+      <div class="credit" dir="rtl">
+        <p>خريطة أسبوع الآلام — تذكار الأيام المقدّسة</p>
 
-    <footer>
-      <p>خريطة أسبوع الآلام — تذكار الأيام المقدّسة</p>
+        <p class="church-name">كنيسة مارمرقس الرسول – شبرا الخيمة</p>
+        <p class="occasion">أسبوع الآلام ٢٠٢٦</p>
+        <p class="supervision">تحت إشراف أبونا ذكريا وأبونا يحنس</p>
 
-      <div class="credit">
-        <span class="heart">+</span>
-        <span class="name">Mina Hany</span>
-        Made by
-        <span class="heart">+</span>
+        <div class="credit-line">
+          <span> <span class="name">أواني مختارة 52</span></span>
+          <span class="divider">|</span>
+          <span class="developer">
+            <span class="heart">+</span>
+            <span class="name">Mina Hany</span> Made by
+            <span class="heart">+</span>
+          </span>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-label">تواصل معنا</span>
+
+          <a
+            href="https://wa.me/201286052628"
+            class="icon-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 4.99L2 22l5.2-1.36c1.45.79 3.08 1.2 4.83 1.2h.01c5.5 0 9.96-4.46 9.96-9.96C21.99 6.46 17.54 2 12.04 2zm5.83 14.06c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.14.11-1.83-.12-.42-.13-.97-.32-1.66-.63-2.93-1.27-4.84-4.2-4.99-4.4-.15-.19-1.19-1.58-1.19-3.02s.75-2.15 1.02-2.44c.26-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.11.32.02.51-.08.19-.13.31-.26.47-.13.16-.27.36-.39.48-.13.13-.26.27-.11.53.15.26.68 1.12 1.46 1.82 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.07.15-.18.64-.75.81-1 .17-.26.34-.21.57-.13.23.08 1.46.69 1.71.81.25.13.42.19.48.3.06.11.06.62-.18 1.3z"
+              />
+            </svg>
+          </a>
+        </div>
+        <div class="meta-line">
+          <span>© 2026</span>
+          <span>·</span>
+          <span class="handle">@marmarkos_shobra</span>
+        </div>
       </div>
     </footer>
+  
+    
+
+
+
+
   </body>
 </html>

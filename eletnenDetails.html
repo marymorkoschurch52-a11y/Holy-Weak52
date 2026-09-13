@@ -383,57 +383,197 @@
       }
 
       .credit {
-  margin-top: 25px;
+        margin-top: 25px;
+        font-family: "Tajawal", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+        padding: 20px 30px;
+        border-radius: 18px;
+        border: 1px solid rgba(212, 164, 95, 0.25);
+        background: rgba(0, 0, 0, 0.25);
+      }
 
-  font-family: "Aref Ruqaa", serif;
+      .credit p {
+        margin: 0;
+      }
 
-  font-size: 18px;
+      .credit .church-name {
+        font-family: "Aref Ruqaa", serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: #f1cf91;
+      }
 
-  display: inline-flex;
+      .credit .occasion {
+        font-size: 14px;
+        color: #cfc2b5;
+        opacity: 0.85;
+      }
 
-  align-items: center;
+      .credit .supervision {
+        font-size: 14px;
+        font-weight: 500;
+        color: #dcb875;
+        margin-top: 2px;
+      }
 
-  gap: 8px;
+      .credit .credit-line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+        font-size: 14px;
+        margin-top: 6px;
+        color: #d8ccc0;
+      }
 
-  padding: 10px 22px;
+      .credit .credit-line .divider {
+        opacity: 0.4;
+        color: #a98d63;
+      }
 
-  border-radius: 30px;
+      .credit .developer {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
 
-  border: 1px solid rgba(217, 179, 108, 0.3);
+      .credit .heart {
+        display: inline-block;
+        color: #e0b86b;
+        animation: creditBeat 1.2s ease-in-out infinite;
+      }
 
-  background: rgba(217, 179, 108, 0.06);
-}
+      .credit .name {
+        background: linear-gradient(
+          90deg,
+          #a8782e,
+          #f0d49a,
+          #d9b36c,
+          #f0d49a,
+          #a8782e
+        );
+        background-size: 300% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        font-weight: 700;
+        animation: creditShine 4s linear infinite;
+      }
 
-.credit .heart {
-  display: inline-block;
+      @supports not (-webkit-background-clip: text) {
+        .credit .name {
+          color: #f1cf91;
+          background: none;
+          -webkit-text-fill-color: initial;
+        }
+      }
 
-  animation: beat 1.2s ease-in-out infinite;
-}
+      @keyframes creditBeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.25);
+        }
+      }
 
-.credit .name {
-  background: linear-gradient(90deg, #a8782e, #f0d49a, #d9b36c, #f0d49a, #a8782e);
+      @keyframes creditShine {
+        to {
+          background-position: 300% center;
+        }
+      }
 
-  background-size: 300% auto;
+      .credit .contact-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 8px;
+      }
 
-  -webkit-background-clip: text;
+      .credit .contact-label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #dcb875;
+      }
 
-  background-clip: text;
+      .credit .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid rgba(212, 164, 95, 0.4);
+        background: rgba(212, 164, 95, 0.1);
+        color: #f1dfc2;
+        transition: 0.3s ease;
+      }
 
-  color: transparent;
+      .credit .icon-btn:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, #e2bd71, #a8782e);
+        color: #1a1107;
+      }
 
-  font-weight: 700;
+      .credit .icon-btn svg {
+        width: 17px;
+        height: 17px;
+        fill: currentColor;
+      }
 
-  animation: shine 4s linear infinite;
-}
+      .credit .meta-line {
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(212, 164, 95, 0.2);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px 10px;
+        font-size: 12px;
+        color: #b9a997;
+        opacity: 0.85;
+        direction: ltr;
+      }
 
-@keyframes beat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.25); }
-}
+      .credit .meta-line .handle {
+        font-weight: 700;
+        opacity: 1;
+        color: #dcb875;
+      }
 
-@keyframes shine {
-  to { background-position: 300% center; }
-}
+      @media (max-width: 600px) {
+        .credit {
+          font-size: 13px;
+          padding: 16px 20px;
+          gap: 6px;
+        }
+        .credit .occasion,
+        .credit .supervision,
+        .credit .credit-line {
+          font-size: 12px;
+        }
+        .credit .meta-line {
+          font-size: 11px;
+        }
+        .credit .icon-btn {
+          width: 30px;
+          height: 30px;
+        }
+        .credit .icon-btn svg {
+          width: 15px;
+          height: 15px;
+        }
+      }
     </style>
   </head>
 
@@ -826,16 +966,50 @@
     </main>
 
     <footer class="footer">
-      <div class="footer-cross">✚</div>
+      <div class="footer-cross">+</div>
 
       <p>اثنين البصخة المقدسة — الاثنين الكبير</p>
 
       <p>الله يريد الثمر، ويطهر القلب، ويدعونا إلى التوبة.</p>
 
-      <div class="credit">
-        <span class="heart">+</span>
-        <span class="name">Mina Hany</span> Made by
-        <span class="heart">+</span>
+      <div class="credit" dir="rtl">
+        <p class="church-name">كنيسة مارمرقس الرسول – شبرا الخيمة</p>
+        <p class="occasion">أسبوع الآلام ٢٠٢٦</p>
+        <p class="supervision">تحت إشراف أبونا ذكريا وأبونا يحنس</p>
+
+        <div class="credit-line">
+          <span><span class="name">أواني مختارة 52</span></span>
+          <span class="divider">|</span>
+          <span class="developer">
+            <span class="heart">+</span>
+            <span class="name">Mina Hany</span> Made by
+            <span class="heart">+</span>
+          </span>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-label">تواصل معنا</span>
+
+          <a
+            href="https://wa.me/201286052628"
+            class="icon-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 4.99L2 22l5.2-1.36c1.45.79 3.08 1.2 4.83 1.2h.01c5.5 0 9.96-4.46 9.96-9.96C21.99 6.46 17.54 2 12.04 2zm5.83 14.06c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.14.11-1.83-.12-.42-.13-.97-.32-1.66-.63-2.93-1.27-4.84-4.2-4.99-4.4-.15-.19-1.19-1.58-1.19-3.02s.75-2.15 1.02-2.44c.26-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.11.32.02.51-.08.19-.13.31-.26.47-.13.16-.27.36-.39.48-.13.13-.26.27-.11.53.15.26.68 1.12 1.46 1.82 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.07.15-.18.64-.75.81-1 .17-.26.34-.21.57-.13.23.08 1.46.69 1.71.81.25.13.42.19.48.3.06.11.06.62-.18 1.3z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="meta-line">
+          <span>© 2026</span>
+          <span>·</span>
+          <span class="handle">@marmarkos_shobra</span>
+        </div>
       </div>
     </footer>
   </body>
