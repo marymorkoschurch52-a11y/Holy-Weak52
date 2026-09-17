@@ -1,0 +1,599 @@
+```html
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>404 — الصفحة غير موجودة | أسبوع الآلام</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        font-family: "Tajawal", sans-serif;
+        background: radial-gradient(
+          circle at top,
+          #3b2a1d 0%,
+          #18120e 45%,
+          #0b0907 100%
+        );
+        color: #f8f1e7;
+        line-height: 1.9;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        animation: pageOpen 1s ease forwards;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.08;
+        background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+        background-size: 35px 35px;
+      }
+
+      /* =========================
+         ERROR
+      ========================= */
+
+      .error-page {
+        min-height: 78vh;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 20px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .error-page::before {
+        content: "✚";
+        position: absolute;
+        font-size: 330px;
+        color: rgba(180, 132, 70, 0.04);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+      }
+
+      .error-content {
+        position: relative;
+        z-index: 2;
+        width: min(750px, 94%);
+        padding: 55px 35px;
+
+        background: linear-gradient(
+          145deg,
+          rgba(73, 51, 34, 0.75),
+          rgba(22, 16, 12, 0.92)
+        );
+
+        border: 1px solid rgba(212, 164, 95, 0.25);
+        border-radius: 25px;
+
+        box-shadow:
+          0 20px 60px rgba(0, 0, 0, 0.4),
+          inset 0 1px rgba(255, 255, 255, 0.04);
+
+        overflow: hidden;
+      }
+
+      .error-content::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 5px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          #e0b86b,
+          #8b5e34,
+          transparent
+        );
+      }
+
+      .cross {
+        font-size: 55px;
+        color: #d4a45f;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .error-code {
+        font-family: "Aref Ruqaa", serif;
+        font-size: clamp(90px, 16vw, 150px);
+        line-height: 1;
+        color: #f4d49a;
+        text-shadow: 0 5px 30px rgba(0, 0, 0, 0.6);
+        margin-bottom: 15px;
+      }
+
+      .error-content h1 {
+        font-family: "Aref Ruqaa", serif;
+        font-size: clamp(32px, 5vw, 50px);
+        color: #e7c47d;
+        margin-bottom: 15px;
+      }
+
+      .error-message {
+        color: #d8ccc0;
+        font-size: 18px;
+        margin-bottom: 30px;
+      }
+
+      .error-message strong {
+        color: #f1cf91;
+      }
+
+      /* =========================
+         BUTTON
+      ========================= */
+
+      .back-container {
+        margin-top: 20px;
+      }
+
+      .back-btn {
+        display: inline-block;
+        text-decoration: none;
+        color: #1a1107;
+        background: linear-gradient(135deg, #e2bd71, #a8782e);
+        padding: 13px 35px;
+        border-radius: 30px;
+        font-weight: 900;
+        font-size: 17px;
+        transition: 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .back-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+      }
+
+      /* =========================
+         SMALL QUOTE
+      ========================= */
+
+      .error-quote {
+        margin-top: 35px;
+        padding: 20px 25px;
+        border-right: 4px solid #c99a52;
+        background: rgba(0, 0, 0, 0.22);
+        border-radius: 15px;
+
+        color: #f1dfc2;
+        font-family: "Aref Ruqaa", serif;
+        font-size: 20px;
+        line-height: 2;
+      }
+
+      .error-quote span {
+        display: block;
+        margin-top: 5px;
+        color: #bca58b;
+        font-family: "Tajawal", sans-serif;
+        font-size: 13px;
+      }
+
+      /* =========================
+         FOOTER
+      ========================= */
+
+      .footer {
+        text-align: center;
+        padding: 50px 20px 35px;
+        border-top: 1px solid rgba(212, 164, 95, 0.15);
+        color: #b9a997;
+      }
+
+      .footer-cross {
+        font-size: 35px;
+        color: #c89b5a;
+        margin-bottom: 15px;
+      }
+
+      .footer > p {
+        font-family: "Aref Ruqaa", serif;
+        font-size: 23px;
+      }
+
+      /* =========================
+         CREDIT
+      ========================= */
+
+      .credit {
+        margin: 25px auto 0;
+        width: min(850px, 95%);
+
+        font-family: "Tajawal", sans-serif;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        gap: 8px;
+        padding: 20px 30px;
+
+        border-radius: 18px;
+        border: 1px solid rgba(212, 164, 95, 0.25);
+        background: rgba(0, 0, 0, 0.25);
+      }
+
+      .credit p {
+        margin: 0;
+      }
+
+      .credit .church-name {
+        font-family: "Aref Ruqaa", serif;
+        font-size: 20px;
+        font-weight: 700;
+        color: #f1cf91;
+      }
+
+      .credit .occasion {
+        font-size: 14px;
+        color: #cfc2b5;
+        opacity: 0.85;
+      }
+
+      .credit .supervision {
+        font-size: 14px;
+        font-weight: 500;
+        color: #dcb875;
+        margin-top: 2px;
+      }
+
+      .credit .credit-line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+        font-size: 14px;
+        margin-top: 6px;
+        color: #d8ccc0;
+      }
+
+      .credit .credit-line .divider {
+        opacity: 0.4;
+        color: #a98d63;
+      }
+
+      .credit .developer {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .credit .heart {
+        display: inline-block;
+        color: #e0b86b;
+        animation: creditBeat 1.2s ease-in-out infinite;
+      }
+
+      .credit .name {
+        background: linear-gradient(
+          90deg,
+          #a8782e,
+          #f0d49a,
+          #d9b36c,
+          #f0d49a,
+          #a8782e
+        );
+
+        background-size: 300% auto;
+
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+
+        font-weight: 700;
+
+        animation: creditShine 4s linear infinite;
+      }
+
+      @supports not (-webkit-background-clip: text) {
+        .credit .name {
+          color: #f1cf91;
+          background: none;
+          -webkit-text-fill-color: initial;
+        }
+      }
+
+      /* =========================
+         CONTACT
+      ========================= */
+
+      .credit .contact-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 8px;
+      }
+
+      .credit .contact-label {
+        font-size: 14px;
+        font-weight: 500;
+        color: #dcb875;
+      }
+
+      .credit .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 34px;
+        height: 34px;
+
+        border-radius: 50%;
+        border: 1px solid rgba(212, 164, 95, 0.4);
+        background: rgba(212, 164, 95, 0.1);
+
+        color: #f1dfc2;
+        transition: 0.3s ease;
+      }
+
+      .credit .icon-btn:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, #e2bd71, #a8782e);
+        color: #1a1107;
+      }
+
+      .credit .icon-btn svg {
+        width: 17px;
+        height: 17px;
+        fill: currentColor;
+      }
+
+      /* =========================
+         META
+      ========================= */
+
+      .credit .meta-line {
+        margin-top: 10px;
+        padding-top: 10px;
+
+        border-top: 1px solid rgba(212, 164, 95, 0.2);
+
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 4px 10px;
+
+        font-size: 12px;
+        color: #b9a997;
+        opacity: 0.85;
+
+        direction: ltr;
+      }
+
+      .credit .meta-line .handle {
+        font-weight: 700;
+        opacity: 1;
+        color: #dcb875;
+      }
+
+      /* =========================
+         ANIMATIONS
+      ========================= */
+
+      @keyframes pageOpen {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes creditBeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.25);
+        }
+      }
+
+      @keyframes creditShine {
+        to {
+          background-position: 300% center;
+        }
+      }
+
+      /* =========================
+         RESPONSIVE
+      ========================= */
+
+      @media (max-width: 600px) {
+        .error-page {
+          min-height: 70vh;
+          padding: 40px 15px;
+        }
+
+        .error-content {
+          padding: 40px 20px;
+          border-radius: 18px;
+        }
+
+        .error-code {
+          font-size: 100px;
+        }
+
+        .error-message {
+          font-size: 16px;
+        }
+
+        .error-quote {
+          font-size: 17px;
+          padding: 18px;
+        }
+
+        .footer {
+          padding: 40px 15px 25px;
+        }
+
+        .footer > p {
+          font-size: 19px;
+        }
+
+        .credit {
+          font-size: 13px;
+          padding: 16px 20px;
+          gap: 6px;
+        }
+
+        .credit .church-name {
+          font-size: 18px;
+        }
+
+        .credit .occasion,
+        .credit .supervision,
+        .credit .credit-line {
+          font-size: 12px;
+        }
+
+        .credit .meta-line {
+          font-size: 11px;
+        }
+
+        .credit .icon-btn {
+          width: 30px;
+          height: 30px;
+        }
+
+        .credit .icon-btn svg {
+          width: 15px;
+          height: 15px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="error-page">
+      <section class="error-content">
+        <span class="cross">✚</span>
+
+        <div class="error-code">404</div>
+
+        <h1>الصفحة غير موجودة</h1>
+
+        <p class="error-message">
+          يبدو أن الصفحة التي تبحث عنها غير موجودة أو تم نقلها.
+          <br />
+          <strong>لا تقلق، يمكنك العودة إلى خريطة أسبوع الآلام.</strong>
+        </p>
+
+        <div class="back-container">
+          <a href="home.html" class="back-btn">
+            ← العودة إلى خريطة أسبوع الآلام
+          </a>
+        </div>
+
+        <div class="error-quote">
+          «لِأَنَّكَ لَنْ تَتْرُكَ نَفْسِي فِي الْهَاوِيَةِ، لَنْ تَدَعَ
+          تَقِيَّكَ يَرَى فَسَادًا.»
+
+          <span>مزمور ١٦ : ١٠</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-cross">+</div>
+
+      <p>أسبوع الآلام ٢٠٢٦</p>
+
+      <p>من أجلنا… مات وقام</p>
+
+      <div class="credit" dir="rtl">
+        <p class="church-name">كنيسة مارمرقس الرسول – شبرا الخيمة</p>
+
+        <p class="occasion">أسبوع الآلام ٢٠٢٦</p>
+
+        <p class="supervision">
+          تحت إشراف أبونا ذكريا وأبونا يحنس
+        </p>
+
+        <div class="credit-line">
+          <span>
+            <span class="name">أواني مختارة 52</span>
+          </span>
+
+          <span class="divider">|</span>
+
+          <span class="developer">
+            <span class="heart">+</span>
+            <span class="name">Mina Hany</span>
+            <span>Designed &amp; Developed by</span>
+            <span class="heart">+</span>
+          </span>
+        </div>
+
+        <div class="contact-row">
+          <span class="contact-label">تواصل معنا</span>
+
+          <a
+            href="https://wa.me/201286052628"
+            class="icon-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="WhatsApp"
+          >
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 4.99L2 22l5.2-1.36c1.45.79 3.08 1.2 4.83 1.2h.01c5.5 0 9.96-4.46 9.96-9.96C21.99 6.46 17.54 2 12.04 2zm5.83 14.06c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.14.11-1.83-.12-.42-.13-.97-.32-1.66-.63-2.93-1.27-4.84-4.2-4.99-4.4-.15-.19-1.19-1.58-1.19-3.02s.75-2.15 1.02-2.44c.26-.29.58-.36.77-.36l.55.01c.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.11.32.02.51-.08.19-.13.31-.26.47-.13.16-.27.36-.39.48-.13.13-.26.27-.11.53.15.26.68 1.12 1.46 1.82 1 .89 1.85 1.17 2.11 1.3.26.13.41.11.56-.07.15-.18.64-.75.81-1 .17-.26.34-.21.57-.13.23.08 1.46.69 1.71.81.25.13.42.19.48.3.06.11.06.62-.18 1.3z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="meta-line">
+          <span>© 2026</span>
+          <span>·</span>
+          <span class="handle">@marmarkos_shobra</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+```
