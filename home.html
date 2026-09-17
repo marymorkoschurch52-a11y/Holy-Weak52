@@ -241,6 +241,7 @@
     </style>
     <link rel="stylesheet" href="music.css" />
     <link rel="stylesheet" href="candle.css" />
+    <link rel="stylesheet" href="map.css" />
   </head>
   <body>
     <!-- خلفية زخرفية ثابتة -->
@@ -596,6 +597,123 @@
           <span class="leaf leaf--left" aria-hidden="true">🌿</span>
         </div>
       </section>
+
+      <section class="holy-map-section" aria-labelledby="holy-map-title">
+        <div class="holy-map-heading">
+          <span class="cross-mark" aria-hidden="true">✝</span>
+          <h2 id="holy-map-title">رحلة أسبوع الآلام</h2>
+          <p>من بيت عنيا إلى القبر… رحلة الألم والمحبة والقيامة</p>
+        </div>
+
+        <div class="holy-map" role="region" aria-label="خريطة أثرية لرحلة أسبوع الآلام">
+          <svg class="holy-map-route" viewBox="0 0 1000 520" preserveAspectRatio="none" aria-hidden="true">
+            <path class="route-desktop" d="M880 76 C805 98 748 118 700 140 S570 182 500 198 S425 246 400 270 S340 300 330 320 S420 350 530 370 S665 404 740 416 S835 440 900 450" />
+            <path class="route-desktop route-highlight" d="M880 76 C805 98 748 118 700 140 S570 182 500 198 S425 246 400 270 S340 300 330 320 S420 350 530 370 S665 404 740 416 S835 440 900 450" />
+            <path class="route-mobile" d="M760 45 C420 98 650 150 390 205 S620 285 360 340 S620 430 390 505" />
+            <path class="route-mobile route-highlight" d="M760 45 C420 98 650 150 390 205 S620 285 360 340 S620 430 390 505" />
+          </svg>
+
+          <div class="map-compass" aria-hidden="true"><span>ش</span></div>
+
+          <button class="map-marker" type="button" data-location="bethany" data-name="بيت عنيا" data-description="هنا بدأت بعض أحداث الرحلة، وفيها أقام المسيح مع أحبائه." data-days="سبت لعازر • أربعاء البصخة" data-page="elsabtDetails.html" aria-label="بيت عنيا">
+            <span aria-hidden="true">✦</span>بيت عنيا
+          </button>
+
+          <button class="map-marker" type="button" data-location="olives" data-name="جبل الزيتون" data-description="من هنا اتجهت خطى المسيح إلى أورشليم في أحد الشعانين." data-days="أحد الشعانين" data-page="elhadDetails.html" aria-label="جبل الزيتون">
+            <span aria-hidden="true">✦</span>جبل الزيتون
+          </button>
+
+          <button class="map-marker" type="button" data-location="jerusalem" data-name="أورشليم" data-description="فيها اجتمعت التعاليم والأحداث التي سبقت الصليب." data-days="أحد الشعانين • إثنين البصخة • ثلاثاء البصخة" data-page="elhadDetails.html" aria-label="أورشليم">
+            <span aria-hidden="true">✦</span>أورشليم
+          </button>
+
+          <button class="map-marker" type="button" data-location="gethsemane" data-name="الجثمانية" data-description="موضع الصلاة والسهر في ليلة التسليم." data-days="خميس العهد" data-page="elkhamesDetails.html" aria-label="الجثمانية">
+            <span aria-hidden="true">✦</span>الجثمانية
+          </button>
+
+          <button class="map-marker" type="button" data-location="zion" data-name="علية صهيون" data-description="هنا اجتمع التلاميذ حول العشاء الأخير." data-days="خميس العهد" data-page="elkhamesDetails.html" aria-label="علية صهيون">
+            <span aria-hidden="true">✦</span>علية صهيون
+          </button>
+
+          <button class="map-marker" type="button" data-location="calvary" data-name="الجلجثة" data-description="موضع الصليب وآلام ربنا يسوع المسيح." data-days="الجمعة العظيمة" data-page="elgom3a.html" aria-label="الجلجثة">
+            <span aria-hidden="true">✦</span>الجلجثة
+          </button>
+
+          <button class="map-marker" type="button" data-location="tomb" data-name="القبر" data-description="هنا وُضع الجسد، ومنه أشرق الرجاء." data-days="سبت النور • أحد القيامة" data-page="sabtElnorDetails.html" aria-label="القبر">
+            <span aria-hidden="true">✦</span>القبر
+          </button>
+
+          <button class="map-marker" type="button" data-location="resurrection" data-name="القيامة" data-description="النهاية التي تحوّل طريق الألم إلى فرح ورجاء." data-days="أحد القيامة" data-page="El3ed.html" aria-label="القيامة">
+            <span aria-hidden="true">✦</span>القيامة
+          </button>
+
+          <button class="map-marker map-marker--secondary" type="button" data-location="temple" data-name="الهيكل" data-description="موضع التعليم والعبادة في قلب أورشليم." data-days="إثنين البصخة • ثلاثاء البصخة" data-page="eletnenDetails.html" aria-label="الهيكل">
+            <span aria-hidden="true">·</span>الهيكل
+          </button>
+          <button class="map-marker map-marker--secondary" type="button" data-location="kidron" data-name="وادي قدرون" data-description="الوادي الذي عبره المسيح في طريقه إلى الجثمانية." data-days="خميس العهد" data-page="elkhamesDetails.html" aria-label="وادي قدرون">
+            <span aria-hidden="true">·</span>وادي قدرون
+          </button>
+          <button class="map-marker map-marker--secondary" type="button" data-location="pool-siloam" data-name="بركة سلوان" data-description="من معالم أورشليم القديمة عند سفح المدينة." data-days="أيام البصخة" data-page="elhadDetails.html" aria-label="بركة سلوان">
+            <span aria-hidden="true">·</span>بركة سلوان
+          </button>
+          <button class="map-marker map-marker--secondary" type="button" data-location="pool-bethesda" data-name="بركة حسدا" data-description="بركة قديمة قرب الهيكل في أورشليم." data-days="أيام البصخة" data-page="eletnenDetails.html" aria-label="بركة حسدا">
+            <span aria-hidden="true">·</span>بركة حسدا
+          </button>
+          <button class="map-marker map-marker--secondary" type="button" data-location="herod" data-name="قصر هيرودس" data-description="من معالم المدينة القديمة في مشهد المحاكمة." data-days="الجمعة العظيمة" data-page="elgom3a.html" aria-label="قصر هيرودس">
+            <span aria-hidden="true">·</span>قصر هيرودس
+          </button>
+          <button class="map-marker map-marker--secondary" type="button" data-location="pilate" data-name="قصر بيلاطس البنطي" data-description="موضع يرتبط بمحاكمة المسيح في أورشليم." data-days="الجمعة العظيمة" data-page="elgom3a.html" aria-label="قصر بيلاطس البنطي">
+            <span aria-hidden="true">·</span>قصر بيلاطس البنطي
+          </button>
+          <button class="map-marker map-marker--secondary" type="button" data-location="high-priest" data-name="بيت رئيس الكهنة" data-description="المكان المرتبط بمحاكمة المسيح ليلًا." data-days="خميس العهد • الجمعة العظيمة" data-page="elgom3a.html" aria-label="بيت رئيس الكهنة">
+            <span aria-hidden="true">·</span>بيت رئيس الكهنة
+          </button>
+          <button class="map-marker map-marker--secondary" type="button" data-location="mountain-valley" data-name="وادي الجبال" data-description="تضاريس هادئة تحيط بالطريق القديم حول أورشليم." data-days="طريق الرحلة" data-page="elhadDetails.html" aria-label="وادي الجبال">
+            <span aria-hidden="true">·</span>وادي الجبال
+          </button>
+          <button class="map-marker map-marker--secondary" type="button" data-location="upper-room-tradition" data-name="موقع العلية بحسب التقليد" data-description="موضع تشير إليه الذاكرة المسيحية كمكان العلية." data-days="خميس العهد" data-page="elkhamesDetails.html" aria-label="موقع العلية بحسب التقليد">
+            <span aria-hidden="true">·</span>موقع العلية بحسب التقليد
+          </button>
+
+          <aside class="map-info" aria-hidden="true" aria-live="polite">
+            <button class="map-info-close" type="button" aria-label="إغلاق">×</button>
+            <h3 class="map-info-title"></h3>
+            <p class="map-info-description"></p>
+            <p class="map-days"></p>
+            <button class="map-discover page-link" type="button" data-page="" aria-label="استكشف اليوم">استكشف اليوم</button>
+          </aside>
+        </div>
+
+        <div class="map-timeline" aria-label="مراحل أسبوع الآلام">
+          <button class="map-day" type="button" data-location="bethany" aria-label="سبت لعازر: إقامة لعازر في بيت عنيا">
+            <span class="map-day-number">١</span><span><strong>سبت لعازر</strong><small>إقامة لعازر</small></span>
+          </button>
+          <button class="map-day" type="button" data-location="olives" aria-label="أحد الشعانين: دخول أورشليم">
+            <span class="map-day-number">٢</span><span><strong>أحد الشعانين</strong><small>دخول أورشليم</small></span>
+          </button>
+          <button class="map-day" type="button" data-location="temple" aria-label="إثنين البصخة: تطهير الهيكل">
+            <span class="map-day-number">٣</span><span><strong>إثنين البصخة</strong><small>تطهير الهيكل</small></span>
+          </button>
+          <button class="map-day" type="button" data-location="temple" aria-label="ثلاثاء البصخة: التعليم في الهيكل">
+            <span class="map-day-number">٤</span><span><strong>ثلاثاء البصخة</strong><small>التعليم والأمثال</small></span>
+          </button>
+          <button class="map-day" type="button" data-location="bethany" aria-label="أربعاء البصخة: سكب الطيب">
+            <span class="map-day-number">٥</span><span><strong>أربعاء البصخة</strong><small>سكب الطيب</small></span>
+          </button>
+          <button class="map-day" type="button" data-location="zion" aria-label="خميس العهد: العشاء الأخير">
+            <span class="map-day-number">٦</span><span><strong>خميس العهد</strong><small>العشاء الأخير</small></span>
+          </button>
+          <button class="map-day" type="button" data-location="calvary" aria-label="الجمعة العظيمة: طريق الآلام والصليب">
+            <span class="map-day-number">٧</span><span><strong>الجمعة العظيمة</strong><small>طريق الآلام والصليب</small></span>
+          </button>
+          <button class="map-day" type="button" data-location="tomb" aria-label="سبت النور: الحراس على القبر">
+            <span class="map-day-number">٨</span><span><strong>سبت النور</strong><small>الحراس على القبر</small></span>
+          </button>
+          <button class="map-day" type="button" data-location="resurrection" aria-label="أحد القيامة: قيامة المسيح">
+            <span class="map-day-number">٩</span><span><strong>أحد القيامة</strong><small>قيامة المسيح</small></span>
+          </button>
+        </div>
+      </section>
     </main>
 
     <section class="youtube-section">
@@ -680,5 +798,6 @@
     <script src="script.js"></script>
     <script src="music.js"></script>
     <script src="candle.js"></script>
+    <script src="map.js"></script>
   </body>
 </html>

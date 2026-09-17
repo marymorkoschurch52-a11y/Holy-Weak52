@@ -1,0 +1,522 @@
+.holy-map-section {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 5rem;
+  overflow: hidden;
+}
+
+.holy-map-heading {
+  max-width: 680px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.holy-map-heading .cross-mark {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: var(--clay);
+  font-size: 1.3rem;
+}
+
+.holy-map-heading h2 {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+}
+
+.holy-map-heading p {
+  margin: 0.55rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+.holy-map {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid var(--parchment-shadow);
+  border-radius: 12px 5px 14px 7px;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(181, 138, 58, 0.12), transparent 22%),
+    radial-gradient(circle at 88% 76%, rgba(156, 74, 40, 0.1), transparent 25%),
+    repeating-linear-gradient(0deg, rgba(62, 42, 24, 0.035) 0 1px, transparent 1px 5px),
+    linear-gradient(135deg, #f8efd5, #ecdfb8 56%, #d9c594);
+  box-shadow: 0 18px 34px -25px rgba(62, 42, 24, 0.75), inset 0 0 0 7px rgba(248, 239, 213, 0.23);
+  animation: holy-map-rise 0.8s ease both;
+}
+
+.holy-map::before,
+.holy-map::after {
+  position: absolute;
+  z-index: -1;
+  color: rgba(62, 42, 24, 0.15);
+  font-family: var(--font-display);
+  pointer-events: none;
+}
+
+.holy-map::before {
+  content: "✦  ·  ✧  ·  ✦";
+  top: 1.25rem;
+  right: 2rem;
+  font-size: 1rem;
+  letter-spacing: 0.4rem;
+}
+
+.holy-map::after {
+  content: "⌁  ⌁  ⌁";
+  bottom: 1rem;
+  left: 2rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.45rem;
+}
+
+.holy-map-route {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.holy-map-route path {
+  fill: none;
+  stroke: rgba(92, 67, 38, 0.58);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 10 9;
+  filter: drop-shadow(0 1px 0 rgba(248, 239, 213, 0.75));
+}
+
+.holy-map-route .route-mobile {
+  display: none;
+}
+
+.holy-map-route .route-highlight {
+  stroke: rgba(181, 138, 58, 0.55);
+  stroke-width: 1.5;
+  stroke-dasharray: 3 12;
+  opacity: 0.7;
+  animation: route-drift 8s linear infinite;
+}
+
+.holy-map[data-active-location] .route-highlight {
+  stroke: rgba(181, 138, 58, 0.85);
+  opacity: 1;
+}
+
+.map-compass {
+  position: absolute;
+  top: 1.3rem;
+  left: 1.5rem;
+  width: 4.2rem;
+  height: 4.2rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(62, 42, 24, 0.32);
+  border-radius: 50%;
+  color: var(--clay-dark);
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  opacity: 0.72;
+  transform: rotate(-12deg);
+}
+
+.map-compass::before,
+.map-compass::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+}
+
+.map-compass::before {
+  width: 1px;
+  height: 3.2rem;
+}
+
+.map-compass::after {
+  width: 3.2rem;
+  height: 1px;
+}
+
+.map-compass span {
+  position: relative;
+  z-index: 1;
+  padding: 0.1rem;
+  background: #ecdfb8;
+}
+
+.map-marker {
+  position: absolute;
+  z-index: 2;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.35rem;
+  border: 1px solid rgba(62, 42, 24, 0.7);
+  border-radius: 50%;
+  color: var(--parchment);
+  background: radial-gradient(circle at 32% 28%, #b8862e, #9c4a28 64%, #6b1f1f);
+  box-shadow: 0 5px 12px rgba(62, 42, 24, 0.28), 0 0 0 4px rgba(248, 239, 213, 0.6);
+  cursor: pointer;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  line-height: 1.1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.map-marker:hover,
+.map-marker:focus-visible,
+.map-marker.is-active {
+  transform: scale(1.1);
+  box-shadow: 0 7px 16px rgba(62, 42, 24, 0.35), 0 0 0 5px rgba(181, 138, 58, 0.22), 0 0 20px rgba(181, 138, 58, 0.38);
+}
+
+.map-marker:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.map-marker span {
+  display: block;
+  margin-top: 0.12rem;
+  font-size: 0.62rem;
+}
+
+.map-marker[data-location="bethany"] { top: 13%; right: 12%; }
+.map-marker[data-location="olives"] { top: 27%; right: 30%; }
+.map-marker[data-location="jerusalem"] { top: 39%; right: 50%; }
+.map-marker[data-location="gethsemane"] { top: 47%; right: 54%; }
+.map-marker[data-location="zion"] { top: 54%; right: 67%; }
+.map-marker[data-location="calvary"] { top: 69%; right: 47%; }
+.map-marker[data-location="tomb"] { top: 80%; right: 26%; }
+.map-marker[data-location="resurrection"] { top: 84%; right: 10%; }
+
+.map-marker--secondary {
+  z-index: 1;
+  width: auto;
+  min-width: 2.5rem;
+  height: 2rem;
+  padding: 0.22rem 0.5rem;
+  border-color: rgba(92, 67, 38, 0.55);
+  color: var(--ink-soft);
+  background: rgba(248, 239, 213, 0.82);
+  box-shadow: 0 2px 7px rgba(62, 42, 24, 0.15);
+  font-size: 0.68rem;
+}
+
+.map-marker--secondary:hover,
+.map-marker--secondary:focus-visible,
+.map-marker--secondary.is-active {
+  color: var(--ink);
+  background: #f8efd5;
+  box-shadow: 0 4px 10px rgba(62, 42, 24, 0.22), 0 0 0 3px rgba(181, 138, 58, 0.18);
+}
+
+.map-marker--secondary span {
+  display: inline;
+  margin: 0 0.18rem 0 0;
+  color: var(--clay);
+  font-size: 0.85rem;
+}
+
+.map-marker[data-location="temple"] { top: 33%; right: 57%; }
+.map-marker[data-location="kidron"] { top: 48%; right: 42%; }
+.map-marker[data-location="pool-siloam"] { top: 48%; right: 75%; }
+.map-marker[data-location="pool-bethesda"] { top: 30%; right: 66%; }
+.map-marker[data-location="herod"] { top: 43%; right: 35%; }
+.map-marker[data-location="pilate"] { top: 56%; right: 46%; }
+.map-marker[data-location="high-priest"] { top: 61%; right: 73%; }
+.map-marker[data-location="mountain-valley"] { top: 73%; right: 78%; }
+.map-marker[data-location="upper-room-tradition"] { top: 58%; right: 82%; }
+
+.map-info {
+  position: absolute;
+  z-index: 4;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  width: min(20rem, calc(100% - 3rem));
+  padding: 1.15rem 1.1rem 1rem;
+  border: 1px solid var(--parchment-shadow);
+  border-radius: 5px 10px 6px 9px;
+  background: rgba(248, 239, 213, 0.94);
+  box-shadow: 0 10px 22px rgba(62, 42, 24, 0.2);
+  color: var(--ink);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.5rem) scale(0.98);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.map-info.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.map-info-close {
+  position: absolute;
+  top: 0.35rem;
+  left: 0.45rem;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 0;
+  color: var(--clay-dark);
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.map-info-close:hover,
+.map-info-close:focus-visible {
+  color: var(--ink);
+}
+
+.map-info-close:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.map-info h3 {
+  margin: 0;
+  color: var(--clay-dark);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+}
+
+.map-info p {
+  margin: 0.35rem 0;
+  color: var(--ink-soft);
+  line-height: 1.75;
+}
+
+.map-info .map-days {
+  color: var(--olive-dark);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.map-info .map-discover {
+  display: inline-block;
+  margin-top: 0.35rem;
+  padding: 0.42rem 0.85rem;
+  border: 1px solid var(--clay-dark);
+  border-radius: 999px;
+  color: var(--clay-dark);
+  background: transparent;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.map-timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(9, minmax(0, 1fr));
+  gap: 0.55rem;
+  margin: 1.2rem auto 0;
+  max-width: 1080px;
+}
+
+.map-timeline::before {
+  content: "";
+  position: absolute;
+  top: 1.25rem;
+  right: 4%;
+  left: 4%;
+  height: 1px;
+  background: var(--parchment-shadow);
+  opacity: 0.72;
+}
+
+.map-day {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0;
+  border: 0;
+  color: var(--ink);
+  background: transparent;
+  cursor: pointer;
+  font-family: var(--font-body);
+  text-align: center;
+}
+
+.map-day-number {
+  display: grid;
+  place-items: center;
+  width: 2.45rem;
+  height: 2.45rem;
+  border: 1px solid var(--parchment-shadow);
+  border-radius: 50%;
+  color: var(--parchment);
+  background: var(--clay);
+  box-shadow: 0 2px 6px rgba(62, 42, 24, 0.18);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.map-day strong,
+.map-day small {
+  display: block;
+  white-space: nowrap;
+}
+
+.map-day strong {
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.map-day small {
+  margin-top: 0.12rem;
+  color: var(--ink-soft);
+  font-size: 0.66rem;
+  opacity: 0.82;
+}
+
+.map-day:hover .map-day-number,
+.map-day:focus-visible .map-day-number,
+.map-day.is-active .map-day-number {
+  transform: scale(1.08);
+  background: var(--clay-dark);
+  box-shadow: 0 0 0 4px rgba(181, 138, 58, 0.2), 0 4px 10px rgba(62, 42, 24, 0.25);
+}
+
+.map-day:focus-visible {
+  outline: 0;
+}
+
+.map-day:focus-visible .map-day-number {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+.map-info .map-discover:hover,
+.map-info .map-discover:focus-visible {
+  color: var(--parchment);
+  background: var(--clay-dark);
+}
+
+.map-info .map-discover:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+}
+
+@keyframes holy-map-rise {
+  from { opacity: 0; transform: translateY(0.8rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes route-drift {
+  to { stroke-dashoffset: -120; }
+}
+
+@media (max-width: 759px) {
+  .holy-map-section {
+    padding-right: 0.85rem;
+    padding-left: 0.85rem;
+  }
+
+  .holy-map {
+    min-height: 760px;
+  }
+
+  .holy-map-route path {
+    stroke-width: 3;
+  }
+
+  .holy-map-route .route-desktop {
+    display: none;
+  }
+
+  .holy-map-route .route-mobile {
+    display: block;
+  }
+
+  .map-compass {
+    top: 1rem;
+    left: 1rem;
+    width: 3.4rem;
+    height: 3.4rem;
+  }
+
+  .map-marker {
+    width: 3.9rem;
+    height: 3.9rem;
+  }
+
+  .map-marker[data-location="bethany"] { top: 11%; right: 66%; }
+  .map-marker[data-location="olives"] { top: 23%; right: 36%; }
+  .map-marker[data-location="jerusalem"] { top: 35%; right: 61%; }
+  .map-marker[data-location="gethsemane"] { top: 43%; right: 35%; }
+  .map-marker[data-location="zion"] { top: 51%; right: 64%; }
+  .map-marker[data-location="calvary"] { top: 63%; right: 38%; }
+  .map-marker[data-location="tomb"] { top: 75%; right: 64%; }
+  .map-marker[data-location="resurrection"] { top: 87%; right: 38%; }
+
+  .map-marker[data-location="temple"] { top: 31%; right: 67%; }
+  .map-marker[data-location="kidron"] { top: 46%; right: 6%; }
+  .map-marker[data-location="pool-siloam"] { top: 46%; right: 76%; }
+  .map-marker[data-location="pool-bethesda"] { top: 28%; right: 7%; }
+  .map-marker[data-location="herod"] { top: 55%; right: 7%; }
+  .map-marker[data-location="pilate"] { top: 59%; right: 70%; }
+  .map-marker[data-location="high-priest"] { top: 66%; right: 5%; }
+  .map-marker[data-location="mountain-valley"] { top: 73%; right: 7%; }
+  .map-marker[data-location="upper-room-tradition"] { top: 57%; right: 77%; }
+
+  .map-marker--secondary {
+    max-width: 5.8rem;
+    height: 1.8rem;
+    overflow: hidden;
+    font-size: 0.58rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .map-info {
+    right: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    width: auto;
+    padding: 1rem 0.95rem 0.85rem;
+  }
+
+  .map-timeline {
+    grid-template-columns: repeat(9, minmax(7.8rem, 1fr));
+    justify-content: start;
+    overflow-x: auto;
+    padding: 0.15rem 0.25rem 0.7rem;
+    scrollbar-color: var(--parchment-shadow) transparent;
+  }
+
+  .map-timeline::before {
+    right: 2rem;
+    left: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .holy-map,
+  .holy-map-route .route-highlight {
+    animation: none;
+  }
+
+  .map-marker,
+  .map-info,
+  .map-day-number {
+    transition: none;
+  }
+}
