@@ -1,0 +1,171 @@
+.candle-toggle {
+  position: fixed !important;
+  left: 1.25rem !important;
+  bottom: 1.25rem !important;
+  z-index: 1000 !important;
+  display: flex !important;
+  align-items: flex-end !important;
+  gap: 0.55rem !important;
+  width: auto !important;
+  min-width: 4.25rem !important;
+  min-height: 4.25rem !important;
+  padding: 0.4rem !important;
+  border: 0 !important;
+  background: transparent !important;
+  color: #3e2a18 !important;
+  cursor: pointer !important;
+  font: inherit !important;
+  line-height: 1 !important;
+  text-align: left !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.candle-toggle:focus-visible {
+  outline: 2px solid #b58a3a !important;
+  outline-offset: 3px;
+}
+
+.candle-visual {
+  position: relative;
+  display: block;
+  width: 2.35rem;
+  height: 3.85rem;
+  flex: 0 0 auto;
+}
+
+.candle-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0.25rem -0.8rem -0.75rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(181, 138, 58, 0.38), rgba(156, 74, 40, 0.08) 42%, transparent 72%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.candle-toggle.is-lit .candle-visual::before {
+  opacity: 1;
+}
+
+.candle-body {
+  position: absolute;
+  right: 0.35rem;
+  bottom: 0.2rem;
+  width: 1.65rem;
+  height: 2.85rem;
+  border: 2px solid #b58a3a;
+  border-radius: 0.25rem 0.25rem 0.38rem 0.38rem;
+  background:
+    linear-gradient(90deg, rgba(62, 42, 24, 0.2), transparent 25%, rgba(255, 255, 255, 0.38) 55%, transparent 80%),
+    repeating-linear-gradient(165deg, rgba(156, 74, 40, 0.16) 0 2px, transparent 2px 7px),
+    #ecdfb8;
+  box-shadow: 0 3px 7px rgba(62, 42, 24, 0.38), 0 0 0 1px rgba(248, 239, 213, 0.35) inset;
+}
+
+.candle-body::before {
+  content: "";
+  position: absolute;
+  top: -0.16rem;
+  left: -1px;
+  right: -1px;
+  height: 0.3rem;
+  border: 2px solid #b58a3a;
+  border-radius: 50%;
+  background: #f8efd5;
+}
+
+.candle-wick {
+  position: absolute;
+  left: 50%;
+  top: -0.65rem;
+  width: 3px;
+  height: 0.58rem;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  background: #3e2a18;
+  z-index: 1;
+}
+
+.candle-flame {
+  position: absolute;
+  left: 50%;
+  top: -1.58rem;
+  width: 0.72rem;
+  height: 1.15rem;
+  transform: translateX(-50%) scale(0);
+  transform-origin: 50% 100%;
+  border-radius: 55% 45% 55% 45%;
+  background: radial-gradient(circle at 50% 72%, #f8efd5 0 24%, #d4bd86 42%, #b58a3a 68%, #9c4a28 100%);
+  box-shadow: 0 0 0.8rem rgba(181, 138, 58, 0.78), 0 0 1.35rem rgba(156, 74, 40, 0.28);
+  opacity: 0;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.candle-toggle.is-lit .candle-flame {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+  animation: candle-flicker 2.4s ease-in-out infinite;
+}
+
+.candle-prayer {
+  align-self: center;
+  max-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: #3e2a18;
+  font-family: "Aref Ruqaa", serif;
+  font-size: 0.95rem;
+  opacity: 0;
+  transform: translateX(-0.35rem);
+  transition: max-width 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+  text-shadow: 0 1px 0 rgba(248, 239, 213, 0.7);
+}
+
+.candle-toggle.is-lit .candle-prayer {
+  max-width: 7rem;
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes candle-flicker {
+  0%,
+  100% {
+    transform: translateX(-50%) rotate(-2deg) scale(0.96, 1.02);
+  }
+  50% {
+    transform: translateX(-50%) rotate(2deg) scale(1.04, 0.97);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .candle-toggle.is-lit .candle-flame {
+    animation: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .candle-toggle {
+    left: 0.85rem !important;
+    bottom: 0.85rem !important;
+    min-width: 3.65rem !important;
+    min-height: 3.65rem !important;
+    gap: 0.35rem !important;
+    padding: 0.3rem !important;
+  }
+
+  .candle-visual {
+    width: 1.95rem;
+    height: 3.2rem;
+  }
+
+  .candle-body {
+    right: 0.3rem;
+    width: 1.4rem;
+    height: 2.35rem;
+  }
+
+  .candle-prayer {
+    font-size: 0.82rem;
+  }
+}
