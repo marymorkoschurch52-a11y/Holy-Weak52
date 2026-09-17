@@ -148,200 +148,207 @@
 
       /* ===================== CREDIT ===================== */
 
-   .credit {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  margin: 0;
+      .credit {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: 0;
 
-  font-family: "Tajawal", sans-serif;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 6px 20px;
+        font-family: "Tajawal", sans-serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 6px 20px;
 
-  padding: 14px 24px;
-  border-radius: 0;
-  border: none;
-  border-top: 1px solid rgba(212, 164, 95, 0.25);
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(6px);
+        padding: 14px 24px;
+        border-radius: 0;
+        border: none;
+        border-top: 1px solid rgba(212, 164, 95, 0.25);
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(6px);
 
-  z-index: 10;
-}
+        z-index: 10;
+      }
 
-.credit p {
-  margin: 0;
-}
+      .credit p {
+        margin: 0;
+      }
 
-.credit .church-name {
-  font-family: "Aref Ruqaa", serif;
-  font-size: 15px;
-  font-weight: 700;
-  color: #f1cf91;
-}
+      .credit .church-name {
+        font-family: "Aref Ruqaa", serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: #f1cf91;
+      }
 
-.credit .occasion {
-  font-size: 12px;
-  color: #cfc2b5;
-  opacity: 0.85;
-}
+      .credit .occasion {
+        font-size: 12px;
+        color: #cfc2b5;
+        opacity: 0.85;
+      }
 
-.credit .supervision {
-  font-size: 12px;
-  font-weight: 500;
-  color: #dcb875;
-}
+      .credit .supervision {
+        font-size: 12px;
+        font-weight: 500;
+        color: #dcb875;
+      }
 
-.credit .credit-line {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 4px 10px;
-  font-size: 12px;
-  color: #d8ccc0;
-}
+      .credit .credit-line {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 4px 10px;
+        font-size: 12px;
+        color: #d8ccc0;
+      }
 
-.credit .credit-line .divider {
-  opacity: 0.4;
-  color: #a98d63;
-}
+      .credit .credit-line .divider {
+        opacity: 0.4;
+        color: #a98d63;
+      }
 
-.credit .developer {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
+      .credit .developer {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
 
-.credit .heart {
-  display: inline-block;
-  color: #e0b86b;
-  animation: creditBeat 1.2s ease-in-out infinite;
-}
+      .credit .heart {
+        display: inline-block;
+        color: #e0b86b;
+        animation: creditBeat 1.2s ease-in-out infinite;
+      }
 
-.credit .name {
-  background: linear-gradient(
-    90deg,
-    #a8782e,
-    #f0d49a,
-    #d9b36c,
-    #f0d49a,
-    #a8782e
-  );
-  background-size: 300% auto;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  font-weight: 700;
-  animation: creditShine 4s linear infinite;
-}
+      .credit .name {
+        background: linear-gradient(
+          90deg,
+          #a8782e,
+          #f0d49a,
+          #d9b36c,
+          #f0d49a,
+          #a8782e
+        );
+        background-size: 300% auto;
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+        font-weight: 700;
+        animation: creditShine 4s linear infinite;
+      }
 
-@supports not (-webkit-background-clip: text) {
-  .credit .name {
-    color: #f1cf91;
-    background: none;
-    -webkit-text-fill-color: initial;
-  }
-}
+      @supports not (-webkit-background-clip: text) {
+        .credit .name {
+          color: #f1cf91;
+          background: none;
+          -webkit-text-fill-color: initial;
+        }
+      }
 
-@keyframes creditBeat {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.25); }
-}
+      @keyframes creditBeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.25);
+        }
+      }
 
-@keyframes creditShine {
-  to { background-position: 300% center; }
-}
+      @keyframes creditShine {
+        to {
+          background-position: 300% center;
+        }
+      }
 
-.credit .contact-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
+      .credit .contact-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
 
-.credit .contact-label {
-  font-size: 12px;
-  font-weight: 500;
-  color: #dcb875;
-}
+      .credit .contact-label {
+        font-size: 12px;
+        font-weight: 500;
+        color: #dcb875;
+      }
 
-.credit .icon-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 50%;
-  border: 1px solid rgba(212, 164, 95, 0.4);
-  background: rgba(212, 164, 95, 0.1);
-  color: #f1dfc2;
-  transition: 0.3s ease;
-}
+      .credit .icon-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid rgba(212, 164, 95, 0.4);
+        background: rgba(212, 164, 95, 0.1);
+        color: #f1dfc2;
+        transition: 0.3s ease;
+      }
 
-.credit .icon-btn:hover {
-  transform: translateY(-2px);
-  background: linear-gradient(135deg, #e2bd71, #a8782e);
-  color: #1a1107;
-}
+      .credit .icon-btn:hover {
+        transform: translateY(-2px);
+        background: linear-gradient(135deg, #e2bd71, #a8782e);
+        color: #1a1107;
+      }
 
-.credit .icon-btn svg {
-  width: 14px;
-  height: 14px;
-  fill: currentColor;
-}
+      .credit .icon-btn svg {
+        width: 14px;
+        height: 14px;
+        fill: currentColor;
+      }
 
-.credit .meta-line {
-  margin: 0;
-  padding: 0;
-  border: none;
-  width: auto;
-  display: flex;
-  align-items: center;
-  gap: 3px 8px;
-  font-size: 11px;
-  color: #b9a997;
-  opacity: 0.85;
-  direction: ltr;
-}
+      .credit .meta-line {
+        margin: 0;
+        padding: 0;
+        border: none;
+        width: auto;
+        display: flex;
+        align-items: center;
+        gap: 3px 8px;
+        font-size: 11px;
+        color: #b9a997;
+        opacity: 0.85;
+        direction: ltr;
+      }
 
-.credit .meta-line .handle {
-  font-weight: 700;
-  opacity: 1;
-  color: #dcb875;
-}
+      .credit .meta-line .handle {
+        font-weight: 700;
+        opacity: 1;
+        color: #dcb875;
+      }
 
-@media (max-width: 700px) {
-  .credit {
-    flex-direction: column;
-    gap: 4px;
-    padding: 12px 16px;
-  }
-  .credit .church-name {
-    font-size: 13px;
-  }
-  .credit .occasion,
-  .credit .supervision,
-  .credit .credit-line {
-    font-size: 11px;
-  }
-  .credit .meta-line {
-    font-size: 10px;
-  }
-  .credit .icon-btn {
-    width: 26px;
-    height: 26px;
-  }
-  .credit .icon-btn svg {
-    width: 13px;
-    height: 13px;
-  }
-}
+      @media (max-width: 700px) {
+        .credit {
+          flex-direction: column;
+          gap: 4px;
+          padding: 12px 16px;
+        }
+        .credit .church-name {
+          font-size: 13px;
+        }
+        .credit .occasion,
+        .credit .supervision,
+        .credit .credit-line {
+          font-size: 11px;
+        }
+        .credit .meta-line {
+          font-size: 10px;
+        }
+        .credit .icon-btn {
+          width: 26px;
+          height: 26px;
+        }
+        .credit .icon-btn svg {
+          width: 13px;
+          height: 13px;
+        }
+      }
     </style>
   </head>
 
