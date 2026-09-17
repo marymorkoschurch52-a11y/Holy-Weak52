@@ -1,3 +1,4 @@
+
 .candle-toggle {
   position: fixed !important;
   left: 1.25rem !important;
@@ -38,7 +39,11 @@
   position: absolute;
   inset: 0.25rem -0.8rem -0.75rem;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(181, 138, 58, 0.38), rgba(156, 74, 40, 0.08) 42%, transparent 72%);
+  background: radial-gradient(
+    circle,
+    rgba(181, 138, 58, 0.2),
+    transparent 68%
+  );
   opacity: 0;
   transition: opacity 0.5s ease;
   pointer-events: none;
@@ -54,13 +59,25 @@
   bottom: 0.2rem;
   width: 1.65rem;
   height: 2.85rem;
-  border: 2px solid #b58a3a;
+  border: 1px solid #d4bd86;
   border-radius: 0.25rem 0.25rem 0.38rem 0.38rem;
+
   background:
-    linear-gradient(90deg, rgba(62, 42, 24, 0.2), transparent 25%, rgba(255, 255, 255, 0.38) 55%, transparent 80%),
-    repeating-linear-gradient(165deg, rgba(156, 74, 40, 0.16) 0 2px, transparent 2px 7px),
+    linear-gradient(
+      90deg,
+      rgba(62, 42, 24, 0.1),
+      transparent 25%,
+      rgba(255, 255, 255, 0.22) 55%,
+      transparent 80%
+    ),
+    repeating-linear-gradient(
+      165deg,
+      rgba(156, 74, 40, 0.08) 0 2px,
+      transparent 2px 7px
+    ),
     #ecdfb8;
-  box-shadow: 0 3px 7px rgba(62, 42, 24, 0.38), 0 0 0 1px rgba(248, 239, 213, 0.35) inset;
+
+  box-shadow: 0 3px 5px rgba(62, 42, 24, 0.22);
 }
 
 .candle-body::before {
@@ -70,7 +87,7 @@
   left: -1px;
   right: -1px;
   height: 0.3rem;
-  border: 2px solid #b58a3a;
+  border: 1px solid #d4bd86;
   border-radius: 50%;
   background: #f8efd5;
 }
@@ -79,7 +96,7 @@
   position: absolute;
   left: 50%;
   top: -0.65rem;
-  width: 3px;
+  width: 2px;
   height: 0.58rem;
   transform: translateX(-50%);
   border-radius: 2px;
@@ -96,8 +113,17 @@
   transform: translateX(-50%) scale(0);
   transform-origin: 50% 100%;
   border-radius: 55% 45% 55% 45%;
-  background: radial-gradient(circle at 50% 72%, #f8efd5 0 24%, #d4bd86 42%, #b58a3a 68%, #9c4a28 100%);
-  box-shadow: 0 0 0.8rem rgba(181, 138, 58, 0.78), 0 0 1.35rem rgba(156, 74, 40, 0.28);
+
+  background: radial-gradient(
+    circle at 50% 72%,
+    #f8efd5 0 20%,
+    #d4bd86 38%,
+    #b58a3a 68%,
+    #9c4a28 100%
+  );
+
+  box-shadow: 0 0 0.8rem rgba(181, 138, 58, 0.55);
+
   opacity: 0;
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
@@ -108,18 +134,27 @@
   animation: candle-flicker 2.4s ease-in-out infinite;
 }
 
+/* النص */
 .candle-prayer {
   align-self: center;
   max-width: 0;
   overflow: hidden;
   white-space: nowrap;
-  color: #3e2a18;
-  font-family: "Aref Ruqaa", serif;
+
+  color: #5c4326;
+
+  /* Tajawal يجعل حرف ج واضح */
+  font-family: "Tajawal", sans-serif;
   font-size: 0.95rem;
+  font-weight: 600;
+
   opacity: 0;
   transform: translateX(-0.35rem);
-  transition: max-width 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
-  text-shadow: 0 1px 0 rgba(248, 239, 213, 0.7);
+
+  transition:
+    max-width 0.5s ease,
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .candle-toggle.is-lit .candle-prayer {
@@ -133,6 +168,7 @@
   100% {
     transform: translateX(-50%) rotate(-2deg) scale(0.96, 1.02);
   }
+
   50% {
     transform: translateX(-50%) rotate(2deg) scale(1.04, 0.97);
   }
