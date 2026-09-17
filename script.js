@@ -59,3 +59,42 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('resize', updateOnScroll);
   updateOnScroll();
 });
+
+
+// =========================================
+// Smooth navigation between pages
+// =========================================
+
+document.addEventListener("click", (event) => {
+  const link = event.target.closest(".page-link");
+
+  if (!link) return;
+
+  const page = link.dataset.page;
+
+  if (!page) return;
+
+  event.preventDefault();
+
+  // احفظ مكان الموسيقى فورًا
+  if (
+    typeof audio !== "undefined" &&
+    Number.isFinite(audio.currentTime)
+  ) {
+    localStorage.setItem(
+      "holyWeekMusicPosition",
+      String(audio.currentTime)
+    );
+  }
+
+  // احفظ حالة الموسيقى
+  if (typeof musicEnabled !== "undefined") {
+    localStorage.setItem(
+      "holyWeekMusicEnabled",
+      musicEnabled ? "true" : "false"
+    );
+  }
+
+  // انتقال للصفحة
+  window.location.href = page;
+});

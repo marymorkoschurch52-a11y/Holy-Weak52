@@ -238,6 +238,22 @@
     saveEnabled();
   });
 
+  // Save music state before navigating between the static HTML pages.
+  document.addEventListener("click", (event) => {
+    const link = event.target.closest(".page-link");
+
+    if (!link) return;
+
+    const page = link.dataset.page;
+
+    if (!page) return;
+
+    event.preventDefault();
+    savePosition();
+    saveEnabled();
+    window.location.href = page;
+  });
+
   // =========================================
   // Add elements
   // =========================================
