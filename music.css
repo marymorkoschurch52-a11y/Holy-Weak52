@@ -1,0 +1,131 @@
+.music-toggle {
+  position: fixed !important;
+
+  right: 1.25rem !important;
+  bottom: 1.25rem !important;
+
+  width: 3.2rem !important;
+  height: 3.2rem !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  padding: 0 !important;
+  margin: 0 !important;
+
+  border: 1px solid rgba(184, 134, 46, 0.9) !important;
+  border-radius: 50% !important;
+
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #80613a 0%,
+      #5c4326 45%,
+      #3e2a18 100%
+    ) !important;
+
+  color: #ecdfb8 !important;
+
+  box-shadow:
+    0 4px 14px rgba(62, 42, 24, 0.45),
+    0 0 0 3px rgba(184, 134, 46, 0.08),
+    inset 0 1px 2px rgba(255, 255, 255, 0.12) !important;
+
+  cursor: pointer !important;
+
+  font-size: 1.25rem !important;
+  line-height: 1 !important;
+
+  z-index: 2147483647 !important;
+
+  visibility: visible !important;
+  opacity: 1 !important;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* صليب صغير كعلامة مائية */
+.music-toggle::before {
+  content: "";
+
+  position: absolute;
+
+  top: 3px;
+  right: 5px;
+
+  font-size: 0.65rem;
+
+  color: rgba(236, 223, 184, 0.35);
+
+  pointer-events: none;
+}
+
+/* لمعة ذهبية بسيطة */
+.music-toggle::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 3px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(236, 223, 184, 0.12);
+
+  pointer-events: none;
+}
+
+/* Hover */
+.music-toggle:hover {
+  background:
+    radial-gradient(
+      circle at 35% 30%,
+      #967343 0%,
+      #704b2c 45%,
+      #4a2f1c 100%
+    ) !important;
+
+  border-color: #b8862e !important;
+
+  transform: translateY(-3px) scale(1.04);
+
+  box-shadow:
+    0 7px 18px rgba(62, 42, 24, 0.5),
+    0 0 14px rgba(184, 134, 46, 0.18),
+    inset 0 1px 2px rgba(255, 255, 255, 0.15) !important;
+}
+
+/* عند الضغط */
+.music-toggle:active {
+  transform: translateY(-1px) scale(0.96);
+}
+
+/* Focus */
+.music-toggle:focus-visible {
+  outline: 2px solid #b8862e;
+  outline-offset: 4px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .music-toggle {
+    right: 0.85rem !important;
+    bottom: 0.85rem !important;
+
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+
+    font-size: 1.05rem !important;
+  }
+
+  .music-toggle::before {
+    top: 2px;
+    right: 4px;
+    font-size: 0.55rem;
+  }
+}
