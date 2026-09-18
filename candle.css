@@ -1,5 +1,12 @@
 
 .candle-toggle {
+  --candle-air-x: 0px;
+  --candle-air-y: 0px;
+  --candle-air-rotate: 0deg;
+  --candle-air-stretch: 1;
+  --candle-air-glow-x: 0%;
+  --candle-air-glow-y: 0%;
+
   position: fixed !important;
   left: 1.25rem !important;
   bottom: 1.25rem !important;
@@ -202,37 +209,37 @@
 
 @keyframes candle-flicker {
   0% {
-    transform: translateX(-50%) rotate(-5deg) scale(0.9, 1.08);
+    transform: translateX(calc(-50% + var(--candle-air-x))) translateY(var(--candle-air-y)) rotate(calc(-5deg + var(--candle-air-rotate))) scale(0.9, calc(1.08 * var(--candle-air-stretch)));
     border-radius: 58% 42% 54% 46%;
   }
 
   14% {
-    transform: translateX(-42%) rotate(5deg) scale(1.08, 0.92);
+    transform: translateX(calc(-42% + var(--candle-air-x))) translateY(var(--candle-air-y)) rotate(calc(5deg + var(--candle-air-rotate))) scale(1.08, calc(0.92 * var(--candle-air-stretch)));
     border-radius: 43% 57% 48% 52%;
   }
 
   31% {
-    transform: translateX(-58%) rotate(-3deg) scale(0.95, 1.12);
+    transform: translateX(calc(-58% + var(--candle-air-x))) translateY(var(--candle-air-y)) rotate(calc(-3deg + var(--candle-air-rotate))) scale(0.95, calc(1.12 * var(--candle-air-stretch)));
     border-radius: 52% 48% 62% 38%;
   }
 
   48% {
-    transform: translateX(-44%) rotate(7deg) scale(1.1, 0.94);
+    transform: translateX(calc(-44% + var(--candle-air-x))) translateY(var(--candle-air-y)) rotate(calc(7deg + var(--candle-air-rotate))) scale(1.1, calc(0.94 * var(--candle-air-stretch)));
     border-radius: 42% 58% 45% 55%;
   }
 
   66% {
-    transform: translateX(-55%) rotate(-6deg) scale(0.92, 1.1);
+    transform: translateX(calc(-55% + var(--candle-air-x))) translateY(var(--candle-air-y)) rotate(calc(-6deg + var(--candle-air-rotate))) scale(0.92, calc(1.1 * var(--candle-air-stretch)));
     border-radius: 61% 39% 52% 48%;
   }
 
   82% {
-    transform: translateX(-47%) rotate(3deg) scale(1.04, 0.97);
+    transform: translateX(calc(-47% + var(--candle-air-x))) translateY(var(--candle-air-y)) rotate(calc(3deg + var(--candle-air-rotate))) scale(1.04, calc(0.97 * var(--candle-air-stretch)));
     border-radius: 47% 53% 57% 43%;
   }
 
   100% {
-    transform: translateX(-50%) rotate(-5deg) scale(0.9, 1.08);
+    transform: translateX(calc(-50% + var(--candle-air-x))) translateY(var(--candle-air-y)) rotate(calc(-5deg + var(--candle-air-rotate))) scale(0.9, calc(1.08 * var(--candle-air-stretch)));
     border-radius: 58% 42% 54% 46%;
   }
 }
@@ -240,37 +247,37 @@
 @keyframes candle-glow {
   0% {
     opacity: 0.72;
-    transform: translate(-4%, 2%) scale(0.9);
+    transform: translate(calc(-4% + var(--candle-air-glow-x)), calc(2% + var(--candle-air-glow-y))) scale(0.9);
   }
 
   14% {
     opacity: 0.96;
-    transform: translate(4%, -3%) scale(1.08);
+    transform: translate(calc(4% + var(--candle-air-glow-x)), calc(-3% + var(--candle-air-glow-y))) scale(1.08);
   }
 
   31% {
     opacity: 0.78;
-    transform: translate(-5%, 1%) scale(0.94);
+    transform: translate(calc(-5% + var(--candle-air-glow-x)), calc(1% + var(--candle-air-glow-y))) scale(0.94);
   }
 
   48% {
     opacity: 1;
-    transform: translate(5%, -2%) scale(1.12);
+    transform: translate(calc(5% + var(--candle-air-glow-x)), calc(-2% + var(--candle-air-glow-y))) scale(1.12);
   }
 
   66% {
     opacity: 0.76;
-    transform: translate(-3%, 3%) scale(0.92);
+    transform: translate(calc(-3% + var(--candle-air-glow-x)), calc(3% + var(--candle-air-glow-y))) scale(0.92);
   }
 
   82% {
     opacity: 0.9;
-    transform: translate(3%, -1%) scale(1.04);
+    transform: translate(calc(3% + var(--candle-air-glow-x)), calc(-1% + var(--candle-air-glow-y))) scale(1.04);
   }
 
   100% {
     opacity: 0.72;
-    transform: translate(-4%, 2%) scale(0.9);
+    transform: translate(calc(-4% + var(--candle-air-glow-x)), calc(2% + var(--candle-air-glow-y))) scale(0.9);
   }
 }
 
