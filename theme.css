@@ -1,0 +1,431 @@
+html[data-theme="dark"] {
+  color-scheme: dark;
+
+  --parchment: #211a13;
+  --parchment-light: #302419;
+  --parchment-dark: #493622;
+  --parchment-shadow: #765a35;
+  --ink: #f4e6c8;
+  --ink-soft: #d5c1a1;
+  --clay: #c4774d;
+  --clay-dark: #e1a06c;
+  --olive: #aab77b;
+  --olive-dark: #c3cf96;
+  --wine: #c47b7b;
+  --sky-top: #1d2830;
+  --sky-bottom: #3c2d23;
+  --gold: #d8ad55;
+}
+
+html[data-theme="light"] {
+  --ink: #3e2a18;
+  --ink-soft: #513a25;
+  --clay-dark: #71371f;
+  --olive-dark: #4c5b2f;
+  --gold: #9c6d22;
+}
+
+html[data-theme="dark"] body {
+  color: #f4e6c8;
+  background:
+    radial-gradient(circle at top, #493622 0%, #211a13 52%, #100c08 100%);
+}
+
+html[data-theme="light"] body {
+  color-scheme: light;
+  background: radial-gradient(circle at top, #faf1d7 0%, #ecdfb8 52%, #d4bd86 100%);
+  color: #3e2a18;
+}
+
+html[data-theme="dark"] .paper-texture {
+  opacity: 0.18;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(216, 173, 85, 0.1), transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(196, 119, 77, 0.08), transparent 45%),
+    repeating-linear-gradient(0deg, rgba(255, 240, 205, 0.025) 0 2px, transparent 2px 4px);
+  mix-blend-mode: screen;
+}
+
+html[data-theme="dark"] .hero-sky {
+  background: linear-gradient(180deg, var(--sky-top) 0%, var(--sky-bottom) 78%, var(--parchment) 100%);
+}
+
+html[data-theme="dark"] .hero-sky::before {
+  background:
+    radial-gradient(120% 100% at 20% 100%, rgba(111, 84, 48, 0.5), transparent 60%),
+    radial-gradient(90% 100% at 75% 100%, rgba(91, 63, 39, 0.6), transparent 65%);
+}
+
+html[data-theme="dark"] .media-card,
+html[data-theme="dark"] .content-card {
+  background: rgba(48, 36, 25, 0.96);
+  border-color: rgba(216, 173, 85, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.32);
+}
+
+html[data-theme="dark"] .media-title {
+  border-bottom-color: rgba(216, 173, 85, 0.2);
+}
+
+html[data-theme="dark"] .description-box {
+  background: #302419;
+  border-top-color: #765a35;
+}
+
+html[data-theme="dark"] .media-card:hover,
+html[data-theme="dark"] .content-card:hover {
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.44);
+}
+
+html[data-theme="dark"] .holy-map {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(216, 173, 85, 0.12), transparent 22%),
+    radial-gradient(circle at 88% 76%, rgba(196, 119, 77, 0.12), transparent 25%),
+    repeating-linear-gradient(0deg, rgba(244, 230, 200, 0.035) 0 1px, transparent 1px 5px),
+    linear-gradient(135deg, #302419, #211a13 56%, #493622);
+  box-shadow: 0 18px 34px -25px rgba(0, 0, 0, 0.8), inset 0 0 0 7px rgba(216, 173, 85, 0.08);
+}
+
+html[data-theme="dark"] .holy-map-route path {
+  stroke: rgba(244, 230, 200, 0.58);
+  filter: drop-shadow(0 1px 0 rgba(16, 12, 8, 0.8));
+}
+
+html[data-theme="dark"] .map-compass span {
+  background: #302419;
+}
+
+html[data-theme="dark"] .map-marker--secondary,
+html[data-theme="dark"] .map-info {
+  background: rgba(48, 36, 25, 0.94);
+  border-color: rgba(216, 173, 85, 0.38);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.35);
+}
+
+html[data-theme="dark"] .map-marker--secondary:hover,
+html[data-theme="dark"] .map-marker--secondary:focus-visible,
+html[data-theme="dark"] .map-marker--secondary.is-active {
+  background: #493622;
+}
+
+html[data-theme="dark"] .credit .church-name,
+html[data-theme="dark"] .credit .occasion,
+html[data-theme="dark"] .credit .supervision,
+html[data-theme="dark"] .credit .credit-line,
+html[data-theme="dark"] .credit .contact-label,
+html[data-theme="dark"] .credit .meta-line {
+  color: #e8d4ae;
+}
+
+html[data-theme="dark"] .credit .name {
+  color: #f4d99b;
+  -webkit-text-fill-color: #f4d99b;
+}
+
+html[data-theme="light"] .hero {
+  background: radial-gradient(circle at top, #f8efd5 0%, #ecdfb8 62%, #d4bd86 100%);
+}
+
+html[data-theme="light"] .hero h1,
+html[data-theme="light"] .hero h2,
+html[data-theme="light"] .section-title,
+html[data-theme="light"] .intro-card h3,
+html[data-theme="light"] .event h3,
+html[data-theme="light"] .lesson h3,
+html[data-theme="light"] .quote,
+html[data-theme="light"] .final-message {
+  color: #3e2a18;
+}
+
+html[data-theme="light"] h1,
+html[data-theme="light"] h2,
+html[data-theme="light"] h3,
+html[data-theme="light"] h4,
+html[data-theme="light"] h5,
+html[data-theme="light"] h6 {
+  color: var(--ink) !important;
+}
+
+html[data-theme="light"] .cross,
+html[data-theme="light"] .hero-reference,
+html[data-theme="light"] .day-number,
+html[data-theme="light"] .event-number,
+html[data-theme="light"] .event-title,
+html[data-theme="light"] .event-reference,
+html[data-theme="light"] .reference,
+html[data-theme="light"] .source,
+html[data-theme="light"] .verse-source,
+html[data-theme="light"] .bible-reference {
+  color: #5a432d !important;
+}
+
+html[data-theme="light"] .hero p,
+html[data-theme="light"] .hero-subtitle,
+html[data-theme="light"] .hero-description,
+html[data-theme="light"] .section-subtitle,
+html[data-theme="light"] .intro-card p,
+html[data-theme="light"] .event p,
+html[data-theme="light"] .lesson p,
+html[data-theme="light"] .reading-card p,
+html[data-theme="light"] .liturgy,
+html[data-theme="light"] .hymn,
+html[data-theme="light"] .text,
+html[data-theme="light"] .summary-item {
+  color: var(--ink-soft);
+}
+
+html[data-theme="light"] .references,
+html[data-theme="light"] .reference,
+html[data-theme="light"] .event-reference,
+html[data-theme="light"] .source,
+html[data-theme="light"] .verse-source,
+html[data-theme="light"] .bible-reference,
+html[data-theme="light"] .station-eyebrow,
+html[data-theme="light"] .station-summary,
+html[data-theme="light"] .station-place,
+html[data-theme="light"] .map-day strong,
+html[data-theme="light"] .map-day small,
+html[data-theme="light"] .site-footer,
+html[data-theme="light"] footer {
+  color: var(--ink-soft);
+}
+
+html[data-theme="light"] .intro-card,
+html[data-theme="light"] .event,
+html[data-theme="light"] .compare-card,
+html[data-theme="light"] .step,
+html[data-theme="light"] .info-card,
+html[data-theme="light"] .section-box,
+html[data-theme="light"] .prophecy-card,
+html[data-theme="light"] .reading-card,
+html[data-theme="light"] .spiritual-card,
+html[data-theme="light"] .summary,
+html[data-theme="light"] .final-message {
+  color: #3e2a18;
+  background: linear-gradient(145deg, rgba(248, 239, 213, 0.96), rgba(236, 223, 184, 0.9));
+  border-color: rgba(181, 138, 58, 0.4);
+  box-shadow: 0 14px 35px rgba(62, 42, 24, 0.16);
+}
+
+html[data-theme="light"] .back-btn,
+html[data-theme="light"] .back {
+  box-shadow: 0 6px 16px rgba(62, 42, 24, 0.2);
+}
+
+html[data-theme="light"] .back-btn {
+  color: #f8efd5;
+  background: #9c4a28;
+  border-color: #7a3a1f;
+}
+
+html[data-theme="light"] .credit {
+  color: var(--ink-soft);
+  background: rgba(248, 239, 213, 0.88);
+  border-color: rgba(181, 138, 58, 0.4);
+}
+
+html[data-theme="light"] .credit .church-name,
+html[data-theme="light"] .credit .occasion,
+html[data-theme="light"] .credit .supervision,
+html[data-theme="light"] .credit .credit-line,
+html[data-theme="light"] .credit .contact-label,
+html[data-theme="light"] .credit .meta-line {
+  color: var(--ink-soft);
+}
+
+html[data-theme="light"] .credit .church-name,
+html[data-theme="light"] .credit .name {
+  color: #6b4a2d !important;
+  -webkit-text-fill-color: #6b4a2d;
+}
+
+html[data-theme="light"] .error-quote,
+html[data-theme="light"] .verse,
+html[data-theme="light"] .credit .icon-btn {
+  color: #4a3320 !important;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #b58a3a;
+  outline-offset: 3px;
+}
+
+html[data-theme="light"] .credit .name {
+  -webkit-text-fill-color: #8b5e2f;
+}
+
+html[data-theme="light"] .credit .divider,
+html[data-theme="light"] .credit .heart,
+html[data-theme="light"] .credit .handle {
+  color: #5a432d;
+}
+
+html[data-theme="light"] body.resurrection-details p,
+html[data-theme="light"] body.resurrection-details li,
+html[data-theme="light"] body.resurrection-details .summary-item span,
+html[data-theme="light"] body.resurrection-details footer {
+  color: #513a25 !important;
+}
+
+html[data-theme="light"] body.details-page p,
+html[data-theme="light"] body.details-page li,
+html[data-theme="light"] body.details-page dd,
+html[data-theme="light"] body.details-page dt,
+html[data-theme="light"] body.details-page .text,
+html[data-theme="light"] body.details-page .description,
+html[data-theme="light"] body.details-page .reference,
+html[data-theme="light"] body.details-page .references,
+html[data-theme="light"] body.details-page .source,
+html[data-theme="light"] body.details-page .event-reference,
+html[data-theme="light"] body.details-page .hero-reference,
+html[data-theme="light"] body.details-page .summary-item span {
+  color: #2a2118 !important;
+}
+
+html[data-theme="light"] body.details-page .event p,
+html[data-theme="light"] body.details-page .final-message p,
+html[data-theme="light"] body.details-page .intro-card p,
+html[data-theme="light"] body.details-page .text,
+html[data-theme="light"] body.details-page .quote,
+html[data-theme="light"] body.details-page .lesson,
+html[data-theme="light"] body.details-page .prophecy-card,
+html[data-theme="light"] body.details-page .liturgy {
+  color: #4a3320 !important;
+}
+
+html[data-theme="light"] body.details-page h1,
+html[data-theme="light"] body.details-page h2,
+html[data-theme="light"] body.details-page h3,
+html[data-theme="light"] body.details-page h4,
+html[data-theme="light"] body.details-page h5,
+html[data-theme="light"] body.details-page h6 {
+  color: #3e2a18 !important;
+}
+
+html[data-theme="light"] body.details-page span,
+html[data-theme="light"] body.details-page strong,
+html[data-theme="light"] body.details-page em,
+html[data-theme="light"] body.details-page blockquote,
+html[data-theme="light"] body.details-page label {
+  color: #2a2118 !important;
+  -webkit-text-fill-color: #2a2118;
+}
+
+html[data-theme="light"] body.details-page .highlight,
+html[data-theme="light"] body.details-page .gold,
+html[data-theme="light"] body.details-page .share-site-label,
+html[data-theme="light"] body.details-page footer span,
+html[data-theme="light"] body.details-page footer .developer,
+html[data-theme="light"] body.details-page footer .name {
+  color: #5a432d !important;
+  -webkit-text-fill-color: #5a432d;
+}
+
+html[data-theme="light"] body.resurrection-details .cross,
+html[data-theme="light"] body.resurrection-details .references,
+html[data-theme="light"] body.resurrection-details .event h4,
+html[data-theme="light"] body.resurrection-details .lesson strong,
+html[data-theme="light"] body.resurrection-details .reading-card h4,
+html[data-theme="light"] body.resurrection-details .liturgy h4,
+html[data-theme="light"] body.resurrection-details .hymn-title,
+html[data-theme="light"] body.resurrection-details .final-quote,
+html[data-theme="light"] body.resurrection-details footer span {
+  color: #5a432d !important;
+}
+
+body:has(> .loading) .music-toggle,
+body:has(> .loading) .candle-toggle {
+  bottom: 8.5rem !important;
+}
+
+html[data-theme="dark"] .theme-toggle {
+  color: #211a13;
+  background: linear-gradient(180deg, #f4d99b, #c99745);
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2147483646;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid #b58a3a;
+  border-radius: 50%;
+  color: #3e2a18;
+  background: linear-gradient(180deg, #f8efd5, #ecdfb8);
+  box-shadow: 0 3px 10px rgba(62, 42, 24, 0.22);
+  cursor: pointer;
+  font: inherit;
+  font-size: 1.2rem;
+  line-height: 1;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: linear-gradient(180deg, #f1d99d, #d4bd86);
+  box-shadow: 0 5px 14px rgba(181, 138, 58, 0.35);
+  transform: translateY(-2px);
+}
+
+.theme-toggle:active {
+  transform: translateY(0) scale(0.94);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid #b58a3a;
+  outline-offset: 3px;
+}
+
+html[data-theme="dark"] .back,
+html[data-theme="dark"] .back-btn {
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme="dark"] .site-footer,
+html[data-theme="dark"] footer {
+  border-color: rgba(216, 173, 85, 0.35);
+}
+
+html[data-theme="dark"] .credit {
+  background: rgba(10, 7, 5, 0.7);
+  border-color: rgba(216, 173, 85, 0.25);
+}
+
+html[data-theme="dark"] .share-site-button {
+  color: #211a13;
+}
+
+html[data-theme="dark"] .candle-prayer {
+  color: #e1c58e;
+}
+
+html[data-theme="light"] .candle-prayer {
+  color: var(--ink-soft);
+}
+
+@media (max-width: 600px) {
+  .theme-toggle {
+    top: 0.75rem;
+    left: 0.75rem;
+    width: 2.45rem;
+    height: 2.45rem;
+    font-size: 1.05rem;
+  }
+
+  body:has(> .loading) .music-toggle,
+  body:has(> .loading) .candle-toggle {
+    bottom: 11.5rem !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle {
+    transition: none;
+  }
+}
