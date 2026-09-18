@@ -397,6 +397,19 @@ html[data-theme="dark"] .credit {
   border-color: rgba(216, 173, 85, 0.25);
 }
 
+html[data-theme="dark"] .credit .icon-btn {
+  color: #f1dfc2;
+  background: rgba(216, 173, 85, 0.14);
+  border-color: rgba(216, 173, 85, 0.58);
+}
+
+html[data-theme="dark"] .credit .icon-btn:hover,
+html[data-theme="dark"] .credit .icon-btn:focus-visible {
+  color: #211a13;
+  background: #d4a45f;
+  border-color: #f1cf91;
+}
+
 html[data-theme="dark"] .share-site-button {
   color: #211a13;
 }
